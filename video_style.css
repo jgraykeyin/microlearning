@@ -1,0 +1,27 @@
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+    font-family: 'Vollkorn', serif;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;  
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    background-color:darkturquoise;
+    padding: 20px;
+}
+
+.sidebar ul {
+    font-size: 22px;
+    color: #fff;
+}
+
+.video-player {
+    grid-column: 2 / 3;
+    padding: 20px;
+}
