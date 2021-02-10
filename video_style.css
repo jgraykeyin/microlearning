@@ -9,15 +9,23 @@ a:link {
     color: #fff;
 }
 
-#link-lsn1 {
-    color: #5D001E;
-}
-
-a {
+a:visited {
     color: #fff;
 }
 
+a:active {
+    color: #5D001E;
+}
+
+a:focus {
+    color: #5D001E;
+}
+
 a:hover {
+    color: #5D001E;
+}
+
+a:active {
     color: #5D001E;
 }
 
