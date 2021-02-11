@@ -1,28 +1,41 @@
 body{
-	font-size: 20px;
-	font-family: sans-serif;
-	color: #333;
+    margin-bottom:50px;
+	font-size: 35px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+    background-color: #954e97;
+    text-align: center;
+    margin: auto 0;
+      
 }
+
 .question{
 	font-weight: 600;
 }
 .answers {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  padding: 10px;
 }
 .answers label{
   display: block;
 }
+
+.asset {
+    width: 250px;
+    padding: 50px;
+}
+
 #submit{
-	font-family: sans-serif;
-	font-size: 20px;
-	background-color: #279;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 35px;
+	background-color: #ed7e31;
 	color: #fff;
 	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
+	border-radius: 10px;
+	padding: 40px;
 	cursor: pointer;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 #submit:hover{
-	background-color: #38a;
+	background-color: rgb(51, 170, 91);
 }
