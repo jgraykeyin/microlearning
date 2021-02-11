@@ -71,7 +71,7 @@
       question: "What is 2 + 2?",
       answers: {
         a: "4",
-        b: "22",
+        b: "2",
         
       },
       correctAnswer: "a"
@@ -79,7 +79,7 @@
     {
       question: "What is 7 * 3?",
       answers: {
-        a: "30",
+        a: "28",
         b: "21",
         c: "14",
         d: "30"
