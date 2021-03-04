@@ -1,0 +1,14 @@
+.user-input{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#main-container {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid black;
+    max-width: 600px;
+    justify-content: center;
+}
