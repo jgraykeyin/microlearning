@@ -1,0 +1,48 @@
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+#main-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 3fr
+}
+
+#course-list {
+    grid-column: 1 / 2;
+    background-color: #ed7e31;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#course-list li {
+    padding: 6px;
+}
+
+#lesson-list {
+    grid-column: 2 / 3;
+    background-color: #2a072c;
+    font-size: 18px;
+    font-weight: normal;
+    color:#cc79aa
+}
+
+#lesson-list li {
+    padding: 6px;
+}
+
+#content-area {
+    grid-column: 3 / 4;
+    background-color: #1c0e21;
+    background-image: url("images/skills_logo_transparent.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    padding: 50px;
+
+}
