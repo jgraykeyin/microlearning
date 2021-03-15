@@ -2,3 +2,28 @@ body {
     background-image: url("images/Background1.png");
     background-size: cover;
 }
+
+.main-container {
+    padding: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-area {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:stretch;
+}
+
+.ui-buttons {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.0);
+    border : 1px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+}
