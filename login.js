@@ -29,8 +29,8 @@ app.get('/', function(request, response) {
 
 
 app.post('/auth', function(request, response) {
-	var username = request.body.username;
-	var password = request.body.password;
+	let username = request.body.username;
+	let password = request.body.password;
 	if (username && password) {
 		connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
             console.log(error);
