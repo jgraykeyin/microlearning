@@ -4,10 +4,22 @@ body {
 }
 
 .main-container {
-  padding: 1rem;
-  margin-top: 6rem;
+  position: relative;
+  color: white;
+  padding: 2rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 
@@ -20,11 +32,7 @@ header {
   max-width: 600px;
 }
 
-#logo {
-  justify-content: center;
-  align-items: center;
 
-}
 
 @media only screen and (min-width: 600px) {
   .main-container {
