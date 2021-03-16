@@ -1,3 +1,72 @@
+body {
+  background-color: #451a53;
+  color: #ce4f21;
+  justify-content: center;
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+
+
+}
+
+header {
+ grid-area: header;
+ text-align: right;
+}
+
+#main-container {
+  padding: 20px;
+  display: grid;
+  grid-template-areas:
+  "header header"
+  "login login"
+  "footer footer";
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 450px;
+  border: 3px solid
+  #6e290f;
+  
+}
+
+#main-login {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin-top: 20%;
+  max-width: 400px;
+  align-self: center;
+  height: 60vh;
+  grid-area: login;
+  padding: 15px;
+  justify-content: center;
+  align-content: center;
+  font-size: 18px;
+  
+}
+
+
+
+.btns {
+  margin-top:15%;
+  padding: 5px 20px;
+  align-content: space-evenly;
+  background-image:linear-gradient(#144b0a, #416939);
+  color:rgb(197, 194, 194);
+  font-style: bolder;
+  font-size: 15px;
+  text-shadow: 0px 0px 10px black;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+#northern {
+  margin-top: 70%;
+  max-width: 100%;
+  height: auto;
+}
+
 /* the side nav menu */
 
 .sidenav {
@@ -34,4 +103,9 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+#main-container {
+  transition: margin-left .5s;
+  padding: 20px;
 }
