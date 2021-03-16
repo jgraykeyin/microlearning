@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Mobile First Design</title>
-    <link rel="stylesheet" href="splashpage.css" />
+    <link rel="stylesheet" href="login_style.css" />
+    <script type="text/javascript" src="login_testing.js"></script>
 
 </head>
 <body>
 
-    <form>
-        <input type="text" name="email" placeholder="Email Address">
-        <input type="password" name="password" placeholder="Password">
-        <button type="button">Login</button>
-    </form>
+    <div class="main-container">
+
+        <!-- First column -->
+        <img src="images/skills_logo.png">
+
+            <!-- Second column -->
+            <form class="loginform">
+                <input type="text" name="email" placeholder="Email Address">
+                <input type="password" name="password" placeholder="Password">
+                <button type="button" class="ui-button-light" id="login-btn">Login</button>
+            </form>
+        
+        <!-- Oh third column -->
+        <footer class="footer">
+            <p>Footer 1234</p>
+        </footer>
+    </div>
     
 </body>
 </html>
