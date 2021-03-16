@@ -1,0 +1,38 @@
+body {
+  background-image: url("images/Background1.png");
+  background-size: cover;
+}
+
+.main-container {
+  padding: 1rem;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  color: white;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 600px;
+}
+
+#logo {
+  justify-content: center;
+  align-items: center;
+
+}
+
+@media only screen and (min-width: 600px) {
+  .main-container {
+      margin: auto;
+      max-width: 400px;
+      padding: 1rem;
+      margin-top: 6rem;
+      display: flex;
+      flex-direction: column;
+
+  }
