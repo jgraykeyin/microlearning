@@ -7,11 +7,11 @@ let path = require('path')
 let bcrypt = require('bcrypt');
 let https = require('https');
 
-const USE_HTTPS = true;
+
+const USE_HTTPS = false;
 const PORT = 3000;
-const SSL_KEY_FILE_LOCATION = path.join(__dirname, 'ssl/key.pem')
-const SSL_CERT_FILE_LOCATION = path.join(__dirname, 'ssl/cert.pem')
-const SSL_PASSPHRASE = 'RANDOM';
+const SSL_KEY_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.key');
+const SSL_CERT_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.crt');
 
 
 let connection = mysql.createConnection({
@@ -19,6 +19,7 @@ let connection = mysql.createConnection({
     user    : 'root',
     password: 'keyintesting',
 });
+
 
 connection.query(`CREATE DATABASE IF NOT EXISTS \`nodelogin\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci`);
 connection.query(`USE \`nodelogin\``);
@@ -44,8 +45,15 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
+// Add access to public css and image folders
+// app.use(express.static(__dirname + '/css'));
+// app.use(express.static(__dirname + '/images'));
+
+app.use('/css', express.static('css'))
+app.use('/images', express.static('images'))
+
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname, '/login.html'));
+    response.sendFile(path.join(__dirname, '/mobile_login.html'));
 });
 
 app.get("/signup", function(request, response){
@@ -133,8 +141,7 @@ function launchCallback(proto, port){
 if (USE_HTTPS){
     https.createServer({
         key: fs.readFileSync(SSL_KEY_FILE_LOCATION),
-        cert: fs.readFileSync(SSL_CERT_FILE_LOCATION),
-        passphrase: SSL_PASSPHRASE
+        cert: fs.readFileSync(SSL_CERT_FILE_LOCATION)
     }, app).listen(PORT, ()=>launchCallback('https', PORT));
 }else{
     app.listen(PORT, ()=>launchCallback('http', PORT));
