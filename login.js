@@ -51,6 +51,8 @@ app.use(bodyParser.json());
 
 app.use('/css', express.static('css'))
 app.use('/images', express.static('images'))
+app.use('/js', express.static('js'))
+
 
 app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, '/mobile_login.html'));
