@@ -61,7 +61,7 @@ app.get("/signup", function(request, response){
 })
 
 app.post('/signup', function(request, response){
-    let username = request.body.username;
+    let fullname = request.body.fullname;
 	let password = request.body.password;
 	let email = request.body.email;
     
@@ -69,7 +69,7 @@ app.post('/signup', function(request, response){
         if(!err){
             bcrypt.hash(password, salt, function(err, password_hash){
                 if(!err){
-		            connection.query(`INSERT INTO accounts (username, password, email, salt) VALUES ('${username}', '${password_hash}', '${email}', '${salt}')`, function(err){
+		            connection.query(`INSERT INTO accounts (username, password, email, salt) VALUES ('${fullname}', '${password_hash}', '${email}', '${salt}')`, function(err){
                         if(err){
                            console.error("Oh no! Insert failed!"); 
                            //response.send("Oh no! An error occured, please try again!")
@@ -94,11 +94,11 @@ app.post('/signup', function(request, response){
 
 
 app.post('/auth', function(request, response) {
-	let username = request.body.username;
+	let email = request.body.email;
 	let password = request.body.password;
     
-	if (username && password) {
-		connection.query('SELECT * FROM accounts WHERE username = ?', [username], function(error, results, fields) {
+	if (email && password) {
+		connection.query('SELECT * FROM accounts WHERE email = ?', [email], function(error, results, fields) {
             console.log(error);
             if (results.length > 0) {
                 bcrypt.hash(password, results[0].salt, function(err, password_hash){
@@ -107,7 +107,7 @@ app.post('/auth', function(request, response) {
                     }else{
                         if(results[0].password === password_hash){
         				    request.session.loggedin = true;
-        				    request.session.username = username;
+        				    request.session.email = email;
         				    response.redirect('/home');
                         }else{
         				    response.send('Incorrect Username and/or Password!');
@@ -127,7 +127,7 @@ app.post('/auth', function(request, response) {
 
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
-        response.sendFile(path.join(__dirname, '/new.html'));
+        response.sendFile(path.join(__dirname, '/dashboard.html'));
     } else {
         response.send('Please login to view this page!');
         response.end();
