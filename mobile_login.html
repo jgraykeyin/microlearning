@@ -18,16 +18,18 @@
         </div>
 
             <!-- Second column -->
-            <form class="loginform">
+            <form class="loginform" method="POST" action="auth">
                 <label for="email">Email Address</label>
                 <input type="text" name="email" placeholder="email@address.com">
                 <label for="password">Password</label>
                 <input type="password" name="password" placeholder="*********">
+                <button type="submit" class="ui-button-light" id="login-btn">Login</button>
             </form>
 
-        <div class="button-area">
-            <button type="button" class="ui-button-light" id="login-btn">Login</button>
+        <div class="spacer">
+        </div>
 
+        <div class="button-area">
             <button type="button" class="ui-button-dark" id="signup-btn">Sign Up</button>
         </div>
         
