@@ -57,7 +57,7 @@ app.get('/', function(request, response) {
 });
 
 app.get("/signup", function(request, response){
-    response.sendFile(path.join(__dirname, '/signup.html'));
+    response.sendFile(path.join(__dirname, '/mobile_signup.html'));
 })
 
 app.post('/signup', function(request, response){
