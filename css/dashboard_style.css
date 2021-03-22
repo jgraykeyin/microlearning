@@ -15,18 +15,47 @@ body {
     background-color: #fff;
     margin: 6px 0;
     transition: 0.4s;
+    z-index: 50;
 }
 
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
+    z-index: 50;
 }
 
 .change .bar2 {
     opacity: 0;
+    z-index: 50;
 }
 
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+    z-index: 50;
 }
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 80%;
+  }
+
+  .sidenav h1 {
+      padding: 20px;
+  }
+
+  .sidenav p {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
