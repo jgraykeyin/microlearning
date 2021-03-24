@@ -1,0 +1,71 @@
+[
+    {
+        "lessonId": 1,
+        "intro":"<h1>Performance Management Basics</h1><h2>What is Performance Management?</h2><h3>Performance Management is:</h3><ul><li>A strategic approach to improving performance in employees.</li><li>A system within a company that links organizational objectives to employee performance.</li><li>It includes performance review plans, employee performance measurement, coaching, recognizing, and rewarding the performance of employees.</li></ul>",
+        "summary":"<h1>Performance Management is:</h1><p>A strategic approach to improving performance in employees.</p><h2>Performance Management has a positive influence on:</h2><ul><li>Employee engagement</li><li>Retaining talent</li><li>Developing Leaders</li>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Performance Management is a way to improve employee performance?",
+                "answer":true
+            },
+            {
+                "id":2,
+                "question":"Performance Management defines the strategic direction of the organization?",
+                "answer":false
+            },
+            {
+                "id":3,
+                "question":"Performance Management systems increase motivation?",
+                "answer":true
+            },
+            {
+                "id":4,
+                "question":"Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
+                "answer":true
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"Performance Management is:",
+                "a":"A strategic approach",
+                "b":"A way to improve employee performance",
+                "c":"A system that links organizational objectives to employee performance",
+                "d":"All of the above",
+                "answer":"d"
+            },
+            {
+                "question":"Successful Performance Management impacts:",
+                "a":"Employee engagement",
+                "b":"Employee retention",
+                "c":"Leadership Development",
+                "d":"All of the above",
+                "answer":"d"
+            }
+        ]
+    },
+    {
+        "lessonId":2
+    },
+    {
+        "lessonId":3
+    },
+    {
+        "lessonId":4
+    },
+    {
+        "lessonId":5
+    },
+    {
+        "lessonId":6
+    },
+    {
+        "lessonId":7
+    },
+    {
+        "lessonId":8
+    }
+]
