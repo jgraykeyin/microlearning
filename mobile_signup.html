@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up - Mobile First Design</title>
+    <title>Login - Mobile First Design</title>
+    <link rel="stylesheet" type="text/css" href="css/login_style.css" />
+
 </head>
 <body>
+
+    <div class="main-container">
+
+        <!-- First column -->
+        <div class="logo">
+            <img src="images/skills_logo.png">
+        </div>
+
+            <!-- Second column -->
+            <form class="loginform" method="POST" action="auth">
+                <label for="name">Full Name:</label>
+                <input type="text" name="fullname" placeholder="Your Name">
+
+                <label for="email">Email Address</label>
+                <input type="text" name="email" placeholder="email@address.com">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="*********">
+
+                <label for="password">Confirm Password</label>
+                <input type="password" name="confirm-password" placeholder="*********">
+
+                <button type="submit" class="ui-button-light" id="login-btn">Sign Up</button>
+            </form>
+
+        <div class="spacer">
+        </div>
+
+        <div class="button-area">
+          <form method="GET" action="/">
+            <button type="submit" class="ui-button-dark" id="signup-btn">Login</button>
+          </form>
+        </div>
+        
+    </div>
     
 </body>
 </html>

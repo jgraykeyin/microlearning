@@ -9,9 +9,8 @@ let https = require('https');
 
 const USE_HTTPS = false;
 const PORT = 3000;
-const SSL_KEY_FILE_LOCATION = path.join(__dirname, 'ssl/key.pem')
-const SSL_CERT_FILE_LOCATION = path.join(__dirname, 'ssl/cert.pem')
-const SSL_PASSPHRASE = 'RANDOM';
+const SSL_KEY_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.key');
+const SSL_CERT_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.crt');
 
 
 let connection = mysql.createConnection({
@@ -19,6 +18,7 @@ let connection = mysql.createConnection({
     user    : 'root',
     password: 'keyintesting',
 });
+
 
 connection.query(`CREATE DATABASE IF NOT EXISTS \`nodelogin\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci`);
 connection.query(`USE \`nodelogin\``);
@@ -44,16 +44,25 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
+// Add access to public css and image folders
+// app.use(express.static(__dirname + '/css'));
+// app.use(express.static(__dirname + '/images'));
+
+app.use('/css', express.static('css'))
+app.use('/images', express.static('images'))
+app.use('/js', express.static('js'))
+
+
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname, '/login.html'));
+    response.sendFile(path.join(__dirname, '/mobile_login.html'));
 });
 
 app.get("/signup", function(request, response){
-    response.sendFile(path.join(__dirname, '/signup.html'));
+    response.sendFile(path.join(__dirname, '/mobile_signup.html'));
 })
 
 app.post('/signup', function(request, response){
-    let username = request.body.username;
+    let fullname = request.body.fullname;
 	let password = request.body.password;
 	let email = request.body.email;
     
@@ -61,7 +70,7 @@ app.post('/signup', function(request, response){
         if(!err){
             bcrypt.hash(password, salt, function(err, password_hash){
                 if(!err){
-		            connection.query(`INSERT INTO accounts (username, password, email, salt) VALUES ('${username}', '${password_hash}', '${email}', '${salt}')`, function(err){
+		            connection.query(`INSERT INTO accounts (username, password, email, salt) VALUES ('${fullname}', '${password_hash}', '${email}', '${salt}')`, function(err){
                         if(err){
                            console.error("Oh no! Insert failed!"); 
                            //response.send("Oh no! An error occured, please try again!")
@@ -86,11 +95,11 @@ app.post('/signup', function(request, response){
 
 
 app.post('/auth', function(request, response) {
-	let username = request.body.username;
+	let email = request.body.email;
 	let password = request.body.password;
     
-	if (username && password) {
-		connection.query('SELECT * FROM accounts WHERE username = ?', [username], function(error, results, fields) {
+	if (email && password) {
+		connection.query('SELECT * FROM accounts WHERE email = ?', [email], function(error, results, fields) {
             console.log(error);
             if (results.length > 0) {
                 bcrypt.hash(password, results[0].salt, function(err, password_hash){
@@ -99,7 +108,7 @@ app.post('/auth', function(request, response) {
                     }else{
                         if(results[0].password === password_hash){
         				    request.session.loggedin = true;
-        				    request.session.username = username;
+        				    request.session.email = email;
         				    response.redirect('/home');
                         }else{
         				    response.send('Incorrect Username and/or Password!');
@@ -119,7 +128,7 @@ app.post('/auth', function(request, response) {
 
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
-        response.sendFile(path.join(__dirname, '/new.html'));
+        response.sendFile(path.join(__dirname, '/dashboard.html'));
     } else {
         response.send('Please login to view this page!');
         response.end();
@@ -133,8 +142,7 @@ function launchCallback(proto, port){
 if (USE_HTTPS){
     https.createServer({
         key: fs.readFileSync(SSL_KEY_FILE_LOCATION),
-        cert: fs.readFileSync(SSL_CERT_FILE_LOCATION),
-        passphrase: SSL_PASSPHRASE
+        cert: fs.readFileSync(SSL_CERT_FILE_LOCATION)
     }, app).listen(PORT, ()=>launchCallback('https', PORT));
 }else{
     app.listen(PORT, ()=>launchCallback('http', PORT));

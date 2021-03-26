@@ -1,0 +1,91 @@
+body {
+    background-image: url("/images/Background1.png");
+    background-size: cover;
+    color: #fff;
+}
+
+.main-container {
+    padding: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.main-container img {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginform input {
+    padding: 5px;
+    margin: 1rem;
+    font-size: 20px;
+}
+
+.button-area {
+    margin-top: 2rem;
+}
+
+.ui-button-light {
+    margin: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: white;
+    border : 1px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.ui-button-dark {
+    margin: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: rgba(0,0,0,0.0);
+    border : 1px solid white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Use this for bigger screens */
+@media only screen and (min-width: 600px) {
+
+    body {
+        background-position: 0;
+    }
+
+    .main-container {
+        margin: auto;
+        max-width: 400px;
+        padding: 1rem;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container img {
+        width: 60%;
+        padding-bottom: 3rem;
+    }
+
+    .loginform input {
+        padding: 5px;
+        margin: 1rem;
+        font-size: 18px;
+    }
+}
