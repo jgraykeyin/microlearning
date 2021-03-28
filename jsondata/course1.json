@@ -262,9 +262,111 @@
         "lessonId":6
     },
     {
-        "lessonId":7
+        "lessonId": 7,
+        "intro":"<h1>Performance Appraisal Forms</h1><h2>What is Included in a Performance Appraisal Form?</h2><p>Regardless of the type of Performance Appraisal you utilize, a Performance Appraisal Form will have all or some of the following criteria.</p><ul><li>Employee information including evaluation period.</li><li>Core Competencies</li><li>Performance Goals</li><li>Rating System</li><li>Employee Feedback</li><li>Career Aspirations</li><li> Sign off summary</li></ul>",
+        "summary":"<p>Performance Appraisal Forms support the Performance Appraisal Process</p><ul><li>Core Competencies are measurable skills, knowledge, abilities, and behaviours required to competently fulfill the responsibilities of a role.</li><li>Connecting the employee’s performance goals to the strategic goals of the organization will create meaning for the work that they do which boosts employee engagement.</li><li>A properly designed performance rating system will differentiate high performance from low performance; identify areas of improvement, highlight development opportunities; and provide transparency in decision making.",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Core Competencies list the organization’s mission and vision.",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"Performance Rating Systems differentiate high performance from low performance and identify areas of improvement.",
+                "answer":true
+            },
+            {
+                "id":3,
+                "question":"Core Competencies, Performance Goals, and Rating Systems are standard sections in most Performance Appraisal Forms.",
+                "answer":true
+            },
+            {
+                "id":4,
+                "question":"SMART Goals will not motivate employees to achieve performance goals.",
+                "answer":false
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"Which of the following are standard in most Performance Appraisal Forms?",
+                "a":"Core Competencies",
+                "b":"Performance Goals",
+                "c":"Rating System",
+                "d":"Career Aspirations",
+                "answer":"a,b,c,d"
+            },
+            {
+                "id":5,
+                "question":"Core Competencies are measurable skills, knowledge, abilities, and behaviours required to competently fulfill the responsibilities of a role.",
+                "answer":true
+            },
+            {
+                "question":"What does SMART represent when setting Performance Goals?",
+                "a":"Short, Meaningful, Attainable, Relevant, Timely",
+                "b":"Specific, Meaningful, Attainable, Relevant, Timely",
+                "c":"Short, Measurable, Attainable, Real, Timely",
+                "d":"Specific, Measurable, Achievable, Relevant, Timely",
+                "answer":"d"
+            },
+            {
+                "id":6,
+                "question":"A properly designed performance rating system will differentiate high performance from low performance; identify areas of improvement, highlight development opportunities; and provide transparency in decision making",
+                "answer":true
+            }
+        ]
     },
     {
-        "lessonId":8
+        "lessonId": 8,
+        "intro":"<h1>Performance Interview</h1><h2>How to set the stage for a Performance Interiew</h2><p>As a Manager it is important to understand that the performance interview can be the most rewarding or most debilitating process for an employee.</p><p>It is up to you to ensure positive outcomes regardless of how bad employee performance has been and to recognize that improvement is possible.</p>",
+        "summary":"<p>You have now learned how to successfully conduct a performance interview which is step 3 of the performance management process – the performance appraisal.  Having a positive performance appraisal experience will improve an employee’s feelings of satisfaction with their job, which will motivate them to work harder and since improving employee performance is the overarching goal of performance management plans, it is critical for a manager to learn how to effectively conduct a performance interview.  The more employees are engaged and satisfied with their work, the better the organization as a whole will perform.</p>",
+        "summary2":"<h1>What did we Learn?</h1><ul><li>What Performance Management is and the benefits of a successful approach?</li><li>The purpose of a Performance Management System and how a Performance Management Process supports it.</li><li>What a Performance Appraisal is and the benefits of a good appraisal</li><li>The five types of performance appraisals.</li><li>The steps in the Performance Appraisal process and how to conduct a successful performance appraisal.</li></ul>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"It is acceptable to have a performance interview over the phone?",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"A manager should focus on providing personal feedback on the employee’s character.",
+                "answer":false
+            },
+            {
+                "id":3,
+                "question":"It is important the manager chooses words carefully and ends on a positive note.",
+                "answer":true
+            },
+            {
+                "id":4,
+                "question":"A Performance Appraisal will feel successful if the manager focuses on concrete, constructive feedback.",
+                "answer":true
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"In order to have a successful performance interview, a manager should do which of the following:",
+                "a":"Conduct the interview face to face",
+                "b":"Always have a representative of human resources present",
+                "c":"Choose your words with care",
+                "d":"Always end after discussing performance issues",
+                "answer":"a,c"
+            },
+            {
+                "question":"What should a manager focus on in a performance interview?",
+                "a":"All the negative personal characteristics an employee demonstrates",
+                "b":"Conducting a quick interview",
+                "c":"Giving concrete, constructive feedback",
+                "d":"Collaborating with the employee to develop behaviour expectations",
+                "answer":"c,d"
+            }
+        
+        ]
     }
 ]
