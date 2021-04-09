@@ -3,276 +3,214 @@
         "lesson_name": "Performance Management Plans",
         "video_file": "performance.mp4",
         "quiz":
-        {
-            "id": 1,
-            "clip_start": 72,
-            "clip_end": 108,
-            "question": "Performance Management is:",
-            "a": "A strategic approach",
-            "b": "A way to improve employee performance.",
-            "c": "A system that links organizational objectives to employee performance",
-            "d": "All the above",
-            "answer": "d"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 2,
-            "clip_start": 109,
-            "clip_end": 125,
-            "question": "Is it important to learn about Performance Management:",
-            "a": "Set our own goals.",
-            "b": "Support each other in continued learning and improvement.",
-            "c": "Assist in attaining of organizational objectives.",
-            "d": "All the above.",
-            "answer": "d"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 3,
-            "clip_start": 126,
-            "clip_end": 175,
-            "question": "Making Performance Management should a priority does NOT help to:",
-            "a": "develop customers.",
-            "b": "develop employees.",
-            "c": "establish clear goals.",
-            "d": "offer consistent feedback.",
-            "answer": "a"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 4,
-            "clip_start": 176,
-            "clip_end": 201,
-            "question": "What is the purpose of performance management?",
-            "a": "Keep employee engaged.",
-            "b": "Develop customers.",
-            "c": "Establish clear goals.",
-            "d": "Set own goals.",
-            "answer": "a"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 5,
-            "clip_start": 416,
-            "clip_end": 430,
-            "question": "Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
-            "true": "True",
-            "false": "False",
-            "answer": "true"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 6,
-            "clip_start": 416,
-            "clip_end": 431,
-            "question": "Move each characteristic into the appropriate column for the different performance management approaches.",
-            "heading A": "Traditional Performance Management Approach",
-            "heading B": "Everyday Performance Management Approach",
-            "answer column A": ["Focus on review process not people","Formal and event driven","Separate from work"],
-            "answer column B": ["Focus on people not process","Informal and ongoing","Integrated with work"]
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 7,
-            "clip_start": 578,
-            "clip_end": 603,
-            "statement": "For the following multiple response questions, select all the options that are correct.",
-            "question": "A Performance Management System will be most successful if it considers which of the following:",
-            "a": "The company’s mission and vision.",
-            "b": "The company’s organizational culture.",
-            "c": "The CEO’s personality.",
-            "d": "How many employees in the company.",
-            "answer": "a",
-            "answer": "b"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 8,
-            "clip_start": 605,
-            "clip_end": 621,
-            "question": "There should be a direct link between an employee’s performance goals and the strategic goals of the organization.",
-            "true": "True",
-            "false": "False",
-            "answer": "true"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 9,
-            "clip_start": 756,
-            "clip_end": 787,
-            "question": "Instructions: Put the steps of the Performance Management Cycle in the correct order:",
-            "answer column A": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"]
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 10,
-            "clip_start": 1195,
-            "clip_end": 1255,
-            "question": "Drag and Drop",
-            "heading A": "Organizational Benefit",
-            "heading B": "Employee Benefit",
-            "answer column A": ["Facilitates strategic decision-making","Addresses employee behavioural issues","Identifies where management can improve"],
-            "answer column B": ["Determines where skills can improve","Involves employees in their career development path","Opens discussions for goal setting"]
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 11,
-            "clip_start": 1257,
-            "clip_end": 1301,
-            "statement": "For the following multiple response questions, select all the options that are correct.",
-            "question": "What happens BEFORE the Performance Appraisal Process begins?",
-            "a": "Competencies are defined.",
-            "b": "The employee meets one-on-one with their manager.",
-            "c": "Performance Coaching to address performance issues.",
-            "d": "The Performance Appraisal is shared with Human Resources.",
-            "answer": "a",
-            "answer": "c"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 12,
-            "clip_start": 1257,
-            "clip_end": 1301,
-            "statement": "For the following multiple response questions, select all the options that are correct.",
-            "question": "What happens DURING the Performance Appraisal Process?",
-            "a": "Competencies are defined.",
-            "b": "The employee meets one-on-one with their manager.",
-            "c": "Performance Coaching to address performance issues.",
-            "d": "The Performance Appraisal is shared with Human Resources.",
-            "answer": "b",
-            "answer": "d"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 13,
-            "clip_start": 1478,
-            "clip_end": 1661,
-            "question": "Match the Type of Performance Appraisal with the characteristic.",
-            "answer column A": ["Self Evaluation","Management by Objectives","Behavioural Checklist", "Ratings Scale","360 Degree Feedback"],
-            "answer column B": ["Employees first conduct their performance assessment on their own against a set list of criteria.","Employee and manager agree to performance goals that the employee will achieve within a specific period of time.","Manager checks YES when they believe the employee has exhibited a trait.","Each set of criteria is weighted so that a measured score can be calculated at the end of the review.","Feedback from the manager and employees."]
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 14,
-            "clip_start": 1709,
-            "clip_end": 1742,
-            "statement": "For the following multiple response questions, select all the options that are correct.",
-            "question": "Which of the following are standard in most Performance Appraisal Forms?",
-            "a": "Core Competencies",
-            "b": "Performance Goals",
-            "c": "Rating system",
-            "d": "Career aspirations",
-            "answer": "a",
-            "answer": "b",
-            "answer": "c"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 15,
-            "clip_start": 1751,
-            "clip_end": 1779,
-            "question": "Core Competencies are measurable skills, knowledge, abilities, and behaviors required to competently fulfill the responsibilities of a role.",
-            "true": "True",
-            "false": "False",
-            "answer": "true"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 16,
-            "clip_start": 1819,
-            "clip_end": 1826,
-            "question": "What does SMART represent when setting Performance Goals?",
-            "a": "Short, Meaningful, Attainable, Relevant, Timely",
-            "b": "Specific, Meaningful, Attainable, Relevant, Timely",
-            "c": "Short, Measurable, Attainable, Real, Timely",
-            "d": "Specific, Measurable, Achievable, Relevant, Timely",
-            "answer": "d"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 17,
-            "clip_start": 1827,
-            "clip_end": 1842,
-            "question": "A properly designed performance rating system will differentiate high performance from low performance; identify areas of improvement, highlight development opportunities; and provide transparency in decision making.",
-            "true": "True",
-            "false": "False",
-            "answer": "true"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 18,
-            "clip_start": 2005,
-            "clip_end": 2095,
-            "question": "What should a manager focus on in a performance interview?",
-            "a": "All the negative personal characteristics an employee demonstrates.",
-            "b": "Conducting a quick interview.",
-            "c": "Giving concrete, constructive feedback.",
-            "d": "Collaborating with the employee to develop behaviour expectations.",
-            "answer": "c",
-            "answer": "d"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 19,
-            "clip_start": 2005,
-            "clip_end": 2019,
-            "question": "A manager should focus on providing personal feedback on the employee’s character.",
-            "true": "True",
-            "false": "False",
-            "answer": "false"
-        },
-        "lesson_name": "Performance Management Plans",
-        "video_file": "performance.mp4",
-        "quiz":
-        {
-            "id": 14,
-            "clip_start": 2096,
-            "clip_end": 2159,
-            "statement": "For the following multiple response questions, select all the options that are correct.",
-            "question": "In order to have a successful performance interview, a manager should do which of the following:",
-            "a": "Conduct the interview face to face.",
-            "b": "Always have a representative of human resources present",
-            "c": "Choose your words with care.",
-            "d": "Always end after discussing performance issues",
-            "answer": "a",
-            "answer": "c"
-        },
+        [
+            {
+                "id": 1,
+                "clip_start": 72,
+                "clip_end": 108,
+                "question": "Performance Management is:",
+                "a": "A strategic approach",
+                "b": "A way to improve employee performance.",
+                "c": "A system that links organizational objectives to employee performance",
+                "d": "All the above",
+                "answer": "d"
+            },
+            {
+                "id": 2,
+                "clip_start": 109,
+                "clip_end": 125,
+                "question": "Is it important to learn about Performance Management:",
+                "a": "Set our own goals.",
+                "b": "Support each other in continued learning and improvement.",
+                "c": "Assist in attaining of organizational objectives.",
+                "d": "All the above.",
+                "answer": "d"
+            },
+            {
+                "id": 3,
+                "clip_start": 126,
+                "clip_end": 175,
+                "question": "Making Performance Management should a priority does NOT help to:",
+                "a": "develop customers.",
+                "b": "develop employees.",
+                "c": "establish clear goals.",
+                "d": "offer consistent feedback.",
+                "answer": "a"
+            },
+            {
+                "id": 4,
+                "clip_start": 176,
+                "clip_end": 201,
+                "question": "What is the purpose of performance management?",
+                "a": "Keep employee engaged.",
+                "b": "Develop customers.",
+                "c": "Establish clear goals.",
+                "d": "Set own goals.",
+                "answer": "a"
+            },
+            {
+                "id": 5,
+                "clip_start": 416,
+                "clip_end": 430,
+                "question": "Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 6,
+                "clip_start": 416,
+                "clip_end": 431,
+                "question": "Move each characteristic into the appropriate column for the different performance management approaches.",
+                "heading A": "Traditional Performance Management Approach",
+                "heading B": "Everyday Performance Management Approach",
+                "answer column A": ["Focus on review process not people","Formal and event driven","Separate from work"],
+                "answer column B": ["Focus on people not process","Informal and ongoing","Integrated with work"]
+            },
+                {
+                "id": 7,
+                "clip_start": 578,
+                "clip_end": 603,
+                "statement": "For the following multiple response questions, select all the options that are correct.",
+                "question": "A Performance Management System will be most successful if it considers which of the following:",
+                "a": "The company’s mission and vision.",
+                "b": "The company’s organizational culture.",
+                "c": "The CEO’s personality.",
+                "d": "How many employees in the company.",
+                "answer": "a,b"
+            },
+                {
+                "id": 8,
+                "clip_start": 605,
+                "clip_end": 621,
+                "question": "There should be a direct link between an employee’s performance goals and the strategic goals of the organization.",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 9,
+                "clip_start": 756,
+                "clip_end": 787,
+                "question": "Instructions: Put the steps of the Performance Management Cycle in the correct order:",
+                "answer column A": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"]
+            },
+            {
+                "id": 10,
+                "clip_start": 1195,
+                "clip_end": 1255,
+                "question": "Drag and Drop",
+                "heading A": "Organizational Benefit",
+                "heading B": "Employee Benefit",
+                "answer column A": ["Facilitates strategic decision-making","Addresses employee behavioural issues","Identifies where management can improve"],
+                "answer column B": ["Determines where skills can improve","Involves employees in their career development path","Opens discussions for goal setting"]
+            },
+            {
+                "id": 11,
+                "clip_start": 1257,
+                "clip_end": 1301,
+                "statement": "For the following multiple response questions, select all the options that are correct.",
+                "question": "What happens BEFORE the Performance Appraisal Process begins?",
+                "a": "Competencies are defined.",
+                "b": "The employee meets one-on-one with their manager.",
+                "c": "Performance Coaching to address performance issues.",
+                "d": "The Performance Appraisal is shared with Human Resources.",
+                "answer": "a,c"
+            },
+            {
+                "id": 12,
+                "clip_start": 1257,
+                "clip_end": 1301,
+                "statement": "For the following multiple response questions, select all the options that are correct.",
+                "question": "What happens DURING the Performance Appraisal Process?",
+                "a": "Competencies are defined.",
+                "b": "The employee meets one-on-one with their manager.",
+                "c": "Performance Coaching to address performance issues.",
+                "d": "The Performance Appraisal is shared with Human Resources.",
+                "answer": "b,d"
+            },
+            {
+                "id": 13,
+                "clip_start": 1478,
+                "clip_end": 1661,
+                "question": "Match the Type of Performance Appraisal with the characteristic.",
+                "answer column A": ["Self Evaluation","Management by Objectives","Behavioural Checklist", "Ratings Scale","360 Degree Feedback"],
+                "answer column B": ["Employees first conduct their performance assessment on their own against a set list of criteria.","Employee and manager agree to performance goals that the employee will achieve within a specific period of time.","Manager checks YES when they believe the employee has exhibited a trait.","Each set of criteria is weighted so that a measured score can be calculated at the end of the review.","Feedback from the manager and employees."]
+            },
+                {
+                "id": 14,
+                "clip_start": 1709,
+                "clip_end": 1742,
+                "statement": "For the following multiple response questions, select all the options that are correct.",
+                "question": "Which of the following are standard in most Performance Appraisal Forms?",
+                "a": "Core Competencies",
+                "b": "Performance Goals",
+                "c": "Rating system",
+                "d": "Career aspirations",
+                "answer": "a,b,c"
+            },
+            {
+                "id": 15,
+                "clip_start": 1751,
+                "clip_end": 1779,
+                "question": "Core Competencies are measurable skills, knowledge, abilities, and behaviors required to competently fulfill the responsibilities of a role.",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 16,
+                "clip_start": 1819,
+                "clip_end": 1826,
+                "question": "What does SMART represent when setting Performance Goals?",
+                "a": "Short, Meaningful, Attainable, Relevant, Timely",
+                "b": "Specific, Meaningful, Attainable, Relevant, Timely",
+                "c": "Short, Measurable, Attainable, Real, Timely",
+                "d": "Specific, Measurable, Achievable, Relevant, Timely",
+                "answer": "d"
+            },
+            {
+                "id": 17,
+                "clip_start": 1827,
+                "clip_end": 1842,
+                "question": "A properly designed performance rating system will differentiate high performance from low performance; identify areas of improvement, highlight development opportunities; and provide transparency in decision making.",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 18,
+                "clip_start": 2005,
+                "clip_end": 2095,
+                "question": "What should a manager focus on in a performance interview?",
+                "a": "All the negative personal characteristics an employee demonstrates.",
+                "b": "Conducting a quick interview.",
+                "c": "Giving concrete, constructive feedback.",
+                "d": "Collaborating with the employee to develop behaviour expectations.",
+                "answer": "c,d"
+            },
+            {
+                "id": 19,
+                "clip_start": 2005,
+                "clip_end": 2019,
+                "question": "A manager should focus on providing personal feedback on the employee’s character.",
+                "true": "True",
+                "false": "False",
+                "answer": "false"
+            },
+                {
+                "id": 14,
+                "clip_start": 2096,
+                "clip_end": 2159,
+                "statement": "For the following multiple response questions, select all the options that are correct.",
+                "question": "In order to have a successful performance interview, a manager should do which of the following:",
+                "a": "Conduct the interview face to face.",
+                "b": "Always have a representative of human resources present",
+                "c": "Choose your words with care.",
+                "d": "Always end after discussing performance issues",
+                "answer": "a,c"
+            }
+        ]
         
     }
 
