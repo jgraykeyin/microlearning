@@ -7,7 +7,6 @@ let path = require('path')
 let bcrypt = require('bcrypt');
 let https = require('https');
 
-
 const USE_HTTPS = false;
 const PORT = 3000;
 const SSL_KEY_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.key');

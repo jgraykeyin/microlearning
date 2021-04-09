@@ -1,0 +1,372 @@
+[
+    {
+        "lessonId": 1,
+        "intro":"<h1>Performance Management Basics</h1><h2>What is Performance Management?</h2><h3>Performance Management is:</h3><ul><li>A strategic approach to improving performance in employees.</li><li>A system within a company that links organizational objectives to employee performance.</li><li>It includes performance review plans, employee performance measurement, coaching, recognizing, and rewarding the performance of employees.</li></ul>",
+        "summary":"<h1>Performance Management is:</h1><p>A strategic approach to improving performance in employees.</p><h2>Performance Management has a positive influence on:</h2><ul><li>Employee engagement</li><li>Retaining talent</li><li>Developing Leaders</li>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Performance Management is a way to improve employee performance?",
+                "answer":true
+            },
+            {
+                "id":2,
+                "question":"Performance Management defines the strategic direction of the organization?",
+                "answer":false
+            },
+            {
+                "id":3,
+                "question":"Performance Management systems increase motivation?",
+                "answer":true
+            },
+            {
+                "id":4,
+                "question":"Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
+                "answer":true
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"Performance Management is:",
+                "a":"A strategic approach",
+                "b":"A way to improve employee performance",
+                "c":"A system that links organizational objectives to employee performance",
+                "d":"All of the above",
+                "answer":"d"
+            },
+            {
+                "question":"Successful Performance Management impacts:",
+                "a":"Employee engagement",
+                "b":"Employee retention",
+                "c":"Leadership Development",
+                "d":"All of the above",
+                "answer":"d"
+            }
+        ]
+    },
+    {
+        "lessonId":2,
+        "intro": "<h1>Performance Management Approaches</h1><h2>What are the Different Approaches to Performance Management?</h2><h3>Traditional Performance Management</h3><ul><li>Focus on review process not people.</li><li>Formal and event driven.</li><li>Separate from work.</li><li>3-5% impact on performance.</li></ul><h3>Everyday Performance Management</h3><ul><li>Focus on people not process.</li><li>Formal and event driven.</li><li>Separate from work.</li><li>3-5% impact on performance.</li></ul><h3>Everyday Performance Management</h3><ul><li>Focus on people not process.</li><li>Informal and ongoing.</li><li>Integrated with work.</li><li>Up to 39% impact on performance.</li></ul>",
+        "summary":"<p>Choose a Performance Management Approach that works for your organization.</p>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"An Everyday Performance Management Approach focuses on people not processes.",
+                "answer":true
+            },
+            {
+                "id":3,
+                "question":"Departments who set monthly performance goals generate greater returns than those who set annual performance goals.",
+                "answer":true
+            }
+        ],
+        "activity":
+        [
+            {
+                "id": 1,
+                "question": "Studies have shown that Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
+                "answer": false    
+            },
+            {
+                "id":2,
+                "question":"<h1>Drag and Drop Activity</h1><h2>Move each characteristic into the appropriate column for the different performance management approaches.</h2><table><tr><th>Traditional Performance Management Approach</th><th>Everyday Performance Management Approach</th></tr><tr><td>Focus on review process not people.</td><td>Focus on people not process.</td></tr><tr><td>Formal and event driven.</td><td>Informal and ongoing.</td></tr><tr><td>Separate from work.</td><td>Integrated with work.</td></tr></table>"
+            }
+        ]
+    },
+    {
+        "lessonId":3,
+        "intro":"<h1>Performance Management Systems</h1><h2>What is a Performance Management System?</h2><ul><li>The goal of a Performance Management Plan is to improve employee performance.</li></ul>",
+        "summary":"<h2>A Performance Management System outlines how performance management will becarried out in an organization.</h2><h2>A Performance Management System is key to the success of an organization.</h2><h3>A successful Performance Management System:</h3><ul><li>Has a clear purpose.</li><li>Is linked to the mission, vision, and strategic direction.</li><li>Fits within the organizational culture.</li><li>Has clearly defined roles, processes, and timelines.</li></ul>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"A Performance Management System explains WHY employee performance needs to improve.",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"A Performance Management System will be most successful if incorporates the company’s mission, vision, and culture.",
+                "answer":true
+            },
+            {
+                "id":3,
+                "question":"Employee’s Performance Goals do not need to be linked to the strategic goals of the organization.",
+                "answer":false
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"A Performance Management System will be most successful if it considers which of the following:",
+                "a":"The company's mission and vision",
+                "b":"The company's organizational culture",
+                "c":"The CEO’s personality",
+                "d":"How many employees in the company",
+                "answer":"a"
+            },
+            {
+                "id":2,
+                "question":"There should be a direct link between an employee’s performance goals and the strategic goals of the organization.",
+                "answer":true
+            }
+        ]
+    },
+    {
+        "lessonId":4,
+        "intro":"<h1>Performance Management Process</h1><h2>What is a Performance Management Process?</h2><h3>The Performance Management Process is:</h3><ul><li>Collaborative, communication-based process</li><li>Executed in alignment with the Process Management System</li><li>Made up of 4 steps.</li></ul><h2>What are the Steps in a Performance Management Process?</h2><h3>The Performance Management Cycle.</h3><ol><li>Performance Planning</li><li>Performance Coaching</li><li>Performance Review</li><li>Recognition/Rewarding</li></ol>",
+        "summary":"<ul><li>The Performance Management Process is a collaborative process.</li><li>The Performance Management Process is a four-step process involving planning, coaching, reviewing, and recognizing.</li><li>The Performance Management Process is cyclical.</li></ul>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Instructions: Put the steps of the Performance Management Cycle in the correct order.",
+                "a":"Performance Planning",
+                "b":"Performance Coaching",
+                "c":"Performance Appraisal",
+                "d":"Rocognition/Reward"
+            },
+            {
+                "id":2,
+                "question":"During Step 1 Performance Planning the performance criteria is established which will be used for the Performance Appraisal.",
+                "answer":true
+            },
+            {
+                "id":3,
+                "question":"During Step 2 Performance Coaching is most successful when done only once a year.",
+                "answer":false
+            },
+            {
+                "id":4,
+                "question":"During Step 3 The Performance Appraisal the manager and employee discuss suggestions to improve the Performance Management Process.",
+                "answer":true
+            },
+            {
+                "id":5,
+                "question":"During Step 4 Recognition and Rewards the manager shares the progress the organization is making towards the strategic goals.",
+                "answer":false
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"Instructions: Put the steps of the Performance Management Cycle in the correct order.",
+                "a":"Performance Planning",
+                "b":"Performance Coaching",
+                "c":"Performance Appraisal",
+                "d":"Rocognition/Reward"
+            }
+        ]
+    },
+    {
+        "lessonId": 5,
+        "intro":"<h1>Performance Appraisal Process</h1><h2>What is a Performance Appraisal?</h2><p>A Performance Appraisal is periodic assessment of an employee’s performance based on the agreed assessment measures.</p><p>A Performance Review is the meeting that happens between an employee and their manager to discuss the employee’s performance</p><p>Facilitated by Human Resources</p><p>Conducted by Managers and Supervisors</p>",
+        "summary":"<p>The Performance Appraisal is the culmination of Performance Management Planning.  The organization chose a Performance Management Approach, from which they developed a Performance Management System.  Within the system, a Performance Management Process was developed which includes the Performance Review or Performance Appraisal. </p>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Competencies and behavioural expectations are defined during the Performance Appraisal Process.",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"Performance Issues should only ever be discussed once a year in the Performance Appraisal",
+                "answer":false
+            },
+            {
+                "id":3,
+                "question":"The Performance Appraisal Process has three steps – the one-on-one interview, archiving, and human resources.",
+                "answer":true
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "header1":"Organizational Benefit",
+                "header2":"Employee Benefit",
+                "option1":"Facilitates strategic decision-making",
+                "option2":"Addresses employee behavioural issues",
+                "option3":"Identifies where management can improve",
+                "option4":"Determines where skills can improve",
+                "option5":"Involves employees in their career development path",
+                "option6":"Opens discussions for goal setting"
+            },
+            {
+                "id":2,
+                "question":"What happens BEFORE the Performance Appraisal Process begins?",
+                "a":"Competencies are defined",
+                "b":"The employee meets one-on-one with their manager",
+                "c":"Performance Coaching to address performance issues",
+                "d":"The Performance Appraisal is shared with Human Resources",
+                "answer":"a,c"
+            },
+            {
+                "id":3,
+                "question":"What happens DURING the Performance Appraisal Process?",
+                "a":"Competencies are defined",
+                "b":"The employee meets one-on-one with their manager",
+                "c":"Performance Coaching to address performance issues",
+                "d":"The Performance Appraisal is shared with Human Resources",
+                "answer":"b,d"
+            }
+        ]
+    },
+    {
+        "lessonId":2,
+        "intro": "<h1>Performance Management Approaches</h1><h2>What are the Different Approaches to Performance Management?</h2><h3>Traditional Performance Management</h3><ul><li>Focus on review process not people.</li><li>Formal and event driven.</li><li>Separate from work.</li><li>3-5% impact on performance.</li></ul><h3>Everyday Performance Management</h3><ul><li>Focus on people not process.</li><li>Formal and event driven.</li><li>Separate from work.</li><li>3-5% impact on performance.</li></ul><h3>Everyday Performance Management</h3><ul><li>Focus on people not process.</li><li>Informal and ongoing.</li><li>Integrated with work.</li><li>Up to 39% impact on performance.</li></ul>",
+        "summary":"<p>Choose a Performance Management Approach that works for your organization.</p>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"An Everyday Performance Management Approach focuses on people not processes.",
+                "answer":true
+            },
+            {
+                "id":3,
+                "question":"Departments who set monthly performance goals generate greater returns than those who set annual performance goals.",
+                "answer":true
+            }
+        ],
+        "activity":
+        [
+            {
+                "id": 1,
+                "question": "Studies have shown that Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
+                "answer": false    
+            },
+            {
+                "id":2,
+                "question":"<h1>Drag and Drop Activity</h1><h2>Move each characteristic into the appropriate column for the different performance management approaches.</h2><table><tr><th>Traditional Performance Management Approach</th><th>Everyday Performance Management Approach</th></tr><tr><td>Focus on review process not people.</td><td>Focus on people not process.</td></tr><tr><td>Formal and event driven.</td><td>Informal and ongoing.</td></tr><tr><td>Separate from work.</td><td>Integrated with work.</td></tr></table>"
+            }
+        ]    },
+    {
+        "lessonId":6
+    },
+    {
+        "lessonId": 7,
+        "intro":"<h1>Performance Appraisal Forms</h1><h2>What is Included in a Performance Appraisal Form?</h2><p>Regardless of the type of Performance Appraisal you utilize, a Performance Appraisal Form will have all or some of the following criteria.</p><ul><li>Employee information including evaluation period.</li><li>Core Competencies</li><li>Performance Goals</li><li>Rating System</li><li>Employee Feedback</li><li>Career Aspirations</li><li> Sign off summary</li></ul>",
+        "summary":"<p>Performance Appraisal Forms support the Performance Appraisal Process</p><ul><li>Core Competencies are measurable skills, knowledge, abilities, and behaviours required to competently fulfill the responsibilities of a role.</li><li>Connecting the employee’s performance goals to the strategic goals of the organization will create meaning for the work that they do which boosts employee engagement.</li><li>A properly designed performance rating system will differentiate high performance from low performance; identify areas of improvement, highlight development opportunities; and provide transparency in decision making.",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"Core Competencies list the organization’s mission and vision.",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"Performance Rating Systems differentiate high performance from low performance and identify areas of improvement.",
+                "answer":true
+            },
+            {
+                "id":3,
+                "question":"Core Competencies, Performance Goals, and Rating Systems are standard sections in most Performance Appraisal Forms.",
+                "answer":true
+            },
+            {
+                "id":4,
+                "question":"SMART Goals will not motivate employees to achieve performance goals.",
+                "answer":false
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"Which of the following are standard in most Performance Appraisal Forms?",
+                "a":"Core Competencies",
+                "b":"Performance Goals",
+                "c":"Rating System",
+                "d":"Career Aspirations",
+                "answer":"a,b,c,d"
+            },
+            {
+                "id":5,
+                "question":"Core Competencies are measurable skills, knowledge, abilities, and behaviours required to competently fulfill the responsibilities of a role.",
+                "answer":true
+            },
+            {
+                "question":"What does SMART represent when setting Performance Goals?",
+                "a":"Short, Meaningful, Attainable, Relevant, Timely",
+                "b":"Specific, Meaningful, Attainable, Relevant, Timely",
+                "c":"Short, Measurable, Attainable, Real, Timely",
+                "d":"Specific, Measurable, Achievable, Relevant, Timely",
+                "answer":"d"
+            },
+            {
+                "id":6,
+                "question":"A properly designed performance rating system will differentiate high performance from low performance; identify areas of improvement, highlight development opportunities; and provide transparency in decision making",
+                "answer":true
+            }
+        ]
+    },
+    {
+        "lessonId": 8,
+        "intro":"<h1>Performance Interview</h1><h2>How to set the stage for a Performance Interiew</h2><p>As a Manager it is important to understand that the performance interview can be the most rewarding or most debilitating process for an employee.</p><p>It is up to you to ensure positive outcomes regardless of how bad employee performance has been and to recognize that improvement is possible.</p>",
+        "summary":"<p>You have now learned how to successfully conduct a performance interview which is step 3 of the performance management process – the performance appraisal.  Having a positive performance appraisal experience will improve an employee’s feelings of satisfaction with their job, which will motivate them to work harder and since improving employee performance is the overarching goal of performance management plans, it is critical for a manager to learn how to effectively conduct a performance interview.  The more employees are engaged and satisfied with their work, the better the organization as a whole will perform.</p>",
+        "summary2":"<h1>What did we Learn?</h1><ul><li>What Performance Management is and the benefits of a successful approach?</li><li>The purpose of a Performance Management System and how a Performance Management Process supports it.</li><li>What a Performance Appraisal is and the benefits of a good appraisal</li><li>The five types of performance appraisals.</li><li>The steps in the Performance Appraisal process and how to conduct a successful performance appraisal.</li></ul>",
+        "review":
+        [
+            {
+                "id":1,
+                "question":"It is acceptable to have a performance interview over the phone?",
+                "answer":false
+            },
+            {
+                "id":2,
+                "question":"A manager should focus on providing personal feedback on the employee’s character.",
+                "answer":false
+            },
+            {
+                "id":3,
+                "question":"It is important the manager chooses words carefully and ends on a positive note.",
+                "answer":true
+            },
+            {
+                "id":4,
+                "question":"A Performance Appraisal will feel successful if the manager focuses on concrete, constructive feedback.",
+                "answer":true
+            }
+        ],
+        "activity":
+        [
+            {
+                "id":1,
+                "question":"In order to have a successful performance interview, a manager should do which of the following:",
+                "a":"Conduct the interview face to face",
+                "b":"Always have a representative of human resources present",
+                "c":"Choose your words with care",
+                "d":"Always end after discussing performance issues",
+                "answer":"a,c"
+            },
+            {
+                "question":"What should a manager focus on in a performance interview?",
+                "a":"All the negative personal characteristics an employee demonstrates",
+                "b":"Conducting a quick interview",
+                "c":"Giving concrete, constructive feedback",
+                "d":"Collaborating with the employee to develop behaviour expectations",
+                "answer":"c,d"
+            }
+        
+        ]
+    }
+]

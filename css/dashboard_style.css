@@ -1,19 +1,55 @@
 body {
-    background-image: url("/images/Background1.png");
-    background-size: cover;
+    background-color: #2E1B33;
     color: #fff;
+    margin: 0;
 }
 
 .main-container {
-    display: inline-block;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     cursor: pointer;
+    background-image: url("../images/ring-green.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
+
+.topnav {
+    height: 60px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #75AF6A;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.hamburger-btn {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
 
 .bar1, .bar2, .bar3 {
     width: 35px;
-    height: 5px;
+    height: 2px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 6px 6px;
     transition: 0.4s;
     z-index: 50;
 }
@@ -58,4 +94,39 @@ body {
       padding-bottom: 4px;
       padding-left: 20px;
       padding-right: 20px;
-  }
+}
+
+.video-area {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.button-area {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.truefalse-btn {
+    margin: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #2E1B33;
+    border: 1px solid #75AF6A;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 22px;
+    c
+}
