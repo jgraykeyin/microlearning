@@ -41,6 +41,20 @@ function main() {
                 // Set the question title
                 let question_title = document.querySelector(".question-title");
                 question_title.innerHTML = quiz[0]["quiz"][0]["question"];
+
+                // Set the quiz options
+                let option_a = document.getElementById("option-a");
+                let option_b = document.getElementById("option-b");
+                let option_c = document.getElementById("option-c");
+                let option_d = document.getElementById("option-d");
+
+                // Insert the quiz options into the document
+                option_a.innerHTML = quiz[0]["quiz"][0]["a"];
+                option_b.innerHTML = quiz[0]["quiz"][0]["b"];
+                option_c.innerHTML = quiz[0]["quiz"][0]["c"];
+                option_d.innerHTML = quiz[0]["quiz"][0]["d"];
+
+
             }
         })
 
@@ -51,8 +65,23 @@ function main() {
     // Pull in JSON Data
     fetchJSONData();
 
+
+    // Setup the audio button
+    let audioBtn = document.getElementById("audio-button");
+    audioBtn.addEventListener("click", function() {
+        let video_player = document.getElementById("video-player");
+        video_player.muted = !video_player.muted;
+
+        if (audioBtn.innerText === "Turn on sound") {
+            audioBtn.innerText = "Turn off sound";
+        } else {
+            audioBtn.innerText = "Turn on sound";
+        }
+    });
+
+
     // Setup the hamburger button
-    hamburgerBtn = document.querySelector(".hamburger-btn");
+    let hamburgerBtn = document.querySelector(".hamburger-btn");
     hamburgerBtn.addEventListener("click", function() {
         //hamburgerBtn.classList.toggle("change");
 
