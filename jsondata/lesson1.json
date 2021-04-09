@@ -1,0 +1,19 @@
+[
+    {
+        "lesson_name": "Performance Management Plans",
+        "video_file": "performance.mp4",
+        "quiz":
+        {
+            "id": 1,
+            "clip_start": 72,
+            "clip_end": 108,
+            "question": "Performance Management is:",
+            "a": "A strategic approach",
+            "b": "A way to improve employee performance.",
+            "c": "A system that links organizational objectives to employee performance",
+            "d": "All the above",
+            "answer": "d"
+        }
+    }
+
+]
