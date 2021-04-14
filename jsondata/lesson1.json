@@ -8,18 +8,18 @@
                 "id": 1,
                 "clip_start": 72,
                 "clip_end": 108,
-                "question": "Performance Management is:",
-                "a": "A strategic approach",
+                "question": "Performance Management is.",
+                "a": "A strategic approach.",
                 "b": "A way to improve employee performance.",
-                "c": "A system that links organizational objectives to employee performance",
-                "d": "All the above",
+                "c": "A system that links organizational objectives to employee performance.",
+                "d": "All the above.",
                 "answer": "d"
             },
             {
                 "id": 2,
                 "clip_start": 109,
                 "clip_end": 125,
-                "question": "Is it important to learn about Performance Management:",
+                "question": "Is it important to learn about Performance Management.",
                 "a": "Set our own goals.",
                 "b": "Support each other in continued learning and improvement.",
                 "c": "Assist in attaining of organizational objectives.",
@@ -30,7 +30,7 @@
                 "id": 3,
                 "clip_start": 126,
                 "clip_end": 175,
-                "question": "Making Performance Management should a priority does NOT help to:",
+                "question": "Making Performance Management should a priority does NOT help to.",
                 "a": "develop customers.",
                 "b": "develop employees.",
                 "c": "establish clear goals.",
@@ -72,12 +72,13 @@
                 "clip_start": 578,
                 "clip_end": 603,
                 "statement": "For the following multiple response questions, select all the options that are correct.",
-                "question": "A Performance Management System will be most successful if it considers which of the following:",
+                "question": "A Performance Management System will be most successful if it considers which of the following.",
                 "a": "The company’s mission and vision.",
                 "b": "The company’s organizational culture.",
                 "c": "The CEO’s personality.",
                 "d": "How many employees in the company.",
-                "answer": "a,b"
+                "answer": "a",
+                "answer": "b"
             },
                 {
                 "id": 8,
@@ -115,7 +116,8 @@
                 "b": "The employee meets one-on-one with their manager.",
                 "c": "Performance Coaching to address performance issues.",
                 "d": "The Performance Appraisal is shared with Human Resources.",
-                "answer": "a,c"
+                "answer": "a",
+                "answer": "c"
             },
             {
                 "id": 12,
@@ -127,7 +129,8 @@
                 "b": "The employee meets one-on-one with their manager.",
                 "c": "Performance Coaching to address performance issues.",
                 "d": "The Performance Appraisal is shared with Human Resources.",
-                "answer": "b,d"
+                "answer": "b",
+                "answer": "d"
             },
             {
                 "id": 13,
@@ -147,7 +150,9 @@
                 "b": "Performance Goals",
                 "c": "Rating system",
                 "d": "Career aspirations",
-                "answer": "a,b,c"
+                "answer": "a",
+                "answer": "b",
+                "answer": "c"
             },
             {
                 "id": 15,
@@ -187,7 +192,8 @@
                 "b": "Conducting a quick interview.",
                 "c": "Giving concrete, constructive feedback.",
                 "d": "Collaborating with the employee to develop behaviour expectations.",
-                "answer": "c,d"
+                "answer": "c",
+                "answer": "d"
             },
             {
                 "id": 19,
@@ -208,7 +214,8 @@
                 "b": "Always have a representative of human resources present",
                 "c": "Choose your words with care.",
                 "d": "Always end after discussing performance issues",
-                "answer": "a,c"
+                "answer": "a",
+                "answer": "c"
             }
         ]
         
