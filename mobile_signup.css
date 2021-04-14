@@ -5,7 +5,8 @@ body {
 
 .main-container {
   position: relative;
-  color: white;
+  width: 80vw;
+  height: 80vh;
   padding: 2rem;
   margin-top: 5rem;
   display: flex;
@@ -14,12 +15,6 @@ body {
   align-content: center;
   justify-content: center;
   justify-self: center;
-}
-
-.logo {
-  position: absolute;
-  top: 0px;
-  right: 0px;
 }
 
 
@@ -31,7 +26,6 @@ header {
   padding: 20px;
   max-width: 600px;
 }
-
 
 
 @media only screen and (min-width: 600px) {

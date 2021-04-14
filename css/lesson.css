@@ -2,6 +2,7 @@ body {
     background-color: #2E1B33;
     color: #fff;
     margin: 0;
+    font-family: 'Open sans', sans-serif;
 }
 
 .main-container {
@@ -14,6 +15,7 @@ body {
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
+    justify-content: baseline;
 }
 
 .topnav {
@@ -108,6 +110,83 @@ body {
     padding: 0px;
 }
 
+.question-area {
+    display: none;
+    flex-direction: column;
+    padding: 16px;
+    align-self: center;
+    background-color: rgb(34, 25, 33);
+    border-bottom: 1px solid #fff;
+}
+
+.question-area h1 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.activity-area {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-self: center;
+    background-color: rgb(34, 25, 33);
+    border-bottom: 1px solid #fff;
+}
+
+.act-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:100%;
+    color: #000;
+}
+
+.act-column {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.act-heading {
+    padding: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid black;
+    background-color:#98c290;
+    font-size: 15px;
+}
+
+.act-spacer {
+    height: 4rem;
+}
+
+.dragtext {
+    padding: 12px;
+    max-width: 142px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-items:normal;
+    align-self:baseline;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.option-text {
+    padding-left: 8px;
+}
+
 .button-area {
     display: flex;
     flex-direction: row;
@@ -128,5 +207,6 @@ body {
     border-radius: 30px;
     color: #fff;
     font-size: 22px;
-    c
+    
 }
+
