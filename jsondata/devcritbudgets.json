@@ -1,0 +1,216 @@
+[
+    {
+        "lesson_name": "Developing and Critiquing Budgets",
+        "video_file": "Developing and Critiquing Budgets.mp4",
+        "quiz":
+        [
+            {
+                "id": 1,
+                "clip_start": 116,
+                "clip_end": 140,
+                "question": "Which of the following answer best describes the role a budget plays in a municipality?:",
+                "a": "Maximize expenditure.",
+                "b": "Make a reactive decision to expenses.",
+                "c": "Used as a forward-looking tool to plan for future fiscal commitments.",
+                "d": "Ensure the municipality is on track to hit their profit target.",
+                "answer": "c"
+            },
+            {
+                "id": 2,
+                "clip_start": 141,
+                "clip_end": 190,
+                "question": "How to use the Budget for Strategic Planning?:",
+                "a": "Use strategic plans or studies in goal setting.",
+                "b": "Develop a strategy with goals to achieve.",
+                "c": "Consider changes in legislation and level of service.",
+                "d": "All the above.",
+                "answer": "d"
+            },
+            {
+                "id": 3,
+                "youtube":"https://www.youtube.com/watch?v=CmbwNbOZ84o",
+                "question":"Provincial Government legislation of Ontario states money coming in equals money going out, also known as________.:",
+                "a": "Financial management.",
+                "b": "Municipal finance.",
+                "c": "Balanced Budget.",
+                "d": "All the above.",
+                "answer": "c"
+            },
+            {
+                "id": 4,
+                "clip_start": 215,
+                "clip_end": 236,
+                "question": "What is Revenue?:",
+                "a": "Revenue is the income or inflow of cash into an organization",
+                "b": "Revenue is the expense or outflow of cash into an organization",
+                "c": "Revenue is the balance of inflow and outflow of cash into an organization",
+                "d": "None of the above.",
+                "answer": "a"
+            },
+            {
+                "id": 5,
+                "clip_start": 237,
+                "clip_end": 245,
+                "question": "Where does municipal revenue come from?:",
+                "a": "Property Taxes",
+                "b": "Grants and Funding",
+                "c": "Fees",
+                "d": "All of the above.",
+                "answer": "d"
+            },
+            {
+                "id": 6,
+                "clip_start": 252,
+                "clip_end": 278,
+                "question": "Property Tax is the most significant source of income for municipalities:",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 7,
+                "clip_start": 252,
+                "clip_end": 278,
+                "question": "what does MPAC stand for?:",
+                "a": "Municipal Property Assessment Corporation",
+                "b": "Ministry of Property and Assessment Council",
+                "c": "Municipal Priority Appraisal Committee",
+                "d": "Ministry of Priority Appraisal Council.",
+                "answer": "a"
+            },
+            {
+                "id": 8,
+                "clip_start": 304,
+                "clip_end": 336,
+                "question": "Instructions: Put the steps of a grant proves in the correct order:",
+                "answer column A": ["Application","Approval","Purchase","Claim/Proof, Funding to municipality"]
+            },
+            {
+                "id": 9,
+                "clip_start": 337,
+                "clip_end": 368,
+                "question": "Municipal government income is generated only through taxation:",
+                "true": "True",
+                "false": "False",
+                "answer": "false"
+            },
+            {
+                "id": 10,
+                "clip_start": 374,
+                "clip_end": 413,
+                "question": "Municipality received grants from_______.:",
+                "a": "Private Sector",
+                "b": "Provincial Government",
+                "c": "Federal Government",
+                "d": "Both b and c",
+                "answer": "d"
+            },
+            {
+                "id": 11,
+                "clip_start": 491,
+                "clip_end": 500,
+                "question": "Expenses incurred for the day-to-day functioning of the municipality known as__________:",
+                "a": "",
+                "b": "",
+                "c": "",
+                "d": "",
+                "answer": "Operating Expenses"
+            },
+            {
+                "id": 12,
+                "clip_start": 501,
+                "clip_end": 519,
+                "question": "Which of the following expense is the correct example of capital Expense?:",
+                "a": "Salaries and benefits",
+                "b": "Contractor costs",
+                "c": "Equipment",
+                "d": "Material and Supplies",
+                "answer": "c"
+            },
+            {
+                "id": 13,
+                "clip_start": 635,
+                "clip_end": 655,
+                "question": "AMP stands for:",
+                "a": "Administrative municipal priorities",
+                "b": "Application management process",
+                "c": "Asset municipality priority",
+                "d": "Asset management plan",
+                "answer": "d"
+            },
+            {
+                "id": 14,
+                "clip_start": 927,
+                "clip_end": 953,
+                "question": "Municipal Organizations do self-audits to report to provincial and federal governments:",
+                "true": "True",
+                "false": "False",
+                "answer": "false"
+            },
+            {
+                "id": 15,
+                "clip_start": 927,
+                "clip_end": 953,
+                "question": "FIR stands for:",
+                "a": "Financial Information Return",
+                "b": "Fiscal Inventory Refund",
+                "c": "Financing Improvement Report",
+                "d": "None of the above",
+                "answer": "a"
+            },
+            {
+                "id": 16,
+                "clip_start": 954,
+                "clip_end": 986,
+                "question": "A Statement of Financial Position is also called _______________:",
+                "a": "",
+                "b": "",
+                "c": "",
+                "d": "",
+                "answer": "Balance Sheet"
+            },
+            {
+                "id": 17,
+                "clip_start": 1059,
+                "clip_end": 1098,
+                "question": "Cash Flow is the responsibility of which department?:",
+                "a": "Marketing Department",
+                "b": "Finance Department",
+                "c": "HR Department",
+                "d": "Management Department",
+                "answer": "b"
+            },
+            {
+                "id": 18,
+                "clip_start": 1099,
+                "clip_end": 1106,
+                "question": "What types of Accounting are used at a Municipality?:",
+                "a": "Cash Basis Accounting",
+                "b": "Accrual Basis of Accounting",
+                "c": "Fund Accounting",
+                "d": "All of the above",
+                "answer": "d"
+            },
+            {
+                "id": 19,
+                "clip_start": 1208,
+                "clip_end": 1260,
+                "question": "At the end of the year, money in Reserve Funds can be used for any purpose:",
+                "true": "True",
+                "false": "False",
+                "answer": "false"
+            },
+            {
+                "id": 20,
+                "clip_start": 1365,
+                "clip_end": 1436,
+                "question": "An effective budget:",
+                "a": "Is forward-thinking",
+                "b": "Minimizes expenses",
+                "c": "Accounts for fixed costs",
+                "d": "All of the above",
+                "answer": "d"
+            }
+        ]
+    }
+]
