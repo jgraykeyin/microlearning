@@ -8,7 +8,7 @@ function main() {
         let i = localStorage.getItem("item");
 
         // Fetch the JSON file
-        let url="jsondata/lesson1.json";
+        let url="jsondata/performance.json";
         let response = await fetch(url);
         let quiz = await response.json();
 
@@ -142,6 +142,31 @@ function main() {
             sidenav.style.width = max_width
         }
     });
+
+
+    // Drag & Drop code, start with an event listener?
+    let dragElement = document.querySelector(".dragtext");
+    dragElement.addEventListener("click", function() {
+        console.log("clickled")
+    });
+
+    let dragged;
+
+    document.addEventListener("drag", function(event) {
+        console.log("Dragging?");
+
+    }, false);
+
+    document.addEventListener("dragstart", function(event) {
+        console.log("Drag start?");
+        dragged.event.target;
+        event.target.style.opacity = 0.5;
+    }, false);
+
+    document.addEventListener("dragend", function(event) {
+        event.target.stye.opacity = "";
+    });
+
 }
 
 window.addEventListener("load", main);
