@@ -9,7 +9,7 @@
 
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/lesson.css" />
-    <script type="text/javascript" src="js/dragdrop.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
 
@@ -34,29 +34,30 @@
             </div>
         </nav>
 
-        <div class="activity-area">
-            <p>	Move each characteristic into the appropriate column for the different performance management approaches.</p>
-            <div class="act-row">
-                <div class="act-column">
-                    <div class="act-heading">
-                        Traditional Performance Management Approach
-                    </div>
-                    <div class="act-heading">
-                        Everyday Performance Management Approach
-                    </div>
-                </div>
+        <video id="video-player" class="video-area" autoplay="autoplay" controls muted>
+                <source id="video-source" src="" type="video/mp4" />
+        </video>
+
+        <div>
+            <button type="button" id="audio-button">Turn on sound</button>
+        </div>
+
+        <div class="question-area">
+            <h1 class="question-title"></h1>
+            <div class="options">
+                A) <input class="option-input" type="radio" name="quiz-option" value="a"><span id="option-a" class="option-text"></span>
             </div>
-            <div class="act-row">
-                <div class="act-column">
-                    <div class="act-spacer"></div>
-                </div>
+            <div class="options">
+                B) <input class="option-input" type="radio" name="quiz-option" value="b"><span id="option-b" class="option-text"></span>
             </div>
-            <div class="act-row">
-                <div class="act-column">
-                    <div class="dragtext" id="draggable" draggable="true">
-                        Focus on review process not people
-                    </div>
-                </div>
+            <div class="options">
+                C) <input class="option-input" type="radio" name="quiz-option" value="c"><span id="option-c" class="option-text"></span>
+            </div>
+            <div class="options">
+                D) <input class="option-input" type="radio" name="quiz-option" value="d"><span id="option-d" class="option-text"></span>
+            </div>
+            <div class="options">
+                <button type="button" class="truefalse-btn" id="submit-answer">Submit</button>
             </div>
         </div>
 

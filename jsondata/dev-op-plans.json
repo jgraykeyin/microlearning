@@ -1,0 +1,221 @@
+[
+    {
+    "lesson_name": "Developing Operational Plan",
+    "video_file": "Developing Operational Plans.mp4",
+    "quiz":
+    [
+        {
+            "id": 1,
+            "clip_start": 114,
+            "clip_end": 120,
+            "question": "What is an operational review?",
+            "a": "A review of financial plans.",
+            "b": "A review of market analysis.",
+            "c": "A review of all areas of an organization",
+            "d": "A review operational plan ",
+            "answer": "c"
+        },
+        {
+            "id": 2,
+            "clip_start": 131,
+            "clip_end": 157,
+            "question": "Who conducts the operational review?",
+            "a": "Internal team reporting to CEO/CAO",
+            "b": "Internal team reporting to senior director",
+            "c": "Internal team reporting to the governing body",
+            "d": "All the above.",
+            "answer": "d"
+        },
+        {
+            "id": 3,
+            "clip_start": 265,
+            "clip_end": 300,
+            "question": "What are the preliminary steps included in an operational review?",
+            "a": "Get governing body endorsement",
+            "b": "Gain understand and buy-in",
+            "c": "Both",
+            "d": "All the above.",
+            "answer": "c"
+        },
+        {
+            "id": 4,
+            "clip_start": 299,
+            "clip_end": 343,
+            "question": "The key stakeholders in step 2 include",
+            "a": "Governing body",
+            "b": "Labour unions",
+            "c": "Staff",
+            "d": "All the above.",
+            "answer": "d"
+        },
+        {
+            "id": 5,
+            "clip_start": 371,
+            "clip_end": 383,
+            "question": "How many steps are included in Kotter Model?",
+            "a": "9",
+            "b": "12",
+            "c": "8",
+            "d": "5",
+            "answer": "c"
+        },
+        {
+            "id": 6,
+            "clip_start": 379,
+            "clip_end": 383,
+            "question": "Communication is an important step used in Kotter Model?",
+            "true": "True",
+            "false": "False",
+            "answer": "true"
+        },
+        {
+            "id": 7,
+            "clip_start": 485,
+            "clip_end": 513,
+            "question": "A charter covers following areas",
+            "a": "Purpose",
+            "b": "Vision",
+            "c": "Project Team",
+            "d": "Both A & C",
+            "answer": "d"
+        },
+        {
+            "id": 8,
+            "clip_start": 598,
+            "clip_end": 611,
+            "question": "What are some major risks associated with developing operational plans?",
+            "a": "Emotional",
+            "b": "Cognitive",
+            "c": "Social",
+            "d": "All of the above",
+            "answer": "d"
+        },
+        {
+            "id": 9,
+            "clip_start": 709,
+            "clip_end": 740,
+            "question": "What information is needed for analysis?",
+            "a": "Internal scan",
+            "b": "External scan",
+            "c": "Market Analysis",
+            "d": "Both A & B",
+            "answer": "d"
+        },
+        {
+            "id": 10,
+            "clip_start": 741,
+            "clip_end": 761,
+            "question": "SWOT is a part of",
+            "a": "Internal scan",
+            "b": "Business analysis ",
+            "c": "Competitive scan",
+            "d": "Literature review",
+            "answer": "a"
+        },
+        {
+            "id": 11,
+            "clip_start": 761,
+            "clip_end": 770,
+            "question": "PEST covers following areas",
+            "a": "Political environment",
+            "b": "Legal environment",
+            "c": "Social environment",
+            "d": "Both A & C",
+            "answer": "d"
+        },
+        {
+            "id": 12,
+            "clip_start": 787,
+            "clip_end": 800,
+            "question": "Performance findings may include",
+            "a": "Labour relations",
+            "b": "Complaints",
+            "c": "Issues",
+            "d": "All of the above",
+            "answer": "d"
+        },
+        {
+            "id": 13,
+            "clip_start": 944,
+            "clip_end": 950,
+            "question": "Who prepares the report in developing operational review?",
+            "a": "CEO",
+            "b": "Project Lead",
+            "c": "Project Team",
+            "d": "General Manager",
+            "answer": "b"
+        },
+        {
+            "id": 14,
+            "clip_start": 962,
+            "clip_end": 970,
+            "question": "Operational review report begins with executive summary.",
+            "true": "True",
+            "false": "False",
+            "answer": "true"
+        },
+        {
+            "id": 15,
+            "clip_start": 1031,
+            "clip_end": 1051,
+            "question": "Once report is completed, it is submitted for feedback to first",
+            "a": "Governing Body",
+            "b": "Manager",
+            "c": "CEO",
+            "d": "Steering Committee",
+            "answer": "d"
+        },
+        {
+            "id": 16,
+            "clip_start": 1052,
+            "clip_end": 1083,
+            "question": "Organizational changes are the part of",
+            "a": "Identify champions of changes",
+            "b": "Re-tooling of the organization",
+            "c": "Organizational strategy",
+            "d": "Equipment upgrade",
+            "answer": "b"
+        },
+        {
+            "id": 17,
+            "clip_start": 1203,
+            "clip_end": 1224,
+            "question": "Project lead will update on the status of organizational operational review recommendations within a period of",
+            "a": "9 months",
+            "b": "6 months",
+            "c": "12 months",
+            "d": "6 months & 12 months",
+            "answer": "d"
+        },
+        {
+            "id": 18,
+            "clip_start": 1225,
+            "clip_end": 1244,
+            "question": "Teams are also accountable for evaluation.",
+            "true": "True",
+            "false": "False",
+            "answer": "true"
+        },
+        {
+            "id": 19,
+            "clip_start": 1349,
+            "clip_end": 1358,
+            "question": "What are some major causes of transformations failure?",
+            "a": "Lack of vision",
+            "b": "Under communication",
+            "c": "Both",
+            "d": "Neither",
+            "answer": "c"
+        },
+        {
+            "id": 20,
+            "clip_start": 1380,
+            "clip_end": 1400,
+            "question": "Not creating short term wins lead to transformation failure.",
+            "true": "True",
+            "false": "False",
+            "answer": "true"
+        }
+
+    ]}        
+]
