@@ -1,0 +1,33 @@
+body {
+  padding:0;
+  margin:0;
+}
+.drop-area {
+  grid: flex;
+  flex-direction: row-reverse;
+  border: 1px solid black;
+  width:25vw;
+  height:25vh;
+  padding:20px;
+  background-color:green;
+}
+ 
+#traditonal {
+  grid: flex;
+  flex-direction: row;
+}
+
+#everyday {
+  grid: flex;
+  flex-direction: row;
+}
+
+.answers {
+  grid: flex;
+  flex-direction: column;
+}
+
+
+#drop-area.dragging {
+  background-color:#f6f6f6;
+}
