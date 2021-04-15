@@ -1,0 +1,222 @@
+body {
+    background-color: #2E1B33;
+    color: #fff;
+    margin: 0;
+    font-family: 'Open sans', sans-serif;
+}
+
+.main-container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    cursor: pointer;
+    /* background-image: url("../images/ring-green.png"); */
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    justify-content: baseline;
+}
+
+.topnav {
+    height: 60px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #75AF6A;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.hamburger-btn {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 6px;
+    transition: 0.4s;
+    z-index: 50;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    z-index: 50;
+}
+
+.change .bar2 {
+    opacity: 0;
+    z-index: 50;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    z-index: 50;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 80%;
+  }
+
+  .sidenav h1 {
+      padding: 20px;
+  }
+
+  .sidenav p {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 20px;
+      padding-right: 20px;
+}
+
+.video-area {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.question-area {
+    display: none;
+    flex-direction: column;
+    padding: 16px;
+    align-self: center;
+    background-color: rgb(34, 25, 33);
+    border-bottom: 1px solid #fff;
+}
+
+.question-area h1 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.activity-area {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-self: center;
+    background-color: rgb(34, 25, 33);
+    border-bottom: 1px solid #fff;
+}
+
+.act-row {
+    display: flex;
+    flex-direction: row;
+    
+    width:100%;
+    color: #000;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: blueviolet;
+    max-width:9em;
+    flex-basis: 100%;
+    padding:1rem;
+    margin:1rem;
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.act-heading {
+    padding: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid black;
+    background-color:#98c290;
+    font-size: 15px;
+}
+
+.act-spacer {
+    height: 4rem;
+}
+
+.draggable {
+    padding: 1rem;
+    max-width: 142px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.draggable.dragging{
+    opacity: .1;
+}
+
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-items:normal;
+    align-self:baseline;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.option-text {
+    padding-left: 8px;
+}
+
+.button-area {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.truefalse-btn {
+    margin: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #2E1B33;
+    border: 1px solid #75AF6A;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 22px;
+    
+}
+
