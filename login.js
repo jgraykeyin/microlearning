@@ -146,6 +146,24 @@ app.get('/performance.html', function(request, response) {
     }
 });
 
+app.get('/devcritbudgets.html', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, '/devcritbudgets.html'));
+    } else {
+        response.send('Please login to view this page!');
+        response.end();
+    }
+});
+
+app.get('/devopplans.html', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, '/devoplans.html'));
+    } else {
+        response.send('Please login to view this page!');
+        response.end();
+    }
+});
+
 function launchCallback(proto, port){
     console.log(`Server is running at: ${proto}://localhost:${port}`);
 }
