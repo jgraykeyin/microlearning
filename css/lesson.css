@@ -159,11 +159,26 @@ body {
     font-size: 15px;
 }
 
+.dropzone {
+    padding: 2px;
+    border: 1px solid black;
+    background-color: rgb(165, 165, 165);
+    font-size: 14px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .act-spacer {
     height: 4rem;
 }
 
 .dragtext {
+    position: absolute;
+    z-index: 99;
     padding: 12px;
     max-width: 142px;
     background-color: #fff;
@@ -172,6 +187,7 @@ body {
     font-size: 13px;
     font-weight: bold;
 }
+
 
 .options {
     display: flex;
