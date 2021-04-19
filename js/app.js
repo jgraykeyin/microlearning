@@ -129,6 +129,7 @@ function main() {
         }
     })
 
+
     // Setup the audio button
     let audioBtn = document.getElementById("audio-button");
     audioBtn.addEventListener("click", function() {

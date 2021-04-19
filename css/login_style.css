@@ -16,67 +16,50 @@ body {
 
 .main-container img {
     width: 80%;
-    border: 2px solid #52255e;
-    border-radius: 2rem;
-    padding: 2rem;
-    box-shadow: 3px 3px 8px #b43e33;
-
+    padding-bottom: 3rem;
 }
 
 .loginform {
-    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align:start;
-    text-decoration-line: underline;
-    text-shadow: 2px 2px 4px gray;
 }
 
 .loginform input {
-    padding: 1px;
+    padding: 5px;
     margin: 1rem;
     font-size: 20px;
-    padding-bottom: 5rem;
 }
 
 .button-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 1rem;
+    margin-top: 2rem;
 }
 
 .ui-button-light {
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
     padding-right: 40px;
     padding-left: 40px;
     background-color: white;
-    border : 2px solid #291230;
-    box-shadow: 2px 2px 4px #b43e33;
+    border : 1px solid white;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: rgb(36, 35, 35);
-    text-shadow: 2px 2px 4px gray;
-    
+    color: black;
 }
 
 .ui-button-dark {
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
     padding-right: 40px;
     padding-left: 40px;
     background-color: rgba(0,0,0,0.0);
-    border : 2px solid #291230;
+    border : 1px solid white;
     border-radius: 20px;
-    box-shadow: 2px 2px 4px #b43e33;
     font-size: 18px;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 4px gray;
 }
 
 /* Use this for bigger screens */
@@ -96,13 +79,13 @@ body {
     }
 
     .main-container img {
-        width: 70%;
-        padding-bottom: 1.5rem;
+        width: 60%;
+        padding-bottom: 3rem;
     }
 
     .loginform input {
-        padding: 3px;
+        padding: 5px;
         margin: 1rem;
-        font-size: 16px;
+        font-size: 18px;
     }
 }
