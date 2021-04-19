@@ -51,6 +51,8 @@ app.use(bodyParser.json());
 app.use('/css', express.static('css'))
 app.use('/images', express.static('images'))
 app.use('/js', express.static('js'))
+app.use('/jsondata', express.static('jsondata'))
+app.use('/video', express.static('video'))
 
 
 app.get('/', function(request, response) {
@@ -128,7 +130,16 @@ app.post('/auth', function(request, response) {
 
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
-        response.sendFile(path.join(__dirname, '/dashboard.html'));
+        response.sendFile(path.join(__dirname, '/homepage.html'));
+    } else {
+        response.send('Please login to view this page!');
+        response.end();
+    }
+});
+
+app.get('/performance.html', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, '/performance.html'));
     } else {
         response.send('Please login to view this page!');
         response.end();
