@@ -18,9 +18,8 @@ async function fetchJSONData() {
     // Get the number of days / weeks between days
     const oneDay = 24 * 60 * 60 * 1000;
     const diffDays = Math.round(Math.abs((today - start_date) / oneDay));
-    const numWeeks = Math.round(diffDays / 7);
+    const numWeeks = Math.floor(diffDays / 7);
     localStorage.setItem("numWeeks", numWeeks);
-    console.log(numWeeks);
     
     // Get the current question title
     let question = quiz[0]["quiz"][numWeeks]["question"];
