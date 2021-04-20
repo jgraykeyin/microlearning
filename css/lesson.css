@@ -84,7 +84,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    opacity: 80%;
+    opacity: 98%;
   }
 
   .sidenav h1 {
@@ -119,8 +119,43 @@ body {
     border-bottom: 1px solid #fff;
 }
 
-.question-area h1 {
+.question-area h2 {
     font-family: 'Fjalla One', sans-serif;
+}
+
+.truefalse-header {
+    padding: 1rem;
+    justify-self: center;
+    align-self: center;
+    text-align:center;
+}
+
+.truefalse-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 32px;
+}
+
+.truefalse-btn {
+    margin: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #2E1B33;
+    border: 1px solid #75AF6A;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.truefalse-btn:hover {
+    background-color: #fff;
+    color: rgb(34, 25, 33);
+}
+
+.truefalse-btn:focus {
+    background-color: #fff;
+    color: rgb(34, 25, 33);
 }
 
 .activity-area {
@@ -128,6 +163,13 @@ body {
     flex-direction: column;
     padding: 16px;
     align-self: center;
+    background-color: rgb(34, 25, 33);
+    border-bottom: 1px solid #fff;
+}
+
+.truefalse-area {
+    display: none;
+    flex-direction: column;
     background-color: rgb(34, 25, 33);
     border-bottom: 1px solid #fff;
 }
@@ -212,17 +254,10 @@ body {
     align-items: center;
 }
 
-.truefalse-btn {
-    margin: 16px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-    padding-right: 32px;
-    background-color: #2E1B33;
-    border: 1px solid #75AF6A;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 22px;
-    
+#audio-button {
+    padding: 8px;
+    font-size: 18px;
 }
+
+
 
