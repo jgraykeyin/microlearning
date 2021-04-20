@@ -2,13 +2,14 @@
     {
         "lesson_name": "Performance Management Plans",
         "video_file": "performance.mp4",
+        "start_date": "2021-04-20",
         "quiz":
         [
             {
                 "id": 1,
                 "clip_start": 72,
                 "clip_end": 108,
-                "question": "Performance Management is.",
+                "question": "Performance Management is:",
                 "a": "A strategic approach.",
                 "b": "A way to improve employee performance.",
                 "c": "A system that links organizational objectives to employee performance.",
@@ -19,7 +20,7 @@
                 "id": 2,
                 "clip_start": 109,
                 "clip_end": 125,
-                "question": "Is it important to learn about Performance Management.",
+                "question": "It is important to learn about Performance Management to:",
                 "a": "Set our own goals.",
                 "b": "Support each other in continued learning and improvement.",
                 "c": "Assist in attaining of organizational objectives.",
@@ -30,7 +31,7 @@
                 "id": 3,
                 "clip_start": 126,
                 "clip_end": 175,
-                "question": "Making Performance Management should a priority does NOT help to.",
+                "question": "Making Performance Management should be a priority does NOT help to:",
                 "a": "develop customers.",
                 "b": "develop employees.",
                 "c": "establish clear goals.",

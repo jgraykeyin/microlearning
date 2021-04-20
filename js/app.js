@@ -109,6 +109,11 @@ function processAnswer() {
 
     if (user_answer === answer) {
 
+
+        // Database code
+        // Update database tracking number
+        
+        
         // Load up the json data
         let quiz = JSON.parse(localStorage.getItem("data"));
         console.log(quiz)
