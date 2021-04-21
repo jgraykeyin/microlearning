@@ -1,0 +1,36 @@
+[
+  {
+      "lesson_name": "Time and Stress Management",
+      "video_file": "Time and Stress Management Lessons.mp4",
+      "start_date": "2021-04-20",
+      "quiz":
+      [
+          {
+              "id": 1,
+              "clip_start": 172,
+              "clip_end": 176,
+              "question": "What is the process of organizing and planning how you divide your time between various activities and tasks that you are responsible for?:",
+              "a": "Time management.",
+              "b": "Performance management.",
+              "c": "Stress management.",
+              "d": "Responsibilities.",
+              "answer": "a"
+          },
+          {
+          "id": 2,
+                "clip_start": 177,
+                "clip_end": 201,
+                "question": "Select all that apply. Time management leads to:",
+                "a": "Increased productivity.",
+                "b": "Improved work quality.",
+                "c": "Divide time according to work.",
+                "d": "Increased potential for advancement.",
+                "answer": "a,b,d"
+            },
+            {
+          "id": 3,
+                "clip_start": 391,
+                "clip_end": 606,
+                "question": "Match each description with the correct Time management theory."
+            },
+
