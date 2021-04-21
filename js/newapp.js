@@ -15,7 +15,7 @@ async function fetchJSONData() {
     } else if (page == "devcritbudgets.html") {
         filename = "devcritbudgets.json"
     }
-    
+
     // Fetch the JSON file
     let url="jsondata/" + filename;
     let response = await fetch(url);
@@ -38,9 +38,6 @@ async function fetchJSONData() {
     // Save the Week Number
     localStorage.setItem("numWeeks", numWeeks);
 
-    // Setup the starting question index
-    // This will need to change once we can pull data from db for user's completed question
-    localStorage.setItem("currentQuestion", 0);
 }
 
 
@@ -49,18 +46,42 @@ function showQuestion() {
     // Get the JSON data
     let quiz = JSON.parse(localStorage.getItem("data"));
 
-    let index = localStorage.getItem("currentQuestion");
+    let index = parseInt(localStorage.getItem("currentQuestion"));
+    let numWeeks = parseInt(localStorage.getItem("numWeeks"));
+
+    console.log(`index: ${index}`)
     
     // Get the current question title
     let question = quiz[0]["quiz"][index]["question"];
+
+    let question_area = document.querySelector(".question-area");
+    let truefalse_area = document.querySelector(".truefalse-area");
+
+    let number_area = document.querySelector(".number-counter");
+
+    let html = `Question ${index+1} of ${numWeeks+1}`
+    number_area.innerHTML = html;
+
+    // Set the question title
+    let question_title = document.querySelector(".question-title");
+    let truefalse_title = document.querySelector(".truefalse-title");
+    if (quiz[0]["quiz"][index]["true"]) {
+        truefalse_area.style.display = "flex";
+        question_area.style.display = "none";
+        truefalse_title.innerHTML = quiz[0]["quiz"][index]["question"];
+    } else {
+        question_area.style.display = "flex";
+        truefalse_area.style.display = "none";
+        question_title.innerHTML = quiz[0]["quiz"][index]["question"];
+    }
 
     // Save the answer to local storage
     let answer = quiz[0]["quiz"][index]["answer"];
     localStorage.setItem("answer", answer);
 
     // Display the current question in the document
-    let question_title = document.querySelector(".question-title");
-    question_title.innerHTML = question;
+    //let question_title = document.querySelector(".question-title");
+    //question_title.innerHTML = question;
 
     // Display the current options in the document
     let option_a = document.getElementById("option-a");
@@ -101,7 +122,7 @@ function processAnswer() {
         localStorage.setItem("currentQuestion", question_index);
 
         result_title.innerHTML = "Correct";
-        result_body.innerHTML = "";
+        result_body.innerHTML = "Congratulations, you know your stuff!";
         play_btn.style.display = "none";
 
         if (question_index <= numWeeks) {
@@ -128,6 +149,9 @@ function playVideo() {
     // Hide the question area
     let question_area = document.querySelector(".question-area");
     question_area.style.display = "none";
+
+    let truefalse_area = document.querySelector(".truefalse-area");
+    truefalse_area.style.display = "none";
 
     let result_area = document.querySelector(".result");
     result_area.style.display = "none";
@@ -189,9 +213,46 @@ function main() {
     play_btn.display="none";
     play_btn.addEventListener("click", playVideo)
 
+    let home_btn = document.getElementById("home-btn");
+    home_btn.display="none";
+    home_btn.addEventListener("click", function() {
+        window.location.href = "/home";
+    });
+
     let next_btn = document.getElementById("next-btn");
     next_btn.display="none";
-    next_btn.addEventListener("click", playVideo)
+    next_btn.addEventListener("click", function() {
+
+        let currentQuestion = parseInt(localStorage.getItem("currentQuestion"));
+
+        let question_area = document.querySelector(".question-area");
+        let result_area = document.querySelector(".result");
+
+        result_area.style.display = "none";
+        question_area.style.display = "flex";
+        showQuestion();
+    })
+
+
+    // Setup the hamburger button
+    let hamburgerBtn = document.querySelector(".hamburger-btn");
+    hamburgerBtn.addEventListener("click", function() {
+        //hamburgerBtn.classList.toggle("change");
+
+        // Make the side panel pop out or go back in
+        const max_width = "320px";
+        sidenav = document.querySelector(".sidenav")
+        if (sidenav.style.width === max_width) {
+            sidenav.style.width = "0px";
+        } else {
+            sidenav.style.width = max_width
+        }
+    });
+    
+
+    // Setup the starting question index
+    // This will need to change once we can pull data from db for user's completed question
+    localStorage.setItem("currentQuestion", 0);
 
     // Fetch some JSON data yo!
     fetchJSONData();
