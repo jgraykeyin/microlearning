@@ -1,8 +1,21 @@
 async function fetchJSONData() {
     // This function fetches our data from JSON files
 
-    let filename = "performance.json";
+    // Get the current name of the html page
+    let path = window.location.pathname;
+    let page = path.split("/").pop();
+    console.log(page);
 
+    let filename = ""
+    // Load the appropriate JSON file based on the html file currently being used
+    if (page == "performance.html") {
+        filename = "performance.json";
+    } else if (page == "devopplans.html") {
+        filename = "dev-op-plans.json";
+    } else if (page == "devcritbudgets.html") {
+        filename = "devcritbudgets.json"
+    }
+    
     // Fetch the JSON file
     let url="jsondata/" + filename;
     let response = await fetch(url);
@@ -144,11 +157,6 @@ function playVideo() {
             question_area.style.display = "flex";
         }
     })
-}
-
-
-function nextQuestion() {
-    console.log("test");
 }
 
 

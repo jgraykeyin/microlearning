@@ -9,7 +9,7 @@
 
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/lesson.css" />
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/newapp.js"></script>
 </head>
 <body>
 
@@ -45,16 +45,16 @@
         <div class="question-area">
             <h1 class="question-title"></h1>
             <div class="options">
-                A) <input class="option-input" type="radio" name="quiz-option" value="a"><span id="option-a" class="option-text"></span>
+                <input class="option-input" type="radio" name="quiz-option" value="a"><span id="option-a" class="option-text"></span>
             </div>
             <div class="options">
-                B) <input class="option-input" type="radio" name="quiz-option" value="b"><span id="option-b" class="option-text"></span>
+                <input class="option-input" type="radio" name="quiz-option" value="b"><span id="option-b" class="option-text"></span>
             </div>
             <div class="options">
-                C) <input class="option-input" type="radio" name="quiz-option" value="c"><span id="option-c" class="option-text"></span>
+                <input class="option-input" type="radio" name="quiz-option" value="c"><span id="option-c" class="option-text"></span>
             </div>
             <div class="options">
-                D) <input class="option-input" type="radio" name="quiz-option" value="d"><span id="option-d" class="option-text"></span>
+                <input class="option-input" type="radio" name="quiz-option" value="d"><span id="option-d" class="option-text"></span>
             </div>
             <div class="options">
                 <button type="button" class="truefalse-btn" id="submit-answer">Submit</button>
@@ -72,6 +72,13 @@
             <div class="button-area">
                 <button type="button" class="truefalse-btn" id="submit-tfanswer">Submit</button>
             </div>
+        </div>
+
+        <div class="result">
+            <h1 class="result-title"></h1>
+            <p class="result-body"></p>
+            <button type="button" class="truefalse-btn" id="play-btn">Play Video</button>
+            <button type="button" class="truefalse-btn" id="next-btn">Next Question</button>
         </div>
 
     </div>
