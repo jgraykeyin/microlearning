@@ -18,6 +18,31 @@ body {
     justify-content: baseline;
 }
 
+.main-container-DCB {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    cursor: pointer;
+    background-image: url("../images/dcb.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    justify-content: baseline;
+}
+
+.main-container-DOP {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    cursor: pointer;
+    background-image: url("../images/dop.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    justify-content: baseline;
+}
 .topnav {
     height: 60px;
     width: 100%;
@@ -167,6 +192,31 @@ body {
     padding-right: 32px;
     background-color: #2E1B33;
     border: 1px solid #75AF6A;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.truefalse-btn-dcb {
+    margin: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #2E1B33;
+    border: 1px solid #6BC9CB;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 22px;
+}
+.truefalse-btn-dop {
+    margin: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #2E1B33;
+    border: 1px solid #DE5826;
     border-radius: 30px;
     color: #fff;
     font-size: 22px;
