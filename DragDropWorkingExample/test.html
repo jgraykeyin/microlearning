@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/test/test.css" />
-    <script type= "text/javascript" src="/test/test2.js" defer></script>
+    <link rel="stylesheet" href="/DragDropWorkingExample/test.css" />
+    <script type= "text/javascript" src="/DragDropWorkingExample/test2.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -31,33 +31,32 @@
                 <p class="lesson-name">Performance Management Basics</p>
             </div>
         </nav>
-
-        <div class="activity-area" style="border-color: chartreuse;">
+        
+        <div class="activity-area">
             <p>	Move each characteristic into the appropriate column for the different performance management approaches.</p>
             <div class="act-row"></div>
-                <div class="act-column">
+                <!-- <div class="act-column">
                     <div class="act-heading">
                         Traditional Performance Management Approach
                     </div>
                     <div class="act-heading">
                         Everyday Performance Management Approach
-                    </div>
+                    </div> -->
                 </div>
-            </div>
-            <div class="act-row">
-            </div>
-            <div class="act-row">
-                <div class="container" style="border-color:white;">
-                    <P class="draggable" draggable="true" >Hello1</P>
-                    <p class="draggable" draggable="true" >Hello2</p>
-                    <p class="draggable" draggable="true" >Hello3</p>
+            <div  class="act-row">
+                <div id ="tpCont"class="container" style="border-color:white;">
+                    <h2> Traditional Performance Management Approach</h2>
+                    <P id ="tp1" class="draggable" draggable="true" >Focus on review process not people</P>
+                    <p id ="tp2" class="draggable" draggable="true" >Formal and event driven</p>
+                    <p id ="tp3" class="draggable" draggable="true" >Separate from work</p>
                 </div>
-                <div class="container">
-                    <p class="draggable" draggable="true" >Hello4</p>
-                    <p class="draggable" draggable="true" >Hello5</p>
-                    <p class="draggable" draggable="true" >Hello6</p>
+                <div id = "epCont" class="container">
+                    <h2>Everyday Performance Management Approach</h2>
+                    <p id ="ep4" class="draggable" draggable="true" >Focus on people not process</p>
+                    <p id ="ep5" class="draggable" draggable="true" >Informal and ongoing</p>
+                    <p id ="ep6" class="draggable" draggable="true" >Integrated with work</p>
                 </div>
-
+                <button onClick=submit()></button>
             </div>
         </div>
 
