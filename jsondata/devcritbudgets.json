@@ -110,12 +110,12 @@
                 "id": 11,
                 "clip_start": 491,
                 "clip_end": 500,
-                "question": "Expenses incurred for the day-to-day functioning of the municipality known as__________:",
-                "a": "",
-                "b": "",
-                "c": "",
-                "d": "",
-                "answer": "Operating Expenses"
+                "question": "Expenses incurred for the day-to-day functioning of the municipality is known as__________:",
+                "a": "Revenue",
+                "b": "Capital Expenses",
+                "c": "Operating Expenses",
+                "d": "Expenditures",
+                "answer": "c"
             },
             {
                 "id": 12,
@@ -164,11 +164,11 @@
                 "clip_start": 954,
                 "clip_end": 986,
                 "question": "A Statement of Financial Position is also called _______________:",
-                "a": "",
-                "b": "",
-                "c": "",
-                "d": "",
-                "answer": "Balance Sheet"
+                "a": "Budget",
+                "b": "Accessment Plan",
+                "c": "Asset Sheet",
+                "d": "Balance Sheet",
+                "answer": "d"
             },
             {
                 "id": 17,
