@@ -6,31 +6,221 @@
       "quiz":
       [
           {
-              "id": 1,
-              "clip_start": 172,
-              "clip_end": 176,
-              "question": "What is the process of organizing and planning how you divide your time between various activities and tasks that you are responsible for?:",
-              "a": "Time management.",
-              "b": "Performance management.",
-              "c": "Stress management.",
-              "d": "Responsibilities.",
-              "answer": "a"
+               "id": 1,
+               "clip_start": 172,
+               "clip_end": 176,
+               "question": "What is the process of organizing and planning how you divide your time between various activities and tasks that you are responsible for?:",
+               "a": "Time management.",
+               "b": "Performance management.",
+               "c": "Stress management.",
+               "d": "Responsibilities.",
+               "answer": "a"
           },
           {
-          "id": 2,
-                "clip_start": 177,
-                "clip_end": 201,
-                "question": "Select all that apply. Time management leads to:",
-                "a": "Increased productivity.",
-                "b": "Improved work quality.",
-                "c": "Divide time according to work.",
-                "d": "Increased potential for advancement.",
-                "answer": "a,b,d"
+               "id": 2,
+               "clip_start": 177,
+               "clip_end": 201,
+               "question": "Select all that apply. Time management leads to:",
+               "a": "Increased productivity.",
+               "b": "Improved work quality.",
+               "c": "Divide time according to work.",
+               "d": "Increased potential for advancement.",
+               "answer": "a,b,d"
             },
             {
-          "id": 3,
-                "clip_start": 391,
-                "clip_end": 606,
-                "question": "Match each description with the correct Time management theory."
-            },
+               "id": 3,
+               "clip_start": 391,
+               "clip_end": 606,
+               "question": "Match each description with the correct Time Management Theory.",
+               "match1": ["The ABC Method", "Prioritizes 20% of inputs and 80% of outputs"],
+               "match2": ["The Pareto Principle", "Concentration on large tasks. Fits similar tasks around large ones"],
+               "match3": ["The Pickle Jar Theory","Works on a task for 25 minutes and then take a break"],
+               "match4": ["The Pomodoro Technique","Prioritizes work and create to do lists"]
 
+            },
+            {
+                "id": 4,
+                "clip_start": 1075,
+                "clip_end": 1090,
+                "question": "This can be harmful for physical health; it increases several diseases including hypertension and heart diseases.",
+                "a": "Stress",
+                "b": "Eustress",
+                "c": "Isolation",
+                "d": "All the above",
+                "answer": "a"   
+            },
+            {
+                "id": 5,
+                "clip_start": 1147,
+                "clip_end": 1158,
+                "question": "External stressors can have the same physical and physiological effects on one’s body.",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 6,
+                "clip_start": 1147,
+                "clip_end": 1159,
+                "question": "Putting pressure on ourself and fear of others both are examples of:",
+                "a": "External stressors",
+                "b": "Internal stressors",
+                "c": "Both A and B",
+                "d": "None of the above",
+                "answer": "b"
+            },
+            {
+               "id": 7,
+               "clip_start": 1160,
+               "clip_end": 1179,
+               "question": "What is positive stress called? It is what we can feel when we are excited, it can impact our pulse rates and hormones.",
+               "a": "External stressors",
+               "b": "Internal stressors",
+               "c": "Eustress",
+               "d": "None of the above",
+               "answer": "c"
+            },
+            {
+               "id": 8,
+               "clip_start": 1186,
+               "clip_end": 1200,
+               "question": "Select all that apply. What are some impacts of distress in human life?",
+               "a": "Divorce or separation",
+               "b": "Loss of employment",
+               "c": "Illness",
+               "d": "Going on vacation",
+               "answer": "a,b,c"
+            },
+            {
+               "id": 9,
+               "clip_start": 1208,
+               "clip_end": 1240,
+               "question": "The signs of stress are traditional categories in how many major areas?",
+               "a": "One",
+               "b": "Two",
+               "c": "Three",
+               "d": "Four",
+               "answer": "d"
+            },
+            {
+               "id": 10,
+               "clip_start": 1248,
+               "clip_end": 1253,
+               "question": "Emotional signs of stress include:",
+               "a": "Depression",
+               "b": "Worrying",
+               "c": "Negativity",
+               "d": "Self-Isolation",
+               "answer": "a"
+            },
+            {
+               "id": 11,
+               "clip_start": 1280,
+               "clip_end": 1291,
+               "question": "How many stages does the general adaption syndrome model contain?:",
+               "a": "One",
+               "b": "Two",
+               "c": "Three",
+               "d": "Four",
+               "answer": "c"
+            },
+            {
+                "id": 12,
+                "clip_start": 1347,
+                "clip_end": 1366,
+                "question": "During this stage the body will not be as strong as it was during the initial response:",
+                "a": "The Alarm Stage",
+                "b": "The Resistance Stage",
+                "c": "The Exhaustion Stage",
+                "d": "All the above",
+                "answer": "b" 
+            },
+            {
+                "id": 13,
+                "clip_start": 1408,
+                "clip_end": 1410,
+                "question": "How are we able to eliminate stress:",
+                "a": "Regular exercise",
+                "b": "Eating too much",
+                "c": "Watching television",
+                "d": "None of the above",
+                "answer": "a" 
+            },
+            {
+                "id": 14,
+                "clip_start": 1458,
+                "clip_end": 1492,
+                "question": "Ensuring fair benefits plans options and creating healthy workplace initiatives are a way by which manager can support their employees with managing the stress.",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 15,
+                "clip_start": 1530,
+                "clip_end": 1545,
+                "question": "When people are experiencing this kind of stress, it begins to negatively affect their Physical and mental health.",
+                "a": "Chronic stress",
+                "b": "Internal Stressor",
+                "c": "External stressor",
+                "d": "None of the above",
+                "answer": "a" 
+            },
+            {
+                "id": 16,
+                "clip_start": 1555,
+                "clip_end": 1565,
+                "question": "According to the Center of Addiction and Mental health _________ number of employees are off due to stress weekly.",
+                "a": "5,000",
+                "b": "50,000",
+                "c": "500,000",
+                "d": "500",
+                "answer": "c" 
+            },
+            {
+                "id": 17,
+                "clip_start": 1568,
+                "clip_end": 1577,
+                "question": "Managing workplace stress will result in:",
+                "a": "Improves relationships",
+                "b": "Improves physical health",
+                "c": "Improves individual’s performance",
+                "d": "None of the above",
+                "answer": "c" 
+            },
+            {
+                "id": 18,
+                "clip_start": 1770,
+                "clip_end": 1779,
+                "question": "Mindfulness is a practice to creating a space for a self to think, breathe and a space between us and our reactions.",
+                "true": "True",
+                "false": "False",
+                "answer": "true"
+            },
+            {
+                "id": 19,
+                "clip_start": 1787,
+                "clip_end": 1822,
+                "question": "What are some characteristics of mindfulness?:",
+                "a": "Human ability to fully present",
+                "b": "Creates an awareness",
+                "c": "Improves health and wellbeing",
+                "d": "All of the above",
+                "answer": "d" 
+            },
+            {
+                "id": 20,
+                "clip_start": 1828,
+                "clip_end": 1836,
+                "question": "Spiritual, emotional, physical and cognitive are the four major dimensions of mindfulness?:",
+                "true": "True",
+                "false": "False",
+                "answer": "false"
+            }
+        ]
+    
+    }
+
+]
+
+            
