@@ -38,6 +38,9 @@ async function fetchJSONData() {
     // Save the Week Number
     localStorage.setItem("numWeeks", numWeeks);
 
+    // Display the first available question
+    showQuestion();
+
 }
 
 
@@ -248,7 +251,7 @@ function main() {
             sidenav.style.width = max_width
         }
     });
-    
+
 
     // Setup the starting question index
     // This will need to change once we can pull data from db for user's completed question
@@ -256,9 +259,6 @@ function main() {
 
     // Fetch some JSON data yo!
     fetchJSONData();
-
-    // Display the first available question
-    showQuestion();
 
 }
 
