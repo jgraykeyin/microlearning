@@ -37,7 +37,7 @@ body {
 } */
 
 .hamburger-btn {
-  padding: 4px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
 }
