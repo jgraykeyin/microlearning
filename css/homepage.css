@@ -30,8 +30,14 @@ body {
   justify-content: left;
 }
 
+/* .topnav-line {
+  height:10px;
+  width: 100vw;
+  
+} */
+
 .hamburger-btn {
-  padding: 8px;
+  padding: 4px;
   display: flex;
   flex-direction: column;
 }
@@ -108,17 +114,23 @@ body {
 }
 
 .links {
-
-  text-align: center;
+  text-align: left;
   font-family: 'Fjalla One', sans-serif;
   background-color: #2f1c34;
+}
+
+.link-icon {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
 }
 
 .href {
   padding: 10px;
   margin: 5px;
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
+  filter: drop-shadow(1px 1px 1px black);
   border-bottom: 1px solid grey;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -151,4 +163,6 @@ a:active {
 
 h1 {
   border-bottom: 2px solid #75af6a;
+  text-align: center;
+  filter: drop-shadow(2px 2px 1px black);
 }
