@@ -1,0 +1,230 @@
+[
+    {
+        "lesson_name": "Organizational Culture",
+        "video_file": "Organizational Culture.mp4",
+        "start_date": "2021-04-20",
+        "quiz":
+        [
+            {
+                "id": 1,
+                "clip_start": 129,
+                "clip_end": 147,
+                "question": "What is organizational behaviour?:",
+                "a": "Interacting with each other.",
+                "b": "Managing all work.",
+                "c": "Working in a team.",
+                "d": "Adapting business behaviour.",
+                "answer": "a"
+            },
+            {
+                "id": 2,
+                "clip_start": 147,
+                "clip_end": 151,
+                "question": "Which is the including in the three levels of organizational behaviour?:",
+                "a": "Micro-level.",
+                "b": "Miso-level.",
+                "c": "Macro-level.",
+                "d": "All of the above.",
+                "answer": "d"
+            },
+            {
+                "id": 3,
+                "clip_start": 178,
+                "clip_end": 194,
+                "question":"Why is organizational behaviour important?:",
+                "a": "Achievement of organizational goals and objectives.",
+                "b": "Improve business skills.",
+                "c": "Motivation and engagement.",
+                "d": "Development of high functioning team. ",
+                "answer": "a,c,d"
+            },
+            {
+                "id": 4,
+                "clip_start": 212,
+                "clip_end": 313,
+                "question": "How many approaches do organizational behaviour have?:",
+                "a": "6",
+                "b": "8",
+                "c": "4",
+                "d": "10",
+                "answer": "c"
+            },
+            {
+                "id": 5,
+                "clip_start": 429,
+                "clip_end": 444,
+                "question": " _____ Is the term that defines employees who work at client sites, such as repair technicians.:",
+                "a": "Contractor",
+                "b": "Remote Work",
+                "c": "Subcontractor",
+                "d": "All of the above.",
+                "answer": "b"
+            },
+            {
+                "id": 6,
+                "clip_start": 849,
+                "clip_end": 896,
+                "question": "The MARS Model Includes:",
+                "a": "Motivation",
+                "b": "Adaptability",
+                "c": "Responsibility",
+                "d": "Situational factors",
+                "answer": "b,a"
+            },
+            {
+                "id": 7,
+                "clip_start": 924,
+                "clip_end": 944,
+                "question": "Select the option that does NOT include in Types of the individual?:",
+                "a": "Task performance",
+                "b": "Organizational Citizenship",
+                "c": "Constructive work behaviour",
+                "d": "Maintaining work attendance",
+                "answer": "c"
+            },
+            {
+                "id": 8,
+                "clip_start": 1414,
+                "clip_end": 1422,
+                "question": "Why is Emotional intelligence important?:",
+                "a": "Enables individuals to strive to be better",
+                "b": "Supports you with helping others",
+                "c": "A, B and D",
+                "d": "Allows you to strive to be better",
+                "answer": "c"
+            },
+            {
+                "id": 9,
+                "clip_start": 1467,
+                "clip_end": 1501,
+                "question": " ____________ shape individual beliefs about the value of a job, company or team.:",
+                "a": "Emotions",
+                "b": "Biases",
+                "c": "Intelligence",
+                "d": "Perception",
+                "answer": "a"
+            },
+            {
+                "id": 10,
+                "clip_start": 1620,
+                "clip_end": 1667,
+                "question": "How can Cognitive dissonance be reduced.:",
+                "a": "Change your beliefs and feelings",
+                "b": "Develop positive attitudes.",
+                "c": "Identify positive features of the decision that were not considered before.",
+                "d": "All of the above",
+                "answer": "d"
+            },
+            {
+                "id": 11,
+                "clip_start": 1668,
+                "clip_end": 1708,
+                "question": "There are three building blocks of developing emotional intelligence:",
+                "true": "True",
+                "false": "False",
+                "answer": "false"
+            },
+            {
+                "id": 12,
+                "clip_start": 1743,
+                "clip_end": 1764,
+                "question": "What does EVLN stand for_____________________?:",
+                "a": "Exit Validate Loyalty Neglect",
+                "b": "Exit Vacant Loyalty Neglect",
+                "c": "Exit Voice Loyalty Neglect",
+                "d": "Exit Value Loyalty Neglect",
+                "answer": "c"
+            },
+            {
+                "id": 13,
+                "clip_start": 1765,
+                "clip_end": 1786,
+                "question": "Positive work attitudes are developed by people as a result of the following, except?:",
+                "a": "Relationship they develop",
+                "b": "Interpersonal treatment",
+                "c": "Facial expressions",
+                "d": "Their personality",
+                "answer": "c"
+            },
+            {
+                "id": 14,
+                "clip_start": 1851,
+                "clip_end": 1872,
+                "question": "Individual behaviour is a function of the following factors:",
+                "a": "Values",
+                "b": "Personality",
+                "c": "Facial Expressions",
+                "d": "Self-concept",
+                "e": "All of the above",
+                "answer": "e"
+            },
+            {
+                "id": 15,
+                "clip_start": 1873,
+                "clip_end": 1907,
+                "question": "What does the term Eustress mean?:",
+                "a": "Function of behaviours",
+                "b": "A positive or pleasant stressor",
+                "c": "The study of emotional intelligence",
+                "d": "A negative or unpleasant stressor",
+                "answer": "b"
+            },
+            {
+                "id": 16,
+                "clip_start": 2214,
+                "clip_end": 2242,
+                "question": "What is not True about a team?:",
+                "a": "Exists for a purpose to fulfill or goal to achieve, influence each other",
+                "b": "Members are mutually accountable for achieving a common goal",
+                "c": "A group has one member only",
+                "d": "Perceive themselves to be a team",
+                "answer": "c"
+            },
+            {
+                "id": 17,
+                "clip_start": 2511,
+                "clip_end": 2526,
+                "question": "Mathematical Algorithms can be used to determine a rational decision, but generally we rely on ____________.:",
+                "a": "Experience",
+                "b": "Feeling",
+                "c": "Speculation",
+                "d": "Intuition",
+                "answer": "a"
+            },
+            {
+                "id": 18,
+                "clip_start": 2634,
+                "clip_end": 2651,
+                "question": "Why is team decision-making important?:",
+                "a": "Helps you understand team roles",
+                "b": "Allows you to recognize conflicts and navigate through disagreements",
+                "c": "Enhances your decision-making techniques",
+                "d": "All of the above",
+                "answer": "d"
+            },
+            {
+                "id": 19,
+                "clip_start": 2750,
+                "clip_end": 2767,
+                "question": "____________ is when two or more people have differing interests, needs, goals, beliefs, or values.:",
+                "a": "Biases",
+                "b": "Conflict",
+                "c": "Perception",
+                "d": "Dynamics",
+                "answer": "b"
+            },
+            {
+                "id": 20,
+                "clip_start": 3274,
+                "clip_end": 3307,
+                "question": "When selecting a communication channel, which of the following should be considered?:",
+                "a": "Individual preference",
+                "b": "Organizational norms",
+                "c": "Diversity",
+                "d": "Team norms",
+                "e": "All of the above",
+                "answer": "e"
+            }
+        ]
+    }
+]
