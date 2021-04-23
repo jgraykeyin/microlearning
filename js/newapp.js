@@ -56,7 +56,7 @@ function showQuestion() {
 
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
-
+    let dragdrop_area = document.querySelector(".dragdrop_area")
     let number_area = document.querySelector(".number-counter");
     let tf_number_area = document.getElementById("num-tf");
 
@@ -65,21 +65,36 @@ function showQuestion() {
     tf_number_area.innerHTML = html;
 
     // Set the question title
+   
     let question_title = document.querySelector(".question-title");
     let truefalse_title = document.querySelector(".truefalse-title");
+    let dragdrop_title = document.querySelector(".activity-area")
+   
+  
+    let AA;
     if (quiz[0]["quiz"][index]["true"]) {
         truefalse_area.style.display = "flex";
         question_area.style.display = "none";
         truefalse_title.innerHTML = quiz[0]["quiz"][index]["question"];
-    } else {
+    }else if(quiz[0]["quiz"][index]["heading-A"]){
+        AA = quiz[0]["quiz"][index]["answer_column_A"][0]
+        console.log(AA)
+        dragdrop_area.style.display = "flex";
+        question_area.style.display = "none";
+        truefalse_area.style.display = "none";
+        dragdrop_title.innerHTML = quiz[0]["quiz"][index]["question"]
+    }else {
         question_area.style.display = "flex";
         truefalse_area.style.display = "none";
+        dragdrop_area.style.display = "none";
         question_title.innerHTML = quiz[0]["quiz"][index]["question"];
     }
 
     // Save the answer to local storage
     let answer = quiz[0]["quiz"][index]["answer"];
     localStorage.setItem("answer", answer);
+
+
 
 
     // Display the current options in the document
@@ -92,6 +107,24 @@ function showQuestion() {
     option_b.innerHTML = quiz[0]["quiz"][index]["b"];
     option_c.innerHTML = quiz[0]["quiz"][index]["c"];
     option_d.innerHTML = quiz[0]["quiz"][index]["d"];
+
+    //diplay drag and drop options in the document
+
+    let headA = document.getElementById("tpCont");
+    let headB = document.getElementById("epCont");
+    
+    let colApos2 = document.getElementById("tp2");
+    let colApos3 = document.getElementById("tp3");
+
+    headA.innerHTML = quiz[0]["quiz"][index]["heading-A"];
+    headB.innerHTML = quiz[0]["quiz"][index]["heading-B"];
+    if(quiz[0]["quiz"][index]["heading-A"]){
+        let colApos1 = document.getElementById("tt");
+        colApos1.innerHTML = AA;
+        console.log(colApos1);
+    }
+    // colApos2.innerHTML = quiz[0]["quiz"][index]["answer-column-A"];
+    // colApos3.innerHTML = quiz[0]["quiz"][index]["answer-column-A"];
 }
 
 
