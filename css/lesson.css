@@ -118,7 +118,7 @@ body {
 }
 
 .question-area {
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 16px;
     align-self: center;
@@ -153,15 +153,16 @@ body {
     padding-bottom: 16px;
     padding-left: 32px;
     padding-right: 32px;
-    background-color: #2E1B33;
+    background-color: #fff;
     border: 1px solid #75AF6A;
-    border-radius: 30px;
-    color: #fff;
+    border-radius: 6px;
+    color: #000;
     font-size: 22px;
 }
 
 .submit-btn {
     margin-top: 42px;
+    margin-bottom: 64px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 32px;
@@ -175,13 +176,15 @@ body {
 }
 
 .truefalse-btn:hover {
-    background-color: #fff;
-    color: rgb(34, 25, 33);
+    background-color: #78AF62;
+    color: #000;
+    border: 3px solid #07613A;
 }
 
 .truefalse-btn:focus {
-    background-color: #fff;
-    color: rgb(34, 25, 33);
+    background-color: #78AF62;
+    color: #000;
+    border: 3px solid #07613A;
 }
 
 .activity-area {
@@ -234,18 +237,20 @@ body {
     font-size: 15px;
 }
 
+/*
 .dropzone {
     padding: 2px;
     border: 1px solid black;
     background-color: rgb(165, 165, 165);
     font-size: 14px;
     width: 100%;
-    height: 80px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+*/
 
 .act-spacer {
     height: 4rem;

@@ -4,7 +4,6 @@ async function fetchJSONData() {
     // Get the current name of the html page
     let path = window.location.pathname;
     let page = path.split("/").pop();
-    console.log(page);
 
     let filename = ""
     // Load the appropriate JSON file based on the html file currently being used
@@ -51,8 +50,6 @@ function showQuestion() {
 
     let index = parseInt(localStorage.getItem("currentQuestion"));
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
-
-    console.log(`index: ${index}`)
     
     // Get the current question title
     let question = quiz[0]["quiz"][index]["question"];
@@ -61,9 +58,11 @@ function showQuestion() {
     let truefalse_area = document.querySelector(".truefalse-area");
 
     let number_area = document.querySelector(".number-counter");
+    let tf_number_area = document.getElementById("num-tf");
 
     let html = `Question ${index+1} of ${numWeeks+1}`
     number_area.innerHTML = html;
+    tf_number_area.innerHTML = html;
 
     // Set the question title
     let question_title = document.querySelector(".question-title");
@@ -82,9 +81,6 @@ function showQuestion() {
     let answer = quiz[0]["quiz"][index]["answer"];
     localStorage.setItem("answer", answer);
 
-    // Display the current question in the document
-    //let question_title = document.querySelector(".question-title");
-    //question_title.innerHTML = question;
 
     // Display the current options in the document
     let option_a = document.getElementById("option-a");
@@ -105,9 +101,11 @@ function processAnswer() {
     
     // Get the answer from the json data
     let answer = localStorage.getItem("answer");
+    let tf_answer = localStorage.getItem("tf_answer");
 
     let question_area = document.querySelector(".question-area");
     let result_area = document.querySelector(".result");
+    let truefalse_area = document.querySelector(".truefalse-area");
     let result_title = document.querySelector(".result-title");
     let result_body = document.querySelector(".result-body");
     let play_btn = document.getElementById("play-btn");
@@ -115,6 +113,13 @@ function processAnswer() {
     let question_index = parseInt(localStorage.getItem("currentQuestion"));
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
 
+    // If it's a true or false question, setup the user's answer from localstorage
+    if (answer === "true" || answer === "false") {
+        console.log("TF answer");
+        user_answer = tf_answer;
+    }
+
+    truefalse_area.style.display = "none";
     question_area.style.display = "none";
     result_area.style.display = "flex";
 
@@ -166,23 +171,20 @@ function playVideo() {
     video_player.style.display = "block";
 
     video_player.pause();
-    video_source.src = "video/" + quiz[0]["video_file"];
+    video_source.src = "video/" + quiz[0]["quiz"][index]["video"];
     video_player.load();
 
-    video_player.currentTime = quiz[0]["quiz"][index]["clip_start"];
     video_player.play()
 
-    video_player.addEventListener("timeupdate", function() {
+    video_player.addEventListener("ended", function() {
 
-        if (this.currentTime >= quiz[0]["quiz"][index]["clip_end"]) {
-            this.pause();
+        this.pause();
 
-            // Hide the video player
-            video_player.style.display = "none";
+        // Hide the video player
+        video_player.style.display = "none";
 
-            // Show the question area
-            question_area.style.display = "flex";
-        }
+        // Show the question area
+        question_area.style.display = "flex";
     })
 }
 
@@ -207,9 +209,25 @@ function main() {
     // Make sure the question area is visible
     question_area.style.display = "flex";
 
+    // Setup the True or False buttons
+    let trueBtn = document.getElementById("btn-true");
+    let falseBtn = document.getElementById("btn-false");
+
+    trueBtn.addEventListener("click", function() {
+        localStorage.setItem("tf_answer", "true");
+    });
+
+    falseBtn.addEventListener("click", function() {
+        localStorage.setItem("tf_answer", "false");
+    });
+
     // Setup the submit answer buttons
     let submitBtn = document.getElementById("submit-answer");
     submitBtn.addEventListener("click", processAnswer);    
+
+    // Setup the submit button for true/false
+    let submitTFBtn = document.getElementById("submit-tfanswer");
+    submitTFBtn.addEventListener("click", processAnswer);
 
     // Setup the play button & next button for the video-player
     let play_btn = document.getElementById("play-btn");
