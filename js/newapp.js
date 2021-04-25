@@ -7,15 +7,21 @@ async function fetchJSONData() {
 
     let filename = ""
     // Load the appropriate JSON file based on the html file currently being used
-    if (page == "performance") {
+    if (page === "performance") {
         filename = "performance.json";
         localStorage.setItem("course", "performance");
-    } else if (page == "devopplans") {
+    } else if (page === "devopplans") {
         filename = "dev-op-plans.json";
         localStorage.setItem("course", "devops");
-    } else if (page == "devcritbudgets") {
+    } else if (page === "devcritbudgets") {
         filename = "devcritbudgets.json"
         localStorage.setItem("course", "budgets");
+    } else if (page === "culture") {
+        filename = "organizationalCulture.json";
+        localStorage.setItem("course", "culture");
+    } else if (page === "timestress") {
+        filename = "time-stress-management.json";
+        localStorage.setItem("course", "stress")
     }
 
     // Fetch the JSON file
@@ -332,7 +338,9 @@ function getUserProgress() {
         let progress = {
             "performance":0,
             "budgets":0,
-            "devops":0
+            "devops":0,
+            "culture":0,
+            "stress":0,
         }
         localStorage.setItem("user_progress", JSON.stringify(progress))
         console.log(progress)
