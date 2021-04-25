@@ -91,7 +91,10 @@
                 "clip_start": 304,
                 "clip_end": 336,
                 "question": "Instructions: Put the steps of a grant proves in the correct order:",
-                "answer column A": ["Application","Approval","Purchase","Claim/Proof, Funding to municipality"]
+                "heading_a": "Order",
+                "heading_b": "",
+                "answer_column_a": ["Application","Approval","Purchase","Claim/Proof, Funding to municipality"],
+                "answer_column_b": []
             },
             {
                 "id": 9,
