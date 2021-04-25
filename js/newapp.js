@@ -40,21 +40,8 @@ async function fetchJSONData() {
     // Save the Week Number
     localStorage.setItem("numWeeks", numWeeks);
 
-    let completed = [];
-    // Initialize localStorage to track the questions completed
-    console.log(localStorage.getItem("completed"));
-    if (localStorage.getItem("completed") === null) {
-        completed =
-            {
-                "performance":0,
-                "budgets":0,
-                "devops":0,
-                "culture":0,
-                "stress":0
-            }
-
-        localStorage.setItem("completed", JSON.stringify(completed));
-    }
+    // Track the user's progres
+    getUserProgress();
 
     // Display the first available question
     showQuestion();
@@ -68,18 +55,6 @@ function showQuestion() {
 
     let index = parseInt(localStorage.getItem("currentQuestion"));
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
-
-    // Check the user's progress
-    /*
-    let completed = JSON.parse(localStorage.getItem("completed"));
-    console.log(index)
-    console.log(completed[0]["performance"])
-    if (completed[0]["performance"] > index) {
-        index = completed[0][];
-        console.log("Check")
-        console.log(index);
-    }
-    */
     
     // Get the current question title
     let question = quiz[0]["quiz"][index]["question"];
@@ -161,9 +136,10 @@ function showQuestion() {
 
 
 function processAnswer() {
-    // Get the user's selected option
-    let user_answer = document.querySelector("input[name='quiz-option']:checked").value;
-    
+
+
+    let user_answer = "";
+
     // Get the answer from the json data
     let answer = localStorage.getItem("answer");
     let tf_answer = localStorage.getItem("tf_answer");
@@ -182,6 +158,11 @@ function processAnswer() {
     if (answer === "true" || answer === "false") {
         console.log("TF answer");
         user_answer = tf_answer;
+    } else {
+        // Get the user's selected multiple choice options
+        user_answer = document.querySelector("input[name='quiz-option']:checked").value;
+        console.log(user_answer)
+        console.log(answer)
     }
 
     truefalse_area.style.display = "none";
@@ -192,13 +173,7 @@ function processAnswer() {
     if (user_answer === answer) {
 
         question_index++;
-        localStorage.setItem("currentQuestion", question_index);
-
-        // Track the completed question
-        let completed = JSON.parse(localStorage.getItem("completed"));
-        completed[0]["performance"] = question_index;
-        localStorage.setItem("completed", JSON.stringify(completed));
-
+        levelUp(question_index);
 
         result_title.innerHTML = "Correct";
         result_body.innerHTML = "Congratulations, you know your stuff!";
@@ -218,6 +193,19 @@ function processAnswer() {
     }
 }
 
+
+function levelUp(question_index) {
+
+    localStorage.setItem("currentQuestion", question_index);
+
+    let user_progress = JSON.parse(localStorage.getItem("user_progress"));
+    let course = localStorage.getItem("course");
+    let next_index = parseInt(user_progress[course]) + 1
+
+    user_progress[course] = next_index;
+    localStorage.setItem("user_progress", JSON.stringify(user_progress));
+
+}
 
 function playVideo() {
 
@@ -317,6 +305,7 @@ function processDragDropAnwers() {
         // All items are in the correct column
         index++;
         localStorage.setItem("currentQuestion", index);
+        levelUp(index);
 
         result_title.innerHTML = "Correct";
         result_body.innerHTML = "Congratulations, you know your stuff!";
@@ -335,6 +324,27 @@ function processDragDropAnwers() {
         next_btn.style.display = "none";    }
 }
 
+
+function getUserProgress() {
+
+    if (localStorage.getItem("user_progress") === "" || localStorage.getItem("user_progress") === null || localStorage.getItem("user_progress") === "undefined") {
+        console.log("Hi?")
+        let progress = {
+            "performance":0,
+            "budgets":0,
+            "devops":0
+        }
+        localStorage.setItem("user_progress", JSON.stringify(progress))
+        console.log(progress)
+    }
+
+    let course = localStorage.getItem("course");
+    let user_progress = JSON.parse(localStorage.getItem("user_progress"));
+    console.log(course)
+    console.log(user_progress)
+
+    localStorage.setItem("currentQuestion", user_progress[course]);
+}
 
 function main() {
 
@@ -392,6 +402,7 @@ function main() {
     next_btn.addEventListener("click", function() {
 
         let currentQuestion = parseInt(localStorage.getItem("currentQuestion"));
+        console.log(currentQuestion)
 
         let question_area = document.querySelector(".question-area");
         let result_area = document.querySelector(".result");
@@ -423,10 +434,6 @@ function main() {
         }
     });
 
-
-    // Setup the starting question index
-    // This will need to change once we can pull data from db for user's completed question
-    localStorage.setItem("currentQuestion", 0);
 
     // Fetch some JSON data yo!
     fetchJSONData();
