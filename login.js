@@ -29,8 +29,8 @@ connection.query(`CREATE TABLE IF NOT EXISTS \`accounts\` (
     \`email\` varchar(100) NOT NULL
   ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;`);
 
-/*connection.query(`ALTER TABLE \`accounts\` ADD PRIMARY KEY (\`id\`)`); */
-/*connection.query(`ALTER TABLE \`accounts\` MODIFY \`id\` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;`);*/
+/*connection.query(`ALTER TABLE \`accounts\` ADD PRIMARY KEY (\`id\`)`);  */
+/* connection.query(`ALTER TABLE \`accounts\` MODIFY \`id\` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;`); */
 
 
 let app = express();
@@ -128,6 +128,14 @@ app.post('/auth', function(request, response) {
 	}
 });
 
+app.get('/logout', function(request, response) {
+
+    response.sendFile(path.join(__dirname, '/mobile_login.html'));
+    request.session.loggedin = false;
+    request.session.email = "";
+
+});
+
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/homepage.html'));
@@ -137,7 +145,7 @@ app.get('/home', function(request, response) {
     }
 });
 
-app.get('/performance.html', function(request, response) {
+app.get('/performance', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/performance.html'));
     } else {
@@ -146,7 +154,7 @@ app.get('/performance.html', function(request, response) {
     }
 });
 
-app.get('/devcritbudgets.html', function(request, response) {
+app.get('/devcritbudgets', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/devcritbudgets.html'));
     } else {
@@ -155,9 +163,9 @@ app.get('/devcritbudgets.html', function(request, response) {
     }
 });
 
-app.get('/devopplans.html', function(request, response) {
+app.get('/devopplans', function(request, response) {
     if (request.session.loggedin) {
-        response.sendFile(path.join(__dirname, '/devoplans.html'));
+        response.sendFile(path.join(__dirname, '/devopplans.html'));
     } else {
         response.send('Please login to view this page!');
         response.end();
