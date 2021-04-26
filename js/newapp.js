@@ -82,7 +82,31 @@ function showQuestion() {
     let truefalse_title = document.querySelector(".truefalse-title");
     let dd_title = document.querySelector(".dd-title");
 
-    if (quiz[0]["quiz"][index]["true"]) {
+    console.log(index)
+    console.log(numWeeks)
+    if (index > numWeeks) {
+
+        let result_area = document.querySelector(".result");
+        let result_title = document.querySelector(".result-title");
+        let result_body = document.querySelector(".result-body");
+
+        let play_btn = document.getElementById("play-btn");
+        let next_btn = document.getElementById("next-btn");
+
+        truefalse_area.style.display = "none";
+        question_area.style.display = "none";
+        result_area.style.display = "flex";
+
+        console.log("Index above numweeks")
+
+
+        result_title.innerHTML = "All done";
+        result_body.innerHTML = "Check back next week for another question.";
+        play_btn.style.display = "none";
+        next_btn.style.display = "none";
+
+
+    } else if (quiz[0]["quiz"][index]["true"]) {
         // This is a the true-false questions
         truefalse_area.style.display = "flex";
         question_area.style.display = "none";
