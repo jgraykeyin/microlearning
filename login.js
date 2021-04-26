@@ -8,7 +8,7 @@ let bcrypt = require('bcrypt');
 let https = require('https');
 
 const USE_HTTPS = false;
-const PORT = 3001;
+const PORT = 3000;
 const SSL_KEY_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.key');
 const SSL_CERT_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.crt');
 
@@ -164,6 +164,24 @@ app.get('/devcritbudgets', function(request, response) {
 app.get('/devopplans', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/devopplans.html'));
+    } else {
+        response.send('Please login to view this page!');
+        response.end();
+    }
+});
+
+app.get('/culture', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, '/culture.html'));
+    } else {
+        response.send('Please login to view this page!');
+        response.end();
+    }
+});
+
+app.get('/timestress', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, '/stress.html'));
     } else {
         response.send('Please login to view this page!');
         response.end();
