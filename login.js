@@ -8,7 +8,7 @@ let bcrypt = require('bcrypt');
 let https = require('https');
 
 const USE_HTTPS = false;
-const PORT = 3000;
+const PORT = 3001;
 const SSL_KEY_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.key');
 const SSL_CERT_FILE_LOCATION = path.join(__dirname, 'ssl/RootCA.crt');
 
@@ -129,12 +129,10 @@ app.post('/auth', function(request, response) {
 });
 
 app.get('/logout', function(request, response) {
-
-    response.sendFile(path.join(__dirname, '/mobile_login.html'));
-    request.session.loggedin = false;
-    request.session.email = "";
-
-});
+    response.redirect('/');
+    request.session.destroy()
+    response.end();
+})
 
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
