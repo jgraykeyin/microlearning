@@ -77,6 +77,7 @@ function showQuestion() {
     tf_number_area.innerHTML = html;
 
     // Set the question title
+   
     let question_title = document.querySelector(".question-title");
     let truefalse_title = document.querySelector(".truefalse-title");
     let dd_title = document.querySelector(".dd-title");
@@ -120,6 +121,7 @@ function showQuestion() {
         // This is a regular multiple choice question
         question_area.style.display = "flex";
         truefalse_area.style.display = "none";
+        dragdrop_area.style.display = "none";
         question_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
         // Display the current options in the document
