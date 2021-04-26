@@ -2,11 +2,12 @@
     {
         "lesson_name": "Performance Management Plans",
         "video_file": "performance.mp4",
-        "start_date": "2021-04-10",
+        "start_date": "2021-03-15",
         "quiz":
         [
             {
                 "id": 1,
+                "video": "performance1.mp4",
                 "clip_start": 72,
                 "clip_end": 108,
                 "question": "Performance Management is:",
@@ -18,6 +19,7 @@
             },
             {
                 "id": 2,
+                "video": "performance2.mp4",
                 "clip_start": 109,
                 "clip_end": 125,
                 "question": "It is important to learn about Performance Management to:",
@@ -29,6 +31,7 @@
             },
             {
                 "id": 3,
+                "video": "performance3.mp4",
                 "clip_start": 126,
                 "clip_end": 175,
                 "question": "Making Performance Management should be a priority does NOT help to:",
@@ -40,6 +43,7 @@
             },
             {
                 "id": 4,
+                "video": "performance4.mp4",
                 "clip_start": 176,
                 "clip_end": 201,
                 "question": "What is the purpose of performance management?",
@@ -51,6 +55,7 @@
             },
             {
                 "id": 5,
+                "video": "performance5.mp4",
                 "clip_start": 416,
                 "clip_end": 430,
                 "question": "Traditional Performance Management has a greater impact on performance than Everyday Performance Management.",
@@ -60,16 +65,18 @@
             },
             {
                 "id": 6,
+                "video": "performance6.mp4",
                 "clip_start": 416,
                 "clip_end": 431,
                 "question": "Move each characteristic into the appropriate column for the different performance management approaches.",
-                "heading A": "Traditional Performance Management Approach",
-                "heading B": "Everyday Performance Management Approach",
-                "answer column A": ["Focus on review process not people","Formal and event driven","Separate from work"],
-                "answer column B": ["Focus on people not process","Informal and ongoing","Integrated with work"]
+                "heading_a": "Traditional Performance Management Approach",
+                "heading_b": "Everyday Performance Management Approach",
+                "answer_column_a": ["Focus on review process not people","Formal and event driven","Separate from work"],
+                "answer_column_b": ["Focus on people not process","Informal and ongoing","Integrated with work"]
             },
                 {
                 "id": 7,
+                "video": "performance7.mp4",
                 "clip_start": 578,
                 "clip_end": 603,
                 "statement": "For the following multiple response questions, select all the options that are correct.",
@@ -82,6 +89,7 @@
             },
                 {
                 "id": 8,
+                "video": "performance8.mp4",
                 "clip_start": 605,
                 "clip_end": 621,
                 "question": "There should be a direct link between an employee’s performance goals and the strategic goals of the organization.",
@@ -91,20 +99,24 @@
             },
             {
                 "id": 9,
+                "video": "performance9.mp4",
                 "clip_start": 756,
                 "clip_end": 787,
                 "question": "Instructions: Put the steps of the Performance Management Cycle in the correct order:",
-                "answer column A": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"]
+                "heading_a": "Cycle Steps",
+                "heading_b": "",
+                "answer_column_a": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"],
+                "answer_column_b": []
             },
             {
                 "id": 10,
                 "clip_start": 1195,
                 "clip_end": 1255,
                 "question": "Drag and Drop",
-                "heading A": "Organizational Benefit",
-                "heading B": "Employee Benefit",
-                "answer column A": ["Facilitates strategic decision-making","Addresses employee behavioural issues","Identifies where management can improve"],
-                "answer column B": ["Determines where skills can improve","Involves employees in their career development path","Opens discussions for goal setting"]
+                "heading_a": "Organizational Benefit",
+                "heading_b": "Employee Benefit",
+                "answer_column_a": ["Facilitates strategic decision-making","Addresses employee behavioural issues","Identifies where management can improve"],
+                "answer_column_b": ["Determines where skills can improve","Involves employees in their career development path","Opens discussions for goal setting"]
             },
             {
                 "id": 11,
@@ -135,8 +147,10 @@
                 "clip_start": 1478,
                 "clip_end": 1661,
                 "question": "Match the Type of Performance Appraisal with the characteristic.",
-                "answer column A": ["Self Evaluation","Management by Objectives","Behavioural Checklist", "Ratings Scale","360 Degree Feedback"],
-                "answer column B": ["Employees first conduct their performance assessment on their own against a set list of criteria.","Employee and manager agree to performance goals that the employee will achieve within a specific period of time.","Manager checks YES when they believe the employee has exhibited a trait.","Each set of criteria is weighted so that a measured score can be calculated at the end of the review.","Feedback from the manager and employees."]
+                "heading_a": "Column 1",
+                "heading_b": "Column 2",
+                "answer_column_a": ["Self Evaluation","Management by Objectives","Behavioural Checklist", "Ratings Scale","360 Degree Feedback"],
+                "answer_column_b": ["Employees first conduct their performance assessment on their own against a set list of criteria.","Employee and manager agree to performance goals that the employee will achieve within a specific period of time.","Manager checks YES when they believe the employee has exhibited a trait.","Each set of criteria is weighted so that a measured score can be calculated at the end of the review.","Feedback from the manager and employees."]
             },
                 {
                 "id": 14,

@@ -43,11 +43,7 @@ function main(){
             console.log('you got it')
         }
         console.log(count)
-
-
     }
 }
-
-
 window.addEventListener('load', main)
 
