@@ -118,6 +118,7 @@ app.post('/auth', function(request, response) {
                         response.send("An error occured during hashing, please try again!");
                     }else{
                         if(results[0].password === password_hash){
+                            request.session.userid = results[0].id;
         				    request.session.loggedin = true;
         				    request.session.email = email;
         				    response.redirect('/home');
@@ -146,6 +147,7 @@ app.get('/logout', function(request, response) {
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
         console.log(`${request.session.email} has logged in`);
+        console.log(`User ID: ${request.session.userid}`);
         response.sendFile(path.join(__dirname, '/homepage.html'));
     } else {
         response.send('Please login to view this page!');
