@@ -4,16 +4,24 @@ async function fetchJSONData() {
     // Get the current name of the html page
     let path = window.location.pathname;
     let page = path.split("/").pop();
-    console.log(page);
 
     let filename = ""
     // Load the appropriate JSON file based on the html file currently being used
-    if (page == "performance.html") {
+    if (page === "performance") {
         filename = "performance.json";
-    } else if (page == "devopplans.html") {
+        localStorage.setItem("course", "performance");
+    } else if (page === "devopplans") {
         filename = "dev-op-plans.json";
-    } else if (page == "devcritbudgets.html") {
+        localStorage.setItem("course", "devops");
+    } else if (page === "devcritbudgets") {
         filename = "devcritbudgets.json"
+        localStorage.setItem("course", "budgets");
+    } else if (page === "culture") {
+        filename = "organizationalCulture.json";
+        localStorage.setItem("course", "culture");
+    } else if (page === "timestress") {
+        filename = "time-stress-management.json";
+        localStorage.setItem("course", "stress")
     }
 
     // Fetch the JSON file
@@ -38,9 +46,11 @@ async function fetchJSONData() {
     // Save the Week Number
     localStorage.setItem("numWeeks", numWeeks);
 
+    // Track the user's progres
+    getUserProgress();
+
     // Display the first available question
     showQuestion();
-
 }
 
 
@@ -51,63 +61,98 @@ function showQuestion() {
 
     let index = parseInt(localStorage.getItem("currentQuestion"));
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
-
-    console.log(`index: ${index}`)
     
     // Get the current question title
     let question = quiz[0]["quiz"][index]["question"];
 
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
+    let dragdrop_area = document.querySelector(".dragdrop-area");
 
     let number_area = document.querySelector(".number-counter");
+    let tf_number_area = document.getElementById("num-tf");
 
     let html = `Question ${index+1} of ${numWeeks+1}`
     number_area.innerHTML = html;
+    tf_number_area.innerHTML = html;
 
     // Set the question title
+   
     let question_title = document.querySelector(".question-title");
     let truefalse_title = document.querySelector(".truefalse-title");
+    let dd_title = document.querySelector(".dd-title");
+
     if (quiz[0]["quiz"][index]["true"]) {
+        // This is a the true-false questions
         truefalse_area.style.display = "flex";
         question_area.style.display = "none";
         truefalse_title.innerHTML = quiz[0]["quiz"][index]["question"];
+
+    } else if (quiz[0]["quiz"][index]["heading_a"]) {
+        // This is a drag drop question
+        truefalse_area.style.display = "none";
+        question_area.style.display = "none";
+        dragdrop_area.style.display = "flex";
+        dd_title.innerHTML = quiz[0]["quiz"][index]["question"];
+
+        let dd1 = document.getElementById("dd-item-1");
+        let dd2 = document.getElementById("dd-item-2");
+        let dd3 = document.getElementById("dd-item-3");
+        let dd4 = document.getElementById("dd-item-4");
+        let dd5 = document.getElementById("dd-item-5");
+        let dd6 = document.getElementById("dd-item-6");
+
+        let title_a = document.getElementById("column-a");
+        let title_b = document.getElementById("column-b");
+
+        // Populate the draggable answers
+        dd1.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][0];
+        dd2.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][1];
+        dd3.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][2];
+
+        dd4.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][0];
+        dd5.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][1];
+        dd6.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][2];
+
+        title_a.innerHTML = quiz[0]["quiz"][index]["heading_a"];
+        title_b.innerHTML = quiz[0]["quiz"][index]["heading_b"];
+
     } else {
+        // This is a regular multiple choice question
         question_area.style.display = "flex";
         truefalse_area.style.display = "none";
+        dragdrop_area.style.display = "none";
         question_title.innerHTML = quiz[0]["quiz"][index]["question"];
+
+        // Display the current options in the document
+        let option_a = document.getElementById("option-a");
+        let option_b = document.getElementById("option-b");
+        let option_c = document.getElementById("option-c");
+        let option_d = document.getElementById("option-d");
+        
+        option_a.innerHTML = quiz[0]["quiz"][index]["a"];
+        option_b.innerHTML = quiz[0]["quiz"][index]["b"];
+        option_c.innerHTML = quiz[0]["quiz"][index]["c"];
+        option_d.innerHTML = quiz[0]["quiz"][index]["d"];
     }
 
     // Save the answer to local storage
     let answer = quiz[0]["quiz"][index]["answer"];
     localStorage.setItem("answer", answer);
-
-    // Display the current question in the document
-    //let question_title = document.querySelector(".question-title");
-    //question_title.innerHTML = question;
-
-    // Display the current options in the document
-    let option_a = document.getElementById("option-a");
-    let option_b = document.getElementById("option-b");
-    let option_c = document.getElementById("option-c");
-    let option_d = document.getElementById("option-d");
-    
-    option_a.innerHTML = quiz[0]["quiz"][index]["a"];
-    option_b.innerHTML = quiz[0]["quiz"][index]["b"];
-    option_c.innerHTML = quiz[0]["quiz"][index]["c"];
-    option_d.innerHTML = quiz[0]["quiz"][index]["d"];
 }
 
 
 function processAnswer() {
-    // Get the user's selected option
-    let user_answer = document.querySelector("input[name='quiz-option']:checked").value;
-    
+
+    let user_answer = "";
+
     // Get the answer from the json data
     let answer = localStorage.getItem("answer");
+    let tf_answer = localStorage.getItem("tf_answer");
 
     let question_area = document.querySelector(".question-area");
     let result_area = document.querySelector(".result");
+    let truefalse_area = document.querySelector(".truefalse-area");
     let result_title = document.querySelector(".result-title");
     let result_body = document.querySelector(".result-body");
     let play_btn = document.getElementById("play-btn");
@@ -115,6 +160,18 @@ function processAnswer() {
     let question_index = parseInt(localStorage.getItem("currentQuestion"));
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
 
+    // If it's a true or false question, setup the user's answer from localstorage
+    if (answer === "true" || answer === "false") {
+        console.log("TF answer");
+        user_answer = tf_answer;
+    } else {
+        // Get the user's selected multiple choice options
+        user_answer = document.querySelector("input[name='quiz-option']:checked").value;
+        console.log(user_answer)
+        console.log(answer)
+    }
+
+    truefalse_area.style.display = "none";
     question_area.style.display = "none";
     result_area.style.display = "flex";
 
@@ -122,7 +179,7 @@ function processAnswer() {
     if (user_answer === answer) {
 
         question_index++;
-        localStorage.setItem("currentQuestion", question_index);
+        levelUp(question_index);
 
         result_title.innerHTML = "Correct";
         result_body.innerHTML = "Congratulations, you know your stuff!";
@@ -142,6 +199,19 @@ function processAnswer() {
     }
 }
 
+
+function levelUp(question_index) {
+
+    localStorage.setItem("currentQuestion", question_index);
+
+    let user_progress = JSON.parse(localStorage.getItem("user_progress"));
+    let course = localStorage.getItem("course");
+    let next_index = parseInt(user_progress[course]) + 1
+
+    user_progress[course] = next_index;
+    localStorage.setItem("user_progress", JSON.stringify(user_progress));
+
+}
 
 function playVideo() {
 
@@ -166,26 +236,123 @@ function playVideo() {
     video_player.style.display = "block";
 
     video_player.pause();
-    video_source.src = "video/" + quiz[0]["video_file"];
+    video_source.src = "https://microlearningvideos.s3.amazonaws.com/" + quiz[0]["quiz"][index]["video"];
     video_player.load();
 
-    video_player.currentTime = quiz[0]["quiz"][index]["clip_start"];
     video_player.play()
 
-    video_player.addEventListener("timeupdate", function() {
+    video_player.addEventListener("ended", function() {
 
-        if (this.currentTime >= quiz[0]["quiz"][index]["clip_end"]) {
-            this.pause();
+        this.pause();
 
-            // Hide the video player
-            video_player.style.display = "none";
+        // Hide the video player
+        video_player.style.display = "none";
 
-            // Show the question area
-            question_area.style.display = "flex";
-        }
+        showQuestion();
     })
 }
 
+
+function processDragDropAnwers() {
+
+    // Get the JSON data
+    let quiz = JSON.parse(localStorage.getItem("data"));
+
+    // Make sure we have the current question
+    let index = parseInt(localStorage.getItem("currentQuestion"));
+
+    // Let's save the answers to arrays first
+    let answers_column_a = quiz[0]["quiz"][index]["answer_column_a"];
+    let answers_column_b = quiz[0]["quiz"][index]["answer_column_b"];
+
+    // Check both Drag & Drop column divs to see which children elements are inside it.
+    // This lets us see what divs have been dragged into them by the user
+    let col_a = document.getElementsByClassName("col-a");
+    let col_b = document.getElementsByClassName("col-b");
+
+    let counter_a = 0;
+    // Loop through each div that's inside Column A
+    for (let i = 0; i < col_a.length; ++i) {
+        // Check to see if the current item is contained in our answers array
+        if (answers_column_a.includes(col_a[i].innerHTML)) {
+            // Increment for a correct answer
+            counter_a++;
+        } else {
+            counter_a--;
+        }
+    }
+
+    // Loop thru column B and do the same as above
+    let counter_b = 0;
+    for (let i = 0; i < col_b.length; ++i) {
+        if (answers_column_b.includes(col_b[i].innerHTML)) {
+            counter_b++;
+        } else {
+            counter_b--;
+        }
+    }
+
+    // Show results based on correct or incorrect
+    // Get all elements ready for showing results
+    let result_area = document.querySelector(".result");
+    let result_title = document.querySelector(".result-title");
+    let result_body = document.querySelector(".result-body");
+    let dragdrop_area = document.querySelector(".dragdrop-area");
+    let play_btn = document.getElementById("play-btn");
+    let next_btn = document.getElementById("next-btn");
+    let numWeeks = parseInt(localStorage.getItem("numWeeks"));
+   
+    // Hide the drag-drop area & show the results area
+    result_area.style.display = "flex";
+    dragdrop_area.style.display = "none";
+
+
+    if (counter_a === 3 && counter_b === 3) {
+        // All items are in the correct column
+        index++;
+        localStorage.setItem("currentQuestion", index);
+        levelUp(index);
+
+        result_title.innerHTML = "Correct";
+        result_body.innerHTML = "Congratulations, you know your stuff!";
+        play_btn.style.display = "none";
+
+        if (question_index <= numWeeks) {
+            next_btn.style.display = "block";
+        } else {
+            next_btn.style.display = "none";
+        }
+
+    } else {
+        result_title.innerHTML = "Incorrect";
+        result_body.innerHTML = "Please review the following video and try again";
+        play_btn.style.display = "block";
+        next_btn.style.display = "none";    }
+}
+
+
+function getUserProgress() {
+
+    if (localStorage.getItem("user_progress") === "" || localStorage.getItem("user_progress") === null || localStorage.getItem("user_progress") === "undefined") {
+        console.log("Hi?")
+        let progress = {
+            "performance":0,
+            "budgets":0,
+            "devops":0,
+            "culture":0,
+            "stress":0,
+        }
+        localStorage.setItem("user_progress", JSON.stringify(progress))
+        console.log(progress)
+    }
+
+    let course = localStorage.getItem("course");
+    let user_progress = JSON.parse(localStorage.getItem("user_progress"));
+    console.log(course)
+    console.log(user_progress)
+
+    localStorage.setItem("currentQuestion", user_progress[course]);
+}
 
 function main() {
 
@@ -207,9 +374,25 @@ function main() {
     // Make sure the question area is visible
     question_area.style.display = "flex";
 
+    // Setup the True or False buttons
+    let trueBtn = document.getElementById("btn-true");
+    let falseBtn = document.getElementById("btn-false");
+
+    trueBtn.addEventListener("click", function() {
+        localStorage.setItem("tf_answer", "true");
+    });
+
+    falseBtn.addEventListener("click", function() {
+        localStorage.setItem("tf_answer", "false");
+    });
+
     // Setup the submit answer buttons
     let submitBtn = document.getElementById("submit-answer");
     submitBtn.addEventListener("click", processAnswer);    
+
+    // Setup the submit button for true/false
+    let submitTFBtn = document.getElementById("submit-tfanswer");
+    submitTFBtn.addEventListener("click", processAnswer);
 
     // Setup the play button & next button for the video-player
     let play_btn = document.getElementById("play-btn");
@@ -227,6 +410,7 @@ function main() {
     next_btn.addEventListener("click", function() {
 
         let currentQuestion = parseInt(localStorage.getItem("currentQuestion"));
+        console.log(currentQuestion)
 
         let question_area = document.querySelector(".question-area");
         let result_area = document.querySelector(".result");
@@ -234,7 +418,13 @@ function main() {
         result_area.style.display = "none";
         question_area.style.display = "flex";
         showQuestion();
-    })
+    });
+
+    // Setup the Drag & Drop submit button
+    let dd_submit_btn = document.getElementById("dd-submit-btn");
+    dd_submit_btn.addEventListener("click", function() {
+        processDragDropAnwers();
+    });
 
 
     // Setup the hamburger button
@@ -252,10 +442,6 @@ function main() {
         }
     });
 
-
-    // Setup the starting question index
-    // This will need to change once we can pull data from db for user's completed question
-    localStorage.setItem("currentQuestion", 0);
 
     // Fetch some JSON data yo!
     fetchJSONData();

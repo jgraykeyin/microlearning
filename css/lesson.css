@@ -118,7 +118,7 @@ body {
 }
 
 .question-area {
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 16px;
     align-self: center;
@@ -153,15 +153,16 @@ body {
     padding-bottom: 16px;
     padding-left: 32px;
     padding-right: 32px;
-    background-color: #2E1B33;
+    background-color: #fff;
     border: 1px solid #75AF6A;
-    border-radius: 30px;
-    color: #fff;
+    border-radius: 6px;
+    color: #000;
     font-size: 22px;
 }
 
 .submit-btn {
     margin-top: 42px;
+    margin-bottom: 64px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 32px;
@@ -175,13 +176,15 @@ body {
 }
 
 .truefalse-btn:hover {
-    background-color: #fff;
-    color: rgb(34, 25, 33);
+    background-color: #78AF62;
+    color: #000;
+    border: 3px solid #07613A;
 }
 
 .truefalse-btn:focus {
-    background-color: #fff;
-    color: rgb(34, 25, 33);
+    background-color: #78AF62;
+    color: #000;
+    border: 3px solid #07613A;
 }
 
 .activity-area {
@@ -205,6 +208,98 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.dragdrop-area {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dd-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    text-align:center;
+}
+
+.dd-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dd-header {
+    font-size: 13px;
+    text-align: center;
+    padding: 4px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.dd-column {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.dd-item {
+    background-color: #fff;
+    border: 1px solid black;
+    color: #000;
+    border-radius: 9px;
+    padding: 8px;
+    margin: 2px;
+    font-size: 14px;
+    max-width: 98px;
+}
+
+.dd-starting-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px dashed white;
+    padding: 2px;
+}
+
+.dropzone {
+    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 260px;
+    border: 1px solid black;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+.drag-drop {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 9px;
+    padding: 6px;
+    margin: 3px;
+    font-size: 14px;
+    max-width: 100px;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+    color: #000;
+    background-color: rgb(149, 216, 236);
+}
+
+.drop-active {
+    border-color: #aaa;
+  }
+  
+.drop-target {
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
 }
 
 .act-row {
@@ -234,35 +329,10 @@ body {
     font-size: 15px;
 }
 
-.dropzone {
-    padding: 2px;
-    border: 1px solid black;
-    background-color: rgb(165, 165, 165);
-    font-size: 14px;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .act-spacer {
     height: 4rem;
 }
-
-.dragtext {
-    position: absolute;
-    z-index: 99;
-    padding: 12px;
-    max-width: 142px;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid black;
-    font-size: 13px;
-    font-weight: bold;
-}
-
 
 .options {
     display: flex;
