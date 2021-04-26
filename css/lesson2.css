@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     height: 100vh;
     cursor: pointer;
-    background-image: url("../images/ring-green.png");
+    background-image: url("../images/Assetgreen.png");
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@ body {
     flex-direction: column;
     height: 100vh;
     cursor: pointer;
-    background-image: url("../images/Time/Asset 260.png");
+    background-image: url("../images/Asset260.png");
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
