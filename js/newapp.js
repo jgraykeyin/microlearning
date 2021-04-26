@@ -139,12 +139,10 @@ function showQuestion() {
     // Save the answer to local storage
     let answer = quiz[0]["quiz"][index]["answer"];
     localStorage.setItem("answer", answer);
-
 }
 
 
 function processAnswer() {
-
 
     let user_answer = "";
 
@@ -238,7 +236,7 @@ function playVideo() {
     video_player.style.display = "block";
 
     video_player.pause();
-    video_source.src = "video/" + quiz[0]["quiz"][index]["video"];
+    video_source.src = "https://microlearningvideos.s3.amazonaws.com/" + quiz[0]["quiz"][index]["video"];
     video_player.load();
 
     video_player.play()
