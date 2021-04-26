@@ -170,6 +170,24 @@ app.get('/devopplans', function(request, response) {
     }
 });
 
+app.get('/culture', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, '/culture.html'));
+    } else {
+        response.send('Please login to view this page!');
+        response.end();
+    }
+});
+
+app.get('/timestress', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, '/stress.html'));
+    } else {
+        response.send('Please login to view this page!');
+        response.end();
+    }
+});
+
 function launchCallback(proto, port){
     console.log(`Server is running at: ${proto}://localhost:${port}`);
 }
