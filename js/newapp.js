@@ -466,6 +466,12 @@ function main() {
         }
     });
 
+    let lo_form = document.querySelector("#logout_form")
+    let lo_clickable = lo_form.querySelector("p");
+    lo_clickable.addEventListener('click', ()=>{
+        lo_form.submit();
+    })
+
 
     // Fetch some JSON data yo!
     fetchJSONData();
