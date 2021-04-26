@@ -19,15 +19,24 @@ let connection = mysql.createConnection({
     password: 'keyintesting',
 });
 
-
+// Create the Database and tables
 connection.query(`CREATE DATABASE IF NOT EXISTS \`nodelogin\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci`);
 connection.query(`USE \`nodelogin\``);
 connection.query(`CREATE TABLE IF NOT EXISTS \`accounts\` (
     \`id\` int(11) NOT NULL,
     \`username\` varchar(50) NOT NULL,
     \`password\` varchar(255) NOT NULL,
-    \`email\` varchar(100) NOT NULL
+    \`email\` varchar(100) NOT NULL,
+    \`salt\` varchar(255) NOT NULL
   ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;`);
+
+  connection.query(`CREATE TABLE IF NOT EXISTS \`progress\` (
+      \`id\` int(11) NOT NULL,
+      \`userid\` int(11) NOT NULL,
+      \`performance\` INT(11) NOT NULL
+  ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;`);
+
+  /* connection.query(`ALTER TABLE \`progress\` ADD PRIMARY KEY (\`id\`)`); */
 
 /*connection.query(`ALTER TABLE \`accounts\` ADD PRIMARY KEY (\`id\`)`);  */
 /* connection.query(`ALTER TABLE \`accounts\` MODIFY \`id\` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;`); */
@@ -136,6 +145,7 @@ app.get('/logout', function(request, response) {
 
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
+        console.log(`${request.session.email} has logged in`);
         response.sendFile(path.join(__dirname, '/homepage.html'));
     } else {
         response.send('Please login to view this page!');

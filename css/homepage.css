@@ -28,6 +28,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: left;
+  font-family: 'Fjalla One', sans-serif;
+
 }
 
 /* .topnav-line {
@@ -40,6 +42,8 @@ body {
   padding: 8px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lesson-info {
@@ -57,7 +61,7 @@ body {
   width: 35px;
   height: 2px;
   background-color: #fff;
-  margin: 6px 6px;
+  margin: 4px 4px;
   transition: 0.4s;
   z-index: 50;
 }
@@ -90,7 +94,7 @@ body {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  opacity: 80%;
+  opacity: 96%;
 }
 
 .sidenav h1 {
@@ -114,9 +118,21 @@ body {
 }
 
 .links {
+  margin-top:0px;
+  padding-top:0px;
   text-align: left;
   font-family: 'Fjalla One', sans-serif;
   background-color: #2f1c34;
+}
+
+.links h1 {
+  padding-top:12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #000;
+  border-bottom: 1px solid white;
 }
 
 .link-icon {
@@ -161,8 +177,3 @@ a:active {
   text-decoration: underline;
 }
 
-h1 {
-  border-bottom: 2px solid #75af6a;
-  text-align: center;
-  filter: drop-shadow(2px 2px 1px black);
-}
