@@ -129,19 +129,10 @@ app.post('/auth', function(request, response) {
 });
 
 app.get('/logout', function(request, response) {
-<<<<<<< HEAD
     response.redirect('/');
     request.session.destroy()
     response.end();
 })
-=======
-
-    response.sendFile(path.join(__dirname, '/mobile_login.html'));
-    request.session.loggedin = false;
-    request.session.email = "";
-
-});
->>>>>>> be5db72a7a98d1ef22408221db81e835744dbcfd
 
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
