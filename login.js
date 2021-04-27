@@ -76,6 +76,21 @@ app.get("/signup", function(request, response){
     response.sendFile(path.join(__dirname, '/mobile_signup.html'));
 })
 
+app.post('/correct', function(request, response) {
+    let userid = request.session.userid
+    let course = request.body.course;
+    let progress = request.body.progress;
+    console.log(`Progress: ${progress}`);
+    
+    connection.query(`INSERT INTO progress (userid,performance,devops,culture,stress,budgets) VALUES ('${userid}','${progress}','0','0','0','0')`, function(err) {
+        if(err) {
+            console.error("Failed to insert progress");
+        } else {
+            console.log("INSERT success");
+        }
+    });
+})
+
 app.post('/signup', function(request, response){
     let fullname = request.body.fullname;
 	let password = request.body.password;
@@ -154,8 +169,9 @@ app.get('/home', function(request, response) {
         console.log(`User ID: ${request.session.userid}`);
         response.sendFile(path.join(__dirname, '/homepage.html'));
     } else {
-        response.send('Please login to view this page!');
-        response.end();
+        // response.send('Please login to view this page!');
+        // response.end();
+        response.sendFile(path.join(__dirname, '/error2.html'));
     }
 });
 
@@ -163,8 +179,9 @@ app.get('/performance', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/performance.html'));
     } else {
-        response.send('Please login to view this page!');
-        response.end();
+        // response.send('Please login to view this page!');
+        // response.end();
+        response.sendFile(path.join(__dirname, '/error2.html'));
     }
 });
 
@@ -172,8 +189,9 @@ app.get('/devcritbudgets', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/devcritbudgets.html'));
     } else {
-        response.send('Please login to view this page!');
-        response.end();
+        // response.send('Please login to view this page!');
+        // response.end();
+        response.sendFile(path.join(__dirname, '/error2.html'));
     }
 });
 
@@ -181,8 +199,9 @@ app.get('/devopplans', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/devopplans.html'));
     } else {
-        response.send('Please login to view this page!');
-        response.end();
+        // response.send('Please login to view this page!');
+        // response.end();
+        response.sendFile(path.join(__dirname, '/error2.html'));
     }
 });
 
@@ -190,8 +209,10 @@ app.get('/culture', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/culture.html'));
     } else {
-        response.send('Please login to view this page!');
-        response.end();
+        // response.send('Please login to view this page!');
+        // response.end();
+        response.sendFile(path.join(__dirname, '/error2.html'));
+
     }
 });
 
@@ -199,8 +220,10 @@ app.get('/timestress', function(request, response) {
     if (request.session.loggedin) {
         response.sendFile(path.join(__dirname, '/stress.html'));
     } else {
-        response.send('Please login to view this page!');
-        response.end();
+        // response.send('Please login to view this page!');
+        // response.end();
+        response.sendFile(path.join(__dirname, '/error2.html'));
+
     }
 });
 

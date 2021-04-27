@@ -290,6 +290,19 @@ function levelUp(question_index) {
     user_progress[course] = next_index;
     localStorage.setItem("user_progress", JSON.stringify(user_progress));
 
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/correct', true);
+
+    //Send the proper header information along with the request
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function() { // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            // Request finished. Do processing here.
+        }
+    }
+    xhr.send(`course=${course}&progress=${next_index}`);
+
 }
 
 function playVideo() {
