@@ -77,6 +77,10 @@ function showQuestion() {
     let number_area = document.querySelector(".number-counter");
     let tf_number_area = document.getElementById("num-tf");
 
+    if (numWeeks > 19) {
+        numWeeks = 19;
+    }
+
     let html = `Question ${index+1} of ${numWeeks+1}`
     number_area.innerHTML = html;
     tf_number_area.innerHTML = html;
@@ -303,6 +307,76 @@ function playVideo() {
     })
 }
 
+function processDragDropOrderAnwers() {
+
+    // Get the JSON data
+    let quiz = JSON.parse(localStorage.getItem("data"));
+
+    // Make sure we have the current question
+    let index = parseInt(localStorage.getItem("currentQuestion"));
+
+    // Let's save the answers to arrays first
+    let answers = quiz[0]["quiz"][index]["answer_column_a"];
+
+    // Check both Drag & Drop column divs to see which children elements are inside it.
+    // This lets us see what divs have been dragged into them by the user
+    let order_1 = document.getElementById("order-1");
+    let order_2 = document.getElementById("order-2");
+    let order_3 = document.getElementById("order-3");
+    let order_4 = document.getElementById("order-4");
+
+    let orderCollection = [order_1,order_2,order_3,order_4];
+
+    let counter_a = 0;
+    // Loop through each div that's inside Column A
+    for (let i = 0; i < orderCollection.length; ++i) {
+        // Check to see if the current item is contained in our answers array
+        if (answers.includes(orderCollection[i].innerHTML)) {
+            // Increment for a correct answer
+            counter_a++;
+        } else {
+            counter_a--;
+        }
+    }
+
+    // Show results based on correct or incorrect
+    // Get all elements ready for showing results
+    let result_area = document.querySelector(".result");
+    let result_title = document.querySelector(".result-title");
+    let result_body = document.querySelector(".result-body");
+    let dragdrop_area = document.querySelector(".dragdrop-area");
+    let play_btn = document.getElementById("play-btn");
+    let next_btn = document.getElementById("next-btn");
+    let numWeeks = parseInt(localStorage.getItem("numWeeks"));
+
+    // Hide the drag-drop area & show the results area
+    result_area.style.display = "flex";
+    dragdrop_area.style.display = "none";
+
+
+    if (counter_a === 4) {
+        // All items are in the correct column
+        index++;
+        localStorage.setItem("currentQuestion", index);
+        levelUp(index);
+
+        result_title.innerHTML = "Correct";
+        result_body.innerHTML = "Congratulations, you know your stuff!";
+        play_btn.style.display = "none";
+
+        if (question_index <= numWeeks) {
+            next_btn.style.display = "block";
+        } else {
+            next_btn.style.display = "none";
+        }
+
+    } else {
+        result_title.innerHTML = "Incorrect";
+        result_body.innerHTML = "Please review the following video and try again";
+        play_btn.style.display = "block";
+        next_btn.style.display = "none";    }
+}
+
 
 function processDragDropAnwers() {
     
@@ -412,7 +486,7 @@ function checkboxMultipleChoice(){
     let questA= document.getElementById("cb-a");
     let questB= document.getElementById("cb-b");
     let questC= document.getElementById("cb-c");
-    let questD= document.getElementById("cb-c");
+    let questD= document.getElementById("cb-d");
     console.log(answers)
     if (questA.checked == true){
         check_num = check_num + 1
