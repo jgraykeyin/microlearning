@@ -43,9 +43,12 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: left;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 18px;
     padding-left: 8px;
+}
+
+.lesson-name {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
 }
 
 
@@ -342,7 +345,7 @@ body {
     align-self:baseline;
     padding: 8px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .option-text {
