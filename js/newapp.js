@@ -101,9 +101,6 @@ function showQuestion() {
         question_area.style.display = "none";
         result_area.style.display = "flex";
 
-        console.log("Index above numweeks")
-
-
         result_title.innerHTML = "All done";
         result_body.innerHTML = "Check back next week for another question.";
         play_btn.style.display = "none";
@@ -209,7 +206,7 @@ function processAnswer() {
         question_index++;
         levelUp(question_index);
 
-        result_title.innerHTML = "Correct";
+        result_title.innerHTML = "<img src='images/result-correct.png'> Correct";
         result_body.innerHTML = "Congratulations, you know your stuff!";
         play_btn.style.display = "none";
 
@@ -220,7 +217,7 @@ function processAnswer() {
         }
 
     } else {
-        result_title.innerHTML = "Incorrect";
+        result_title.innerHTML = "<img src='images/result-incorrect.png'> Incorrect";
         result_body.innerHTML = "Please review the following video and try again";
         play_btn.style.display = "block";
         next_btn.style.display = "none";

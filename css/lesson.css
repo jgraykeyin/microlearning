@@ -214,6 +214,13 @@ body {
     align-items: center;
 }
 
+.result-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .dragdrop-area {
     display: none;
     flex-direction: column;
