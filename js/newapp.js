@@ -77,6 +77,10 @@ function showQuestion() {
     let number_area = document.querySelector(".number-counter");
     let tf_number_area = document.getElementById("num-tf");
 
+    if (numWeeks > 19) {
+        numWeeks = 19;
+    }
+
     let html = `Question ${index+1} of ${numWeeks+1}`
     number_area.innerHTML = html;
     tf_number_area.innerHTML = html;
