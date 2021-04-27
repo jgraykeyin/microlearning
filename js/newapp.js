@@ -332,6 +332,10 @@ function processDragDropAnwers() {
             counter_a--;
         }
     }
+    // let referenceA = document.getElementById("dd-item-1")
+    // let answerColumnA = document.getelementbyID("answers-column-a");
+    // if (answerColumnA === document.querySelectorAll("tpCont").querySelector("#tp1")))
+    // if this drop zone containes performanve planning good continue to check the next; 4 drop zones in rows stacked
 
     // Loop thru column B and do the same as above
     let counter_b = 0;
