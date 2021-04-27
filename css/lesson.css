@@ -279,7 +279,8 @@ body {
 .dropzone {
     border-bottom-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    height: 260px;
+    height: 75px;
+    width:400px;
     border: 1px solid black;
     background-color:rgba(255, 255, 255, 0.5);
 }
@@ -343,6 +344,14 @@ body {
     font-size: 15px;
 }
 .cbquestion-area {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-self: center;
+    background-color: rgb(34, 25, 33);
+    border-bottom: 1px solid #fff;
+}
+.order-area{
     display: flex;
     flex-direction: column;
     padding: 16px;
