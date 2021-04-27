@@ -201,7 +201,7 @@
                 "b": "Conducting a quick interview.",
                 "c": "Giving concrete, constructive feedback.",
                 "d": "Collaborating with the employee to develop behaviour expectations.",
-                "answer": "c,d"
+                "answer": ["c","d"]
             },
             {
                 "id": 19,
@@ -222,7 +222,7 @@
                 "b": "Always have a representative of human resources present",
                 "c": "Choose your words with care.",
                 "d": "Always end after discussing performance issues",
-                "answer": "a,c"
+                "answer": ["a","c"]
             }
         ]
         
