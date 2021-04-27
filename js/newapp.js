@@ -68,7 +68,7 @@ function showQuestion() {
     
     // Get the current question title
     let question = quiz[0]["quiz"][index]["question"];
-
+    let order_area = document.querySelector(".order_area")
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
     let dragdrop_area = document.querySelector(".dragdrop-area");
@@ -86,7 +86,7 @@ function showQuestion() {
     tf_number_area.innerHTML = html;
 
     // Set the question title
-   
+    let order_title = document.querySelector(".order-title");
     let question_title = document.querySelector(".question-title");
     let truefalse_title = document.querySelector(".truefalse-title");
     let dd_title = document.querySelector(".dd-title");
@@ -108,7 +108,7 @@ function showQuestion() {
         truefalse_area.style.display = "none";
         question_area.style.display = "none";
         result_area.style.display = "flex";
-
+        order_area.style.display = "none"
         result_title.innerHTML = "All done";
         result_body.innerHTML = "Check back next week for another question.";
         play_btn.style.display = "none";
@@ -121,13 +121,35 @@ function showQuestion() {
         checkbox_area.style.display = "none"
         question_area.style.display = "none";
         dragdrop_area.style.display = "none";
+        order_area.style.display = "none"
         truefalse_title.innerHTML = quiz[0]["quiz"][index]["question"];
+
+    } else if (quiz[0]["quiz"][index]["sequence"]){
+        //This is a sequence order questions
+        order_area.style.display = "flex"
+        truefalse_area.style.display = "none";
+        question_area.style.display = "none";
+        checkbox_area.style.display = "none"
+        dragdrop_area.style.display = "none";
+        dd_title.innerHTML = quiz[0]["quiz"][index]["question"];
+
+        let order_1 = document.getElementById("order-1");
+        let order_2 = document.getElementById("order-2");
+        let order_3 = document.getElementById("order-3");
+        let order_4 = document.getElementById("order-4");
+
+        order_1.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][0];
+        order_2.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][1];
+        order_3.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][2];
+        order_4.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][3];
+
 
     } else if (quiz[0]["quiz"][index]["heading_a"]) {
         // This is a drag drop question
         truefalse_area.style.display = "none";
         question_area.style.display = "none";
         checkbox_area.style.display = "none"
+        order_area.style.display = "none"
         dragdrop_area.style.display = "flex";
         dd_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
@@ -158,6 +180,7 @@ function showQuestion() {
         truefalse_area.style.display = "none";
         dragdrop_area.style.display = "none";
         question_area.style.display = "none";
+        order_area.style.display = "none"
         cb_statement.innerHTML = quiz[0]["quiz"][index]["statement"];
         cb_title.innerHTML = quiz[0]["quiz"][index]["question"]
 
@@ -177,6 +200,7 @@ function showQuestion() {
         truefalse_area.style.display = "none";
         checkbox_area.style.display = "none"
         dragdrop_area.style.display = "none";
+        order_area.style.display = "none"
         question_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
         // Display the current options in the document

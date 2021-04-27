@@ -103,7 +103,7 @@
                 "clip_start": 756,
                 "clip_end": 787,
                 "question": "Instructions: Put the steps of the Performance Management Cycle in the correct order:",
-                "heading_a": "Cycle Steps",
+                "sequence": "Sequence Activity",
                 "answer_column_a": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"]
                 
             },
@@ -127,7 +127,7 @@
                 "b": "The employee meets one-on-one with their manager.",
                 "c": "Performance Coaching to address performance issues.",
                 "d": "The Performance Appraisal is shared with Human Resources.",
-                "answer": "a,c"
+                "answer": ["a","c"]
             },
             {
                 "id": 12,
@@ -139,7 +139,7 @@
                 "b": "The employee meets one-on-one with their manager.",
                 "c": "Performance Coaching to address performance issues.",
                 "d": "The Performance Appraisal is shared with Human Resources.",
-                "answer": "b,d"
+                "answer": ["b","d"]
             },
             {
                 "id": 13,
@@ -161,7 +161,7 @@
                 "b": "Performance Goals",
                 "c": "Rating system",
                 "d": "Career aspirations",
-                "answer": "a,b,c"
+                "answer": ["a","b","c"]
             },
             {
                 "id": 15,
