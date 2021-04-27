@@ -328,7 +328,14 @@ body {
     background-color:#98c290;
     font-size: 15px;
 }
-
+.cbquestion-area {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-self: center;
+    background-color: rgb(34, 25, 33);
+    border-bottom: 1px solid #fff;
+}
 
 .act-spacer {
     height: 4rem;
