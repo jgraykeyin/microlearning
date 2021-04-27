@@ -2,7 +2,7 @@
     {
         "lesson_name": "Performance Management Plans",
         "video_file": "performance.mp4",
-        "start_date": "2021-03-15",
+        "start_date": "2020-03-15",
         "quiz":
         [
             {
@@ -34,11 +34,11 @@
                 "video": "performance3.mp4",
                 "clip_start": 126,
                 "clip_end": 175,
-                "question": "Making Performance Management a priority does NOT help to:",
-                "a": "Develop customers.",
-                "b": "Develop employees.",
-                "c": "Establish clear goals.",
-                "d": "Offer consistent feedback.",
+                "question": "Making Performance Management should be a priority does NOT help to:",
+                "a": "develop customers.",
+                "b": "develop employees.",
+                "c": "establish clear goals.",
+                "d": "offer consistent feedback.",
                 "answer": "a"
             },
             {
@@ -85,7 +85,7 @@
                 "b": "The company’s organizational culture.",
                 "c": "The CEO’s personality.",
                 "d": "How many employees in the company.",
-                "answer": "a,b"
+                "answer": ["a","b"]
             },
                 {
                 "id": 8,
@@ -104,9 +104,8 @@
                 "clip_end": 787,
                 "question": "Instructions: Put the steps of the Performance Management Cycle in the correct order:",
                 "heading_a": "Cycle Steps",
-                "heading_b": "",
-                "answer_column_a": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"],
-                "answer_column_b": []
+                "answer_column_a": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"]
+                
             },
             {
                 "id": 10,

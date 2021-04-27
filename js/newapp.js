@@ -390,7 +390,7 @@ function checkboxMultipleChoice(){
 
     // Let's save the answers 
     let answers = quiz[0]["quiz"][index]["answer"];
-    console.log(answers)
+    
 
     // let but = document.getElementById("button")
     // but.addEventListener('click',clicked)
@@ -409,7 +409,7 @@ function checkboxMultipleChoice(){
     let questB= document.getElementById("cb-b");
     let questC= document.getElementById("cb-c");
     let questD= document.getElementById("cb-c");
-    
+    console.log(answers)
     if (questA.checked == true){
         check_num = check_num + 1
         if(answers.includes(questA.value)){
@@ -431,7 +431,6 @@ function checkboxMultipleChoice(){
     if (questD.checked == true){
         check_num = check_num + 1
         if(answers.includes(questD.value)){
-            
             count = count + 1
         }
     }
