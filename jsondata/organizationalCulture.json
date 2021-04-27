@@ -40,7 +40,7 @@
                 "b": "Improve business skills.",
                 "c": "Motivation and engagement.",
                 "d": "Development of high functioning team. ",
-                "answer": "a,c,d"
+                "answer": ["a","c","d"]
             },
             {
                 "id": 4,
@@ -77,7 +77,7 @@
                 "b": "Adaptability",
                 "c": "Responsibility",
                 "d": "Situational factors",
-                "answer": "b,a"
+                "answer": ["b","a"]
             },
             {
                 "id": 7,

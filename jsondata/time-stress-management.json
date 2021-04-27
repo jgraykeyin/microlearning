@@ -28,7 +28,7 @@
                "b": "Improved work quality.",
                "c": "Divide time according to work.",
                "d": "Increased potential for advancement.",
-               "answer": "a,b,d"
+               "answer": ["a","b","d"]
             },
             {
                "id": 3,
@@ -99,7 +99,7 @@
                "b": "Loss of employment",
                "c": "Illness",
                "d": "Going on vacation",
-               "answer": "a,b,c"
+               "answer": ["a","b","c"]
             },
             {
                "id": 9,
