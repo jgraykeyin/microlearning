@@ -34,11 +34,11 @@
                 "video": "performance3.mp4",
                 "clip_start": 126,
                 "clip_end": 175,
-                "question": "Making Performance Management should be a priority does NOT help to:",
-                "a": "develop customers.",
-                "b": "develop employees.",
-                "c": "establish clear goals.",
-                "d": "offer consistent feedback.",
+                "question": "Making Performance Management a priority does NOT help to:",
+                "a": "Develop customers.",
+                "b": "Develop employees.",
+                "c": "Establish clear goals.",
+                "d": "Offer consistent feedback.",
                 "answer": "a"
             },
             {
