@@ -374,7 +374,8 @@ function processDragDropOrderAnwers() {
         result_title.innerHTML = "Incorrect";
         result_body.innerHTML = "Please review the following video and try again";
         play_btn.style.display = "block";
-        next_btn.style.display = "none";    }
+        next_btn.style.display = "none";    
+    }
 }
 
 
