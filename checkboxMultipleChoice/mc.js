@@ -13,28 +13,28 @@ function main(){
         if (questA.checked == true){
             check_num = check_num + 1
             if(answers.includes(questA.value)){
-                console.log("triggered if A")
+                
                 count = count + 1
             }
         }
         if (questB.checked == true){
             check_num = check_num + 1
             if(answers.includes(questB.value)){
-                console.log("triggered if B")
+               
                 count = count + 1
             }  
         }
         if (questC.checked == true){
             check_num = check_num + 1
             if(answers.includes(questC.value)){
-                console.log("triggered if C")
+                
                 count = count + 1
             } 
         }
         if (questD.checked == true){
             check_num = check_num + 1
             if(answers.includes(questD.value)){
-                console.log("triggered if D")
+               
                 count = count + 1
             }
         }
@@ -42,12 +42,8 @@ function main(){
         if (count === answers.length && check_num === answers.length){
             console.log('you got it')
         }
-        console.log(count)
-
-
+        // console.log(count)
     }
 }
-
-
 window.addEventListener('load', main)
 

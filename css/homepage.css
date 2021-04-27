@@ -11,10 +11,10 @@ body {
   flex-direction: column;
   height: 100vh;
   cursor: pointer;
-  background-image: url("../images/ring-green.png");
+  /* background-image: url("../images/ring-green.png");
   background-size: contain;
   background-position: bottom;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   justify-content: baseline;
 }
 
@@ -23,7 +23,7 @@ body {
   width: 100%;
   left: 0px;
   top: 0px;
-  background-color: #75AF6A;
+  background-color: #6A74b7;
   color: #fff;
   display: flex;
   flex-direction: row;
@@ -52,7 +52,7 @@ body {
   justify-content: flex-start;
   align-items: left;
   font-family: 'Fjalla One', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   padding-left: 8px;
 }
 
@@ -128,30 +128,38 @@ body {
 .links h1 {
   padding-top:12px;
   padding-bottom: 12px;
-  padding-left: 42px;
+  padding-left: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
-  background-image: linear-gradient(black,#2f1c34, black);
+  background-color: #000;
+  border-top: 1px solid white;
   border-bottom: 1px solid white;
-  filter: drop-shadow(1px 1px 1px black);
+  font-family: 'Open sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 .link-icon {
-  width: 20px;
-  height: 20px;
-  padding-right: 5px;
+  width: 40px;
+  height: 40px;
+  padding-right: 20px;
 }
 
 .href {
   padding: 10px;
-  margin: 5px;
+  margin: 0;
   color: #fff;
   font-size: 20px;
-  filter: drop-shadow(1px 1px 1px black);
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(75, 75, 75);
+  width: 100vw;
   padding-top: 2rem;
   padding-bottom: 2rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
 }
 
 a:link {

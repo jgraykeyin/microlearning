@@ -46,6 +46,10 @@ async function fetchJSONData() {
     // Save the Week Number
     localStorage.setItem("numWeeks", numWeeks);
 
+    // Display the course title in the header
+    let lessonName = document.querySelector(".lesson-name");
+    lessonName.innerHTML = quiz[0]["lesson_name"];
+
     // Track the user's progres
     getUserProgress();
 
@@ -68,6 +72,7 @@ function showQuestion() {
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
     let dragdrop_area = document.querySelector(".dragdrop-area");
+    let checkbox_area = document.querySelector(".cbquestion-area");
 
     let number_area = document.querySelector(".number-counter");
     let tf_number_area = document.getElementById("num-tf");
@@ -81,6 +86,9 @@ function showQuestion() {
     let question_title = document.querySelector(".question-title");
     let truefalse_title = document.querySelector(".truefalse-title");
     let dd_title = document.querySelector(".dd-title");
+    let cb_statement = document.querySelector(".cbquestion-statement")
+    let cb_title = document.querySelector(".cbquestion-title")
+    
 
     console.log(index)
     console.log(numWeeks)
@@ -97,9 +105,6 @@ function showQuestion() {
         question_area.style.display = "none";
         result_area.style.display = "flex";
 
-        console.log("Index above numweeks")
-
-
         result_title.innerHTML = "All done";
         result_body.innerHTML = "Check back next week for another question.";
         play_btn.style.display = "none";
@@ -109,13 +114,16 @@ function showQuestion() {
     } else if (quiz[0]["quiz"][index]["true"]) {
         // This is a the true-false questions
         truefalse_area.style.display = "flex";
+        checkbox_area.style.display = "none"
         question_area.style.display = "none";
+        dragdrop_area.style.display = "none";
         truefalse_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
     } else if (quiz[0]["quiz"][index]["heading_a"]) {
         // This is a drag drop question
         truefalse_area.style.display = "none";
         question_area.style.display = "none";
+        checkbox_area.style.display = "none"
         dragdrop_area.style.display = "flex";
         dd_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
@@ -141,10 +149,29 @@ function showQuestion() {
         title_a.innerHTML = quiz[0]["quiz"][index]["heading_a"];
         title_b.innerHTML = quiz[0]["quiz"][index]["heading_b"];
 
+    } else if (quiz[0]["quiz"][index]["statement"]){
+        checkbox_area.style.display = "flex"
+        truefalse_area.style.display = "none";
+        dragdrop_area.style.display = "none";
+        question_area.style.display = "none";
+        cb_statement.innerHTML = quiz[0]["quiz"][index]["statement"];
+        cb_title.innerHTML = quiz[0]["quiz"][index]["question"]
+
+        //display current option for question in document
+        let cboption_a = document.getElementById("cboption-a");
+        let cboption_b = document.getElementById("cboption-b");
+        let cboption_c = document.getElementById("cboption-c");
+        let cboption_d = document.getElementById("cboption-d");
+        
+        cboption_a.innerHTML = quiz[0]["quiz"][index]["a"];
+        cboption_b.innerHTML = quiz[0]["quiz"][index]["b"];
+        cboption_c.innerHTML = quiz[0]["quiz"][index]["c"];
+        cboption_d.innerHTML = quiz[0]["quiz"][index]["d"];
     } else {
         // This is a regular multiple choice question
         question_area.style.display = "flex";
         truefalse_area.style.display = "none";
+        checkbox_area.style.display = "none"
         dragdrop_area.style.display = "none";
         question_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
@@ -205,7 +232,7 @@ function processAnswer() {
         question_index++;
         levelUp(question_index);
 
-        result_title.innerHTML = "Correct";
+        result_title.innerHTML = "<img src='images/result-correct.png'> Correct";
         result_body.innerHTML = "Congratulations, you know your stuff!";
         play_btn.style.display = "none";
 
@@ -216,7 +243,7 @@ function processAnswer() {
         }
 
     } else {
-        result_title.innerHTML = "Incorrect";
+        result_title.innerHTML = "<img src='images/result-incorrect.png'> Incorrect";
         result_body.innerHTML = "Please review the following video and try again";
         play_btn.style.display = "block";
         next_btn.style.display = "none";
@@ -278,7 +305,7 @@ function playVideo() {
 
 
 function processDragDropAnwers() {
-
+    
     // Get the JSON data
     let quiz = JSON.parse(localStorage.getItem("data"));
 
@@ -353,6 +380,89 @@ function processDragDropAnwers() {
         play_btn.style.display = "block";
         next_btn.style.display = "none";    }
 }
+
+function checkboxMultipleChoice(){
+    // Get the JSON data
+    let quiz = JSON.parse(localStorage.getItem("data"));
+
+    // Make sure we have the current question
+    let index = parseInt(localStorage.getItem("currentQuestion"));
+
+    // Let's save the answers 
+    let answers = quiz[0]["quiz"][index]["answer"];
+    console.log(answers)
+
+    // let but = document.getElementById("button")
+    // but.addEventListener('click',clicked)
+    let result_area = document.querySelector(".result");
+    let result_title = document.querySelector(".result-title");
+    let result_body = document.querySelector(".result-body");
+    let cbmultiple_choice= document.querySelector(".cbquestion-area");
+    let play_btn = document.getElementById("play-btn");
+    let next_btn = document.getElementById("next-btn");
+    let numWeeks = parseInt(localStorage.getItem("numWeeks"));
+    
+    //function for checkbox mc 
+    let count = 0
+    let check_num = 0
+    let questA= document.getElementById("cb-a");
+    let questB= document.getElementById("cb-b");
+    let questC= document.getElementById("cb-c");
+    let questD= document.getElementById("cb-c");
+    
+    if (questA.checked == true){
+        check_num = check_num + 1
+        if(answers.includes(questA.value)){
+            count = count + 1
+        }
+    }
+    if (questB.checked == true){
+        check_num = check_num + 1
+        if(answers.includes(questB.value)){
+            count = count + 1
+        }  
+    }
+    if (questC.checked == true){
+        check_num = check_num + 1
+        if(answers.includes(questC.value)){
+            count = count + 1
+        } 
+    }
+    if (questD.checked == true){
+        check_num = check_num + 1
+        if(answers.includes(questD.value)){
+            
+            count = count + 1
+        }
+    }
+    // console.log(count)
+    // Hide the drag-drop area & show the results area
+    result_area.style.display = "flex";
+    cbmultiple_choice.style.display = "none";
+
+    //if you have the answer correct
+    if (count === answers.length && check_num === answers.length){
+        console.log('you got it')
+        index++;
+        localStorage.setItem("currentQuestion", index);
+        levelUp(index);
+
+        result_title.innerHTML = "Correct";
+        result_body.innerHTML = "Congratulations, you know your stuff!";
+        play_btn.style.display = "none";
+
+        if (question_index <= numWeeks) {
+            next_btn.style.display = "block";
+        } else {
+            next_btn.style.display = "none";
+        }
+
+    } else {
+        result_title.innerHTML = "Incorrect";
+        result_body.innerHTML = "Please review the following video and try again";
+        play_btn.style.display = "block";
+        next_btn.style.display = "none";    }
+    }
 
 
 function getUserProgress() {
@@ -450,7 +560,10 @@ function main() {
         processDragDropAnwers();
     });
 
-
+    let checkbox_submit_answer = document.getElementById("cb-submit-answer")
+    checkbox_submit_answer.addEventListener("click", function(){
+        checkboxMultipleChoice();
+    })
     // Setup the hamburger button
     let hamburgerBtn = document.querySelector(".hamburger-btn");
     hamburgerBtn.addEventListener("click", function() {
