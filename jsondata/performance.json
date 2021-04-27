@@ -103,7 +103,7 @@
                 "clip_start": 756,
                 "clip_end": 787,
                 "question": "Instructions: Put the steps of the Performance Management Cycle in the correct order:",
-                "heading_a": "Cycle Steps",
+                "sequence": "Sequence Activity",
                 "answer_column_a": ["Performance Planning","Performance Coaching","Performance Review","Recognition/Reward"]
                 
             },
