@@ -68,7 +68,7 @@ function showQuestion() {
     
     // Get the current question title
     let question = quiz[0]["quiz"][index]["question"];
-    let order_area = document.querySelector(".order_area")
+    let order_area = document.querySelector(".order-area")
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
     let dragdrop_area = document.querySelector(".dragdrop-area");
@@ -131,7 +131,7 @@ function showQuestion() {
         question_area.style.display = "none";
         checkbox_area.style.display = "none"
         dragdrop_area.style.display = "none";
-        dd_title.innerHTML = quiz[0]["quiz"][index]["question"];
+        order_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
         let order_1 = document.getElementById("order-1");
         let order_2 = document.getElementById("order-2");
@@ -198,9 +198,9 @@ function showQuestion() {
         // This is a regular multiple choice question
         question_area.style.display = "flex";
         truefalse_area.style.display = "none";
-        checkbox_area.style.display = "none"
+        checkbox_area.style.display = "none";
         dragdrop_area.style.display = "none";
-        order_area.style.display = "none"
+        order_area.style.display = "none";
         question_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
         // Display the current options in the document
@@ -348,6 +348,7 @@ function processDragDropOrderAnwers() {
     let order_2 = document.getElementById("order-2");
     let order_3 = document.getElementById("order-3");
     let order_4 = document.getElementById("order-4");
+    let order_area = document.querySelector(".order-area")
 
     let orderCollection = [order_1,order_2,order_3,order_4];
 
@@ -373,9 +374,9 @@ function processDragDropOrderAnwers() {
     let next_btn = document.getElementById("next-btn");
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
 
-    // Hide the drag-drop area & show the results area
+    // Hide the order-area & show the results area
     result_area.style.display = "flex";
-    dragdrop_area.style.display = "none";
+    order_area.style.display = "none";
 
 
     if (counter_a === 4) {
@@ -660,10 +661,15 @@ function main() {
     dd_submit_btn.addEventListener("click", function() {
         processDragDropAnwers();
     });
-
+    //setup the checkbox MC Submit Button
     let checkbox_submit_answer = document.getElementById("cb-submit-answer")
     checkbox_submit_answer.addEventListener("click", function(){
         checkboxMultipleChoice();
+    })
+    //setup the Sequence Order Submit Button
+    let sequenceOrder_submit_answer = document.getElementById("order-submit-btn")
+    sequenceOrder_submit_answer.addEventListener("click", function(){
+        processDragDropOrderAnwers()();
     })
     // Setup the hamburger button
     let hamburgerBtn = document.querySelector(".hamburger-btn");
