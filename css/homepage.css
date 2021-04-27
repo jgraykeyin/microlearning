@@ -132,6 +132,7 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   background-color: #000;
+  border-top: 1px solid white;
   border-bottom: 1px solid white;
   font-family: 'Open sans', sans-serif;
   font-weight: 300;
