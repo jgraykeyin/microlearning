@@ -441,15 +441,10 @@ function checkboxMultipleChoice(){
     // Hide the drag-drop area & show the results area
     result_area.style.display = "flex";
     cbmultiple_choice.style.display = "none";
-
-    console.log(count)
-    console.log(answers.length)
-    console.log(check_num)
     
 
     //if you have the answer correct
     if (count === answers.length && check_num === answers.length){
-        console.log('you got it')
         index++;
         localStorage.setItem("currentQuestion", index);
         levelUp(index);
@@ -475,7 +470,6 @@ function checkboxMultipleChoice(){
 function getUserProgress() {
 
     if (localStorage.getItem("user_progress") === "" || localStorage.getItem("user_progress") === null || localStorage.getItem("user_progress") === "undefined") {
-        console.log("Hi?")
         let progress = {
             "performance":0,
             "budgets":0,
@@ -484,13 +478,11 @@ function getUserProgress() {
             "stress":0,
         }
         localStorage.setItem("user_progress", JSON.stringify(progress))
-        console.log(progress)
     }
 
     let course = localStorage.getItem("course");
     let user_progress = JSON.parse(localStorage.getItem("user_progress"));
-    console.log(course)
-    console.log(user_progress)
+
 
     localStorage.setItem("currentQuestion", user_progress[course]);
 }
