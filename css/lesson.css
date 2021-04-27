@@ -34,8 +34,9 @@ body {
     padding: 8px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .lesson-info {
     display: flex;
@@ -52,7 +53,7 @@ body {
     width: 35px;
     height: 2px;
     background-color: #fff;
-    margin: 6px 6px;
+    margin: 4px 4px;
     transition: 0.4s;
     z-index: 50;
 }
