@@ -46,6 +46,10 @@ async function fetchJSONData() {
     // Save the Week Number
     localStorage.setItem("numWeeks", numWeeks);
 
+    // Display the course title in the header
+    let lessonName = document.querySelector(".lesson-name");
+    lessonName.innerHTML = quiz[0]["lesson_name"];
+
     // Track the user's progres
     getUserProgress();
 
