@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/lesson2.css" />
     <link rel="stylesheet" type="text/css" href="css/lesson.css" />
+
     <script type="text/javascript" src="js/newapp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script type="text/javascript" src="js/dragdrop2.js"></script>
@@ -16,14 +18,17 @@
 </head>
 <body>
 
-    <div class="main-container">
+    <div class="main-container-TS">
 
         <div class="sidenav">
-            <h1>Sidebar Content</h1>
-            <button>
+            <h1>Municipal Skills Accelerator</h1>
+            <p>About</p>
+            <p>Contact</p>
+            <p>Home</p>
+            <form id="logout_form" action="/logout"><p>Log Out</p></form>
         </div>
-
-        <nav class="topnav">
+        
+        <nav class="topnav-TS">
             <div class="hamburger-btn">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -59,7 +64,7 @@
                 <input class="option-input" type="radio" name="quiz-option" value="d"><span id="option-d" class="option-text"></span>
             </div>
             <div class="options">
-                <button type="button" class="submit-btn" id="submit-answer">Submit</button>
+                <button type="button" class="submit-btn-TS" id="submit-answer">Submit</button>
             </div>
         </div>
 

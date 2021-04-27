@@ -46,6 +46,10 @@ async function fetchJSONData() {
     // Save the Week Number
     localStorage.setItem("numWeeks", numWeeks);
 
+    // Display the course title in the header
+    let lessonName = document.querySelector(".lesson-name");
+    lessonName.innerHTML = quiz[0]["lesson_name"];
+
     // Track the user's progres
     getUserProgress();
 
@@ -86,7 +90,28 @@ function showQuestion() {
     let cb_title = document.querySelector(".cbquestion-title")
     
 
-    if (quiz[0]["quiz"][index]["true"]) {
+    console.log(index)
+    console.log(numWeeks)
+    if (index > numWeeks) {
+
+        let result_area = document.querySelector(".result");
+        let result_title = document.querySelector(".result-title");
+        let result_body = document.querySelector(".result-body");
+
+        let play_btn = document.getElementById("play-btn");
+        let next_btn = document.getElementById("next-btn");
+
+        truefalse_area.style.display = "none";
+        question_area.style.display = "none";
+        result_area.style.display = "flex";
+
+        result_title.innerHTML = "All done";
+        result_body.innerHTML = "Check back next week for another question.";
+        play_btn.style.display = "none";
+        next_btn.style.display = "none";
+
+
+    } else if (quiz[0]["quiz"][index]["true"]) {
         // This is a the true-false questions
         truefalse_area.style.display = "flex";
         checkbox_area.style.display = "none"
@@ -207,7 +232,7 @@ function processAnswer() {
         question_index++;
         levelUp(question_index);
 
-        result_title.innerHTML = "Correct";
+        result_title.innerHTML = "<img src='images/result-correct.png'> Correct";
         result_body.innerHTML = "Congratulations, you know your stuff!";
         play_btn.style.display = "none";
 
@@ -218,7 +243,7 @@ function processAnswer() {
         }
 
     } else {
-        result_title.innerHTML = "Incorrect";
+        result_title.innerHTML = "<img src='images/result-incorrect.png'> Incorrect";
         result_body.innerHTML = "Please review the following video and try again";
         play_btn.style.display = "block";
         next_btn.style.display = "none";
@@ -553,6 +578,12 @@ function main() {
             sidenav.style.width = max_width
         }
     });
+
+    let lo_form = document.querySelector("#logout_form")
+    let lo_clickable = lo_form.querySelector("p");
+    lo_clickable.addEventListener('click', ()=>{
+        lo_form.submit();
+    })
 
 
     // Fetch some JSON data yo!

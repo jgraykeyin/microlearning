@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     height: 100vh;
     cursor: pointer;
-    background-image: url("../images/ring-green.png");
+    background-image: url("../images/Assetgreen.png");
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -43,6 +43,33 @@ body {
     background-repeat: no-repeat;
     justify-content: baseline;
 }
+
+.main-container-OGC {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    cursor: pointer;
+    background-image: url("../images/AssetOC.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    justify-content: baseline;
+}
+
+.main-container-TS {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    cursor: pointer;
+    background-image: url("../images/Asset260.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    justify-content: baseline;
+}
+
 .topnav {
     height: 60px;
     width: 100%;
@@ -73,6 +100,31 @@ body {
     left: 0px;
     top: 0px;
     background-color: #DE5826;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    
+}
+
+.topnav-OGC{
+    height: 60px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #F47E4F;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.topnav-TS{
+    height: 60px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #F15B5C;
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -197,7 +249,7 @@ body {
     font-size: 22px;
 }
 
-.truefalse-btn-dcb {
+.truefalse-btn-DCB {
     margin: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -209,7 +261,7 @@ body {
     color: #fff;
     font-size: 22px;
 }
-.truefalse-btn-dop {
+.truefalse-btn-DOP {
     margin: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -220,6 +272,94 @@ body {
     border-radius: 30px;
     color: #fff;
     font-size: 22px;
+}
+
+.truefalse-btn-TS {
+    margin: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #2E1B33;
+    border: 1px solid #F15B5C;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.submit-btn {
+    margin-top: 42px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #07613A;
+    border: 2px solid #8bb47b;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    width: 80vw;
+}
+
+.submit-btn-DOP {
+    margin-top: 42px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color:  #A43423;
+    border: 2px solid  #A43423;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    width: 80vw;
+}
+
+.submit-btn-DCB {
+    margin-top: 42px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #0D4051; 
+    border: 2px solid  #6BC9CB;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    width: 80vw;
+}
+
+.submit-btn-TS {
+    margin-top: 42px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #83152D;
+    border: 2px solid  #F5886E;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    width: 80vw;
+}
+
+.submit-btn-OGC {
+    margin-top: 42px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #CC4232;
+    border: 2px solid #841D19;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    width: 80vw;
 }
 
 .truefalse-btn:hover {
