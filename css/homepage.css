@@ -61,7 +61,7 @@ body {
   width: 35px;
   height: 2px;
   background-color: #fff;
-  margin: 4px 4px;
+  margin: 6px 6px;
   transition: 0.4s;
   z-index: 50;
 }
