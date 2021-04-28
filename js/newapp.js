@@ -65,6 +65,9 @@ function showQuestion() {
 
     let index = parseInt(localStorage.getItem("currentQuestion"));
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
+
+    let yt_area = document.querySelector(".youtube-area");
+    yt_area.style.display = "none";
     
     // Get the current question title
     let question = quiz[0]["quiz"][index]["question"];
@@ -318,27 +321,41 @@ function playVideo() {
     let result_area = document.querySelector(".result");
     result_area.style.display = "none";
 
-    // Load and Show the video player
-    let video_player = document.getElementById("video-player");
-    let video_source = document.getElementById("video-source");
+    if (quiz[0]["quiz"][index]["youtube"]) {
 
-    video_player.style.display = "block";
+        let yt_area = document.querySelector(".youtube-area");
+        yt_area.style.display = "flex";
 
-    video_player.pause();
-    video_source.src = "https://microlearningvideos.s3.amazonaws.com/" + quiz[0]["quiz"][index]["video"];
-    video_player.load();
+        let yt_player = document.getElementById("youtube-frame");
+        yt_player.src = `${quiz[0]["quiz"][index]["youtube"]}`
 
-    video_player.play()
+        yt_button = document.getElementById("youtube-done");
+        yt_button.addEventListener("click", showQuestion);
 
-    video_player.addEventListener("ended", function() {
+    } else {
 
-        this.pause();
+        // Load and Show the video player
+        let video_player = document.getElementById("video-player");
+        let video_source = document.getElementById("video-source");
 
-        // Hide the video player
-        video_player.style.display = "none";
+        video_player.style.display = "block";
 
-        showQuestion();
-    })
+        video_player.pause();
+        video_source.src = "https://microlearningvideos.s3.amazonaws.com/" + quiz[0]["quiz"][index]["video"];
+        video_player.load();
+
+        video_player.play()
+
+        video_player.addEventListener("ended", function() {
+
+            this.pause();
+
+            // Hide the video player
+            video_player.style.display = "none";
+
+            showQuestion();
+        });
+    }
 }
 
 function processDragDropOrderAnwers() {
