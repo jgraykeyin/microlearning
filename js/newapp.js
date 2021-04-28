@@ -361,7 +361,7 @@ function processDragDropOrderAnwers() {
     let order_2 = document.getElementById("order-2");
     let order_3 = document.getElementById("order-3");
     let order_4 = document.getElementById("order-4");
-    let order_area = document.querySelector(".order-area")
+    
 
     let orderCollection = [order_1,order_2,order_3,order_4];
 
@@ -382,7 +382,7 @@ function processDragDropOrderAnwers() {
     let result_area = document.querySelector(".result");
     let result_title = document.querySelector(".result-title");
     let result_body = document.querySelector(".result-body");
-    let dragdrop_area = document.querySelector(".dragdrop-area");
+    let order_area = document.querySelector(".order-area")
     let play_btn = document.getElementById("play-btn");
     let next_btn = document.getElementById("next-btn");
     let numWeeks = parseInt(localStorage.getItem("numWeeks"));
