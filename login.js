@@ -34,17 +34,17 @@ connection.query(`CREATE TABLE IF NOT EXISTS \`accounts\` (
 // connection.query(`ALTER TABLE \`accounts\` MODIFY \`id\` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;`); 
 //   ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;`);
 
-//   connection.query(`CREATE TABLE IF NOT EXISTS \`progress\` (
-//       \`id\` int(11) NOT NULL,
-//       \`userid\` int(11) NOT NULL,
-//       \`performance\` INT(11) NOT NULL
-//   ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;`);
+connection.query(`CREATE TABLE IF NOT EXISTS \`progress\` (
+       \`id\` int(11) NOT NULL,
+       \`performance\` INT(11) NOT NULL,
+       \`devops\` INT(11) NOT NULL,
+       \`culture\` INT(11) NOT NULL,
+       \`stress\` INT(11) NOT NULL,
+       \`budgets\` INT(11) NOT NULL,
+       \`email\` VARCHAR(255) NOT NULL
+   ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;`);
 
-  /* connection.query(`ALTER TABLE \`progress\` ADD PRIMARY KEY (\`id\`)`); */
-
-/*connection.query(`ALTER TABLE \`accounts\` ADD PRIMARY KEY (\`id\`)`);  */
-/* connection.query(`ALTER TABLE \`accounts\` MODIFY \`id\` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;`); */
-
+/* connection.query(`ALTER TABLE \`progress\` ADD PRIMARY KEY (\`id\`)`); */
 
 let app = express();
 
@@ -79,10 +79,12 @@ app.get("/signup", function(request, response){
 app.post('/correct', function(request, response) {
     let userid = request.session.userid
     let course = request.body.course;
+    let email = request.session.email;
     let progress = request.body.progress;
     console.log(`Progress: ${progress}`);
+    console.log(`Course: ${course}`)
     
-    connection.query(`INSERT INTO progress (userid,performance,devops,culture,stress,budgets) VALUES ('${userid}','${progress}','0','0','0','0')`, function(err) {
+    connection.query(`UPDATE progress SET ${course}='${progress}' WHERE email='${email}'`, function(err) {
         if(err) {
             console.error("Failed to insert progress");
         } else {
@@ -106,6 +108,14 @@ app.post('/signup', function(request, response){
                            //response.send("Oh no! An error occured, please try again!")
         		           //response.redirect('/signup');
                         }else{
+
+                            // After creating the account, create an entry in the progress table for the user
+                            connection.query(`INSERT INTO progress (performance,devops,culture,stress,budgets,email) VALUES ('0','0','0','0','0','${email}')`), function(err) {
+                                if(err) {
+                                    console.error("Progress insert failed");
+                                }
+                            }
+
         		            response.redirect('/');
                         }
                     })
