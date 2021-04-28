@@ -53,7 +53,7 @@ body {
   align-items: left;
   font-family: 'Fjalla One', sans-serif;
   font-size: 20px;
-  padding-left: 8px;
+  padding-left: 10px;
 }
 
 
@@ -108,6 +108,11 @@ body {
     padding-right: 20px;
 }
 
+.sidenav a {
+  padding-left: 20px;
+
+}
+
 .logo img{
   padding: 5px;
   margin-top: 5px;
@@ -123,20 +128,24 @@ body {
   text-align: left;
   font-family: 'Fjalla One', sans-serif;
   background-color: #2f1c34;
+  filter: drop-shadow(3px 3px 4px black);
+  
 }
 
 .links h1 {
   padding-top:12px;
   padding-bottom: 12px;
-  padding-left: 20px;
+  padding-left: 48px;
   margin-top: 0px;
   margin-bottom: 0px;
-  background-color: #000;
+  background-image: linear-gradient(#2f1c34,black,#2f1c34);
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   font-family: 'Open sans', sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 26px;
+  
+  
 }
 
 .link-icon {
@@ -159,6 +168,7 @@ body {
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  filter: drop-shadow(3px 3px 4px black);
 
 }
 
@@ -217,3 +227,4 @@ a:active {
   justify-content: center;
   align-items: center;
 }
+
