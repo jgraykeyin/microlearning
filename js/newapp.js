@@ -93,9 +93,6 @@ function showQuestion() {
     let cb_statement = document.querySelector(".cbquestion-statement")
     let cb_title = document.querySelector(".cbquestion-title")
     
-
-    console.log(index)
-    console.log(numWeeks)
     if (index > numWeeks) {
 
         let result_area = document.querySelector(".result");
@@ -146,6 +143,7 @@ function showQuestion() {
 
     } else if (quiz[0]["quiz"][index]["heading_a"]) {
         // This is a drag drop question
+
         truefalse_area.style.display = "none";
         question_area.style.display = "none";
         checkbox_area.style.display = "none"
@@ -241,13 +239,11 @@ function processAnswer() {
 
     // If it's a true or false question, setup the user's answer from localstorage
     if (answer === "true" || answer === "false") {
-        console.log("TF answer");
         user_answer = tf_answer;
     } else {
         // Get the user's selected multiple choice options
         user_answer = document.querySelector("input[name='quiz-option']:checked").value;
-        console.log(user_answer)
-        console.log(answer)
+
     }
 
     truefalse_area.style.display = "none";
@@ -290,7 +286,8 @@ function levelUp(question_index) {
     user_progress[course] = next_index;
     localStorage.setItem("user_progress", JSON.stringify(user_progress));
 
-    var xhr = new XMLHttpRequest();
+    // Send the course name and user progress back to our Node server so it can be inserted into MySQL
+    let xhr = new XMLHttpRequest();
     xhr.open("POST", '/correct', true);
 
     //Send the proper header information along with the request
@@ -398,11 +395,21 @@ function processDragDropOrderAnwers() {
         localStorage.setItem("currentQuestion", index);
         levelUp(index);
 
+        let dditem1 = document.getElementById("order-1");
+        let dditem2 = document.getElementById("order-2");
+        let dditem3 = document.getElementById("order-3");
+        let dditem4 = document.getElementById("order-4");
+        
+        dditem1.remove();
+        dditem2.remove();
+        dditem3.remove();
+        dditem4.remove();
+
         result_title.innerHTML = "Correct";
         result_body.innerHTML = "Congratulations, you know your stuff!";
         play_btn.style.display = "none";
 
-        if (question_index <= numWeeks) {
+        if (index <= numWeeks) {
             next_btn.style.display = "block";
         } else {
             next_btn.style.display = "none";
@@ -433,6 +440,9 @@ function processDragDropAnwers() {
     // This lets us see what divs have been dragged into them by the user
     let col_a = document.getElementsByClassName("col-a");
     let col_b = document.getElementsByClassName("col-b");
+
+    console.log(col_a);
+    console.log(col_b)
 
     let counter_a = 0;
     // Loop through each div that's inside Column A
@@ -485,7 +495,75 @@ function processDragDropAnwers() {
         result_body.innerHTML = "Congratulations, you know your stuff!";
         play_btn.style.display = "none";
 
-        if (question_index <= numWeeks) {
+        let dditem1 = document.getElementById("dd-item-1");
+        let dditem2 = document.getElementById("dd-item-2");
+        let dditem3 = document.getElementById("dd-item-3");
+        let dditem4 = document.getElementById("dd-item-4");
+        let dditem5 = document.getElementById("dd-item-5");
+        let dditem6 = document.getElementById("dd-item-6");
+
+        // Removing all the draggable items
+        dditem1.classList.remove('col-a')
+        dditem2.classList.remove('col-a')
+        dditem3.classList.remove('col-a')
+        dditem4.classList.remove('col-a')
+        dditem5.classList.remove('col-a')
+        dditem6.classList.remove('col-a')
+        dditem1.classList.remove('col-b')
+        dditem2.classList.remove('col-b')
+        dditem3.classList.remove('col-b')
+        dditem4.classList.remove('col-b')
+        dditem5.classList.remove('col-b')
+        dditem6.classList.remove('col-b')
+
+        dditem1.remove();
+        dditem2.remove();
+        dditem3.remove();
+        dditem4.remove();
+        dditem5.remove();
+        dditem6.remove();
+
+        let item_area = document.querySelector(".dd-starting-items");
+
+        let newitem1 = document.createElement("div");
+        newitem1.classList.add("dd-item");
+        newitem1.classList.add("drag-drop");
+        newitem1.setAttribute("id", "dd-item-1");
+
+        let newitem2 = document.createElement("div");
+        newitem2.classList.add("dd-item");
+        newitem2.classList.add("drag-drop");
+        newitem2.setAttribute("id", "dd-item-2");
+
+        let newitem3 = document.createElement("div");
+        newitem3.classList.add("dd-item");
+        newitem3.classList.add("drag-drop");
+        newitem3.setAttribute("id", "dd-item-3");
+
+        let newitem4 = document.createElement("div");
+        newitem4.classList.add("dd-item");
+        newitem4.classList.add("drag-drop");
+        newitem4.setAttribute("id", "dd-item-4");
+
+        let newitem5 = document.createElement("div");
+        newitem5.classList.add("dd-item");
+        newitem5.classList.add("drag-drop");
+        newitem5.setAttribute("id", "dd-item-5");
+
+        let newitem6 = document.createElement("div");
+        newitem6.classList.add("dd-item");
+        newitem6.classList.add("drag-drop");
+        newitem6.setAttribute("id", "dd-item-6");
+
+        item_area.appendChild(newitem1)
+        item_area.appendChild(newitem2)
+        item_area.appendChild(newitem3)
+        item_area.appendChild(newitem4)
+        item_area.appendChild(newitem5)
+        item_area.appendChild(newitem6)
+
+
+        if (index <= numWeeks) {
             next_btn.style.display = "block";
         } else {
             next_btn.style.display = "none";
@@ -495,7 +573,9 @@ function processDragDropAnwers() {
         result_title.innerHTML = "Incorrect";
         result_body.innerHTML = "Please review the following video and try again";
         play_btn.style.display = "block";
-        next_btn.style.display = "none";    }
+        next_btn.style.display = "none";    
+    }
+
 }
 
 function checkboxMultipleChoice(){
@@ -567,7 +647,7 @@ function checkboxMultipleChoice(){
         result_body.innerHTML = "Congratulations, you know your stuff!";
         play_btn.style.display = "none";
 
-        if (question_index <= numWeeks) {
+        if (index <= numWeeks) {
             next_btn.style.display = "block";
         } else {
             next_btn.style.display = "none";
@@ -683,7 +763,7 @@ function main() {
     //setup the Sequence Order Submit Button
     let sequenceOrder_submit_answer = document.getElementById("order-submit-btn")
     sequenceOrder_submit_answer.addEventListener("click", function(){
-        processDragDropOrderAnwers()();
+        processDragDropOrderAnwers();
     })
     // Setup the hamburger button
     let hamburgerBtn = document.querySelector(".hamburger-btn");
