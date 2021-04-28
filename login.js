@@ -44,7 +44,8 @@ connection.query(`CREATE TABLE IF NOT EXISTS \`progress\` (
        \`email\` VARCHAR(255) NOT NULL
    ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;`);
 
-/* connection.query(`ALTER TABLE \`progress\` ADD PRIMARY KEY (\`id\`)`); */
+connection.query(`ALTER TABLE \`progress\` ADD PRIMARY KEY (\`id\`)`);
+connection.query(`ALTER TABLE \`progress\` MODIFY \`id\` INT(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;`); 
 
 let app = express();
 
