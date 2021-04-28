@@ -116,6 +116,19 @@ body {
     padding: 0px;
 }
 
+.youtube-area {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.match-area {
+    display:none;
+}
+
 .number-counter {
     font-size: 12px;
     font-weight: bold;
