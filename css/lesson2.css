@@ -199,6 +199,11 @@ body {
       padding-right: 20px;
 }
 
+.sidenav a {
+    padding-left: 20px;
+  
+  }
+
 .video-area {
     display: flex;
     flex-direction: column;
