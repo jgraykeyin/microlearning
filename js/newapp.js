@@ -74,6 +74,7 @@ function showQuestion() {
     let order_area = document.querySelector(".order-area")
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
+    let match_area = document.querySelector(".match-area")
     let dragdrop_area = document.querySelector(".dragdrop-area");
     let checkbox_area = document.querySelector(".cbquestion-area");
 
@@ -95,6 +96,7 @@ function showQuestion() {
     let dd_title = document.querySelector(".dd-title");
     let cb_statement = document.querySelector(".cbquestion-statement")
     let cb_title = document.querySelector(".cbquestion-title")
+    let match_title = document.querySelector(".match-title")
     
     if (index > numWeeks) {
 
@@ -109,6 +111,7 @@ function showQuestion() {
         question_area.style.display = "none";
         result_area.style.display = "flex";
         order_area.style.display = "none"
+        match_area.style.display = "none";
         result_title.innerHTML = "All done";
         result_body.innerHTML = "Check back next week for another question.";
         play_btn.style.display = "none";
@@ -144,7 +147,40 @@ function showQuestion() {
         order_4.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][3];
 
 
-    } else if (quiz[0]["quiz"][index]["heading_a"]) {
+    } else if (quiz[0]["quiz"][index]["type"]){
+        order_area.style.display = "none"
+        truefalse_area.style.display = "none";
+        question_area.style.display = "none";
+        checkbox_area.style.display = "none"
+        dragdrop_area.style.display = "none";
+        match_area.style.display = "flex";
+        match_title.innerHTML = quiz[0]["quiz"][index]["question"];
+
+        let match_1 = document.getElementById("match-1");
+        let match_2 = document.getElementById("match-2");
+        let match_3 = document.getElementById("match-3");
+        let match_4 = document.getElementById("match-4");
+        let match_5 = document.getElementById("match-5");
+
+        let matched_1 = document.getElementById("answered-match-a");;
+        let matched_2 = document.getElementById("answered-match-b")
+        let matched_3 = document.getElementById("answered-match-c")
+        let matched_4 = document.getElementById("answered-match-d")
+        let matched_5 = document.getElementById("answered-match-e")
+
+        match_1.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][0];
+        match_2.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][1];
+        match_3.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][2];
+        match_4.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][3];
+        match_5.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][4];
+
+        matched_1.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][0];
+        matched_2.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][1];
+        matched_3.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][2];
+        matched_4.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][3];
+        matched_5.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][4];
+    
+    }else if (quiz[0]["quiz"][index]["heading_a"]) {
         // This is a drag drop question
 
         truefalse_area.style.display = "none";
@@ -781,6 +817,11 @@ function main() {
     let sequenceOrder_submit_answer = document.getElementById("order-submit-btn")
     sequenceOrder_submit_answer.addEventListener("click", function(){
         processDragDropOrderAnwers();
+    })
+    //setup the Match Order Submit Button
+    let matchOrder_submit_answer = document.getElementById("match-submit-btn")
+    matchOrder_submit_answer.addEventListener("click", function(){
+        processDragDropMatchAnwers();
     })
     // Setup the hamburger button
     let hamburgerBtn = document.querySelector(".hamburger-btn");
