@@ -124,6 +124,7 @@ function showQuestion() {
         checkbox_area.style.display = "none"
         question_area.style.display = "none";
         dragdrop_area.style.display = "none";
+        match_area.style.display = "none";
         order_area.style.display = "none"
         truefalse_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
@@ -133,6 +134,7 @@ function showQuestion() {
         truefalse_area.style.display = "none";
         question_area.style.display = "none";
         checkbox_area.style.display = "none"
+        match_area.style.display = "none";
         dragdrop_area.style.display = "none";
         order_title.innerHTML = quiz[0]["quiz"][index]["question"];
 
@@ -186,6 +188,7 @@ function showQuestion() {
         truefalse_area.style.display = "none";
         question_area.style.display = "none";
         checkbox_area.style.display = "none"
+        match_area.style.display = "none";
         order_area.style.display = "none"
         dragdrop_area.style.display = "flex";
         dd_title.innerHTML = quiz[0]["quiz"][index]["question"];
