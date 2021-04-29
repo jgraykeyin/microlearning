@@ -456,3 +456,7 @@ body {
 .sidenav a:active {
     color: #fff;
 }
+
+.hidden-mc-option{
+    display:None;
+}

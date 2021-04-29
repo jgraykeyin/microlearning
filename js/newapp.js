@@ -171,11 +171,13 @@ function showQuestion() {
         let order_2 = document.getElementById("order-2");
         let order_3 = document.getElementById("order-3");
         let order_4 = document.getElementById("order-4");
+        let order_5 = document.getElementById("order-5");
 
         order_1.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][0];
         order_2.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][1];
         order_3.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][2];
         order_4.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][3];
+        order_5.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][4];
 
 
     } else if (quiz[0]["quiz"][index]["type"]){
@@ -280,11 +282,23 @@ function showQuestion() {
         let option_b = document.getElementById("option-b");
         let option_c = document.getElementById("option-c");
         let option_d = document.getElementById("option-d");
-        
+        let option_e = document.getElementById("option-e");
+
         option_a.innerHTML = quiz[0]["quiz"][index]["a"];
         option_b.innerHTML = quiz[0]["quiz"][index]["b"];
         option_c.innerHTML = quiz[0]["quiz"][index]["c"];
         option_d.innerHTML = quiz[0]["quiz"][index]["d"];
+        if ((option_e != null) && (quiz[0]["quiz"][index]["e"])){
+            if(option_e.parentElement.classList.contains("hidden-mc-option")){
+                option_e.parentElement.classList.remove("hidden-mc-option")
+            }
+
+            option_e.innerHTML = quiz[0]["quiz"][index]["e"];
+        }else{
+            if(!option_e.parentElement.classList.contains("hidden-mc-option")){
+                option_e.parentElement.classList.add("hidden-mc-option")
+            }
+        }
     }
 
     // Save the answer to local storage
@@ -446,19 +460,30 @@ function processDragDropOrderAnwers() {
     let order_2 = document.getElementById("order-2");
     let order_3 = document.getElementById("order-3");
     let order_4 = document.getElementById("order-4");
+    let order_5 = document.getElementById("order-5");
     
 
-    let orderCollection = [order_1,order_2,order_3,order_4];
+    let orderCollection = [order_1,order_2,order_3,order_4,order_5];
+    orderCollection = orderCollection.filter((v)=> v !== null && v !== undefined)
+    orderCollection.sort((a,b)=> parseFloat(a.attributes["data-y"].value) - parseFloat(b.attributes["data-y"].value))
 
-    let counter_a = 0;
+    //let counter_a = 0;
+    let answers_all_correct = true;
+    //console.log("ANSWERS:")
+    //console.log(answers);
     // Loop through each div that's inside Column A
-    for (let i = 0; i < orderCollection.length; ++i) {
+    for (let i = 0; i < answers.length; ++i) {
         // Check to see if the current item is contained in our answers array
-        if (answers.includes(orderCollection[i].innerHTML)) {
+        console.log("Order Collection [" + i.toString() + "] :")
+        console.log(orderCollection[i].innerHTML)
+        //if(answer[i] === orderCollection[i].innerHTML)
+        //answers.includes(orderCollection[i].innerHTML
+        if (answers[i] === orderCollection[i].innerHTML) {
             // Increment for a correct answer
-            counter_a++;
+            // console.log(counter_a)
         } else {
-            counter_a--;
+            answers_all_correct = false;
+            // console.log(counter_a)
         }
     }
 
@@ -477,7 +502,7 @@ function processDragDropOrderAnwers() {
     order_area.style.display = "none";
 
 
-    if (counter_a === 4) {
+    if (answers_all_correct) {
         // All items are in the correct column
         index++;
         localStorage.setItem("currentQuestion", index);
@@ -530,17 +555,26 @@ function processDragDropMatchAnwers() {
     let order_5 = document.getElementById("match-5");
     
 
-    let orderCollection = [order_1,order_2,order_3,order_4,order_5];
 
-    let counter_a = 0;
+    let orderCollection = [order_1,order_2,order_3,order_4,order_5];
+    orderCollection = orderCollection.filter((v)=> v !== null && v !== undefined)
+    orderCollection.sort((a,b)=> parseFloat(a.attributes["data-y"].value) - parseFloat(b.attributes["data-y"].value))
+    
+    // let counter_a = 0;
+    let answers_all_correct = true;
     // Loop through each div that's inside Column A
-    for (let i = 0; i < orderCollection.length; ++i) {
+    for (let i = 0; i < answers.length; ++i) {
         // Check to see if the current item is contained in our answers array
-        if (answers.includes(orderCollection[i].innerHTML)) {
+        console.log("Order Collection [" + i.toString() + "] :")
+        console.log(orderCollection[i].innerHTML)
+        //if(answer[i] === orderCollection[i].innerHTML)
+        //answers.includes(orderCollection[i].innerHTML
+        if (answers[i] === orderCollection[i].innerHTML) {
             // Increment for a correct answer
-            counter_a++;
+            // console.log(counter_a)
         } else {
-            counter_a--;
+            answers_all_correct = false;
+            // console.log(counter_a)
         }
     }
 
@@ -559,7 +593,7 @@ function processDragDropMatchAnwers() {
     match_area.style.display = "none";
 
 
-    if (counter_a === 5) {
+    if (answers_all_correct) {
         // All items are in the correct column
         index++;
         localStorage.setItem("currentQuestion", index);
