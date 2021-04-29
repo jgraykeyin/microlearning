@@ -70,18 +70,22 @@ function showQuestion() {
     yt_area.style.display = "none";
     
     let question = ""
-    if (index > 20) {
-        question = "All done"
-    } else {
-        // Get the current question title
-        question = quiz[0]["quiz"][index]["question"];
-    }
+
     let order_area = document.querySelector(".order-area")
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
     let match_area = document.querySelector(".match-area")
     let dragdrop_area = document.querySelector(".dragdrop-area");
     let checkbox_area = document.querySelector(".cbquestion-area");
+
+    if (index > 20) {
+        question = "All done"
+    } else {
+        // Get the current question title
+        question = quiz[0]["quiz"][index]["question"];
+        match_area.style.display = "none";
+        checkbox_area.style.display = "none";
+    }
 
     let number_area = document.querySelector(".number-counter");
     let tf_number_area = document.getElementById("num-tf");
