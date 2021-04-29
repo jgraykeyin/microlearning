@@ -474,5 +474,34 @@ body {
     font-size: 18px;
 }
 
+#match-submit-button {
+    margin-top: 42px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #0D4051; 
+    border: 2px solid  #6BC9CB;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    width: 80vw;
+}
+
+#dd-submit-btn-DCB {
+    margin-top: 42px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #0D4051; 
+    border: 2px solid  #6BC9CB;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    width: 80vw;
+}
 
 
