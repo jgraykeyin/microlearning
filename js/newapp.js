@@ -69,8 +69,13 @@ function showQuestion() {
     let yt_area = document.querySelector(".youtube-area");
     yt_area.style.display = "none";
     
-    // Get the current question title
-    let question = quiz[0]["quiz"][index]["question"];
+    let question = ""
+    if (index > 20) {
+        question = "All done"
+    } else {
+        // Get the current question title
+        question = quiz[0]["quiz"][index]["question"];
+    }
     let order_area = document.querySelector(".order-area")
     let question_area = document.querySelector(".question-area");
     let truefalse_area = document.querySelector(".truefalse-area");
@@ -88,6 +93,8 @@ function showQuestion() {
     let html = `Question ${index+1} of ${numWeeks+1}`
     number_area.innerHTML = html;
     tf_number_area.innerHTML = html;
+
+    console.log(index);
 
     // Set the question title
     let order_title = document.querySelector(".order-title");
@@ -117,7 +124,7 @@ function showQuestion() {
         play_btn.style.display = "none";
         next_btn.style.display = "none";
 
-    } else if (index >= 20) {
+    } else if (index >= 19) {
         
         let result_area = document.querySelector(".result");
         let result_title = document.querySelector(".result-title");
