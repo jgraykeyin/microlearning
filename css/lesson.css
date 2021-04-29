@@ -126,8 +126,20 @@ body {
 }
 
 .match-area {
-    display:none;
+    display:none;     
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+.match-title{
+  
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    text-align:center;
+}
+
+
 
 .number-counter {
     font-size: 12px;
@@ -303,6 +315,10 @@ body {
     height: 300px;
     max-width: 180px;
 }
+.medzone{
+    max-width: 200px;
+    height: 100px;
+}
 
 .drag-drop {
     display: inline-block;
@@ -318,12 +334,12 @@ body {
     transition: background-color 0.3s;
 }
 
-.order-area {
+/* .order-area {
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 .drag-drop.can-drop {
