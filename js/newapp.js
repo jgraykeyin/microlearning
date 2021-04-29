@@ -446,7 +446,6 @@ function processDragDropOrderAnwers() {
     let order_2 = document.getElementById("order-2");
     let order_3 = document.getElementById("order-3");
     let order_4 = document.getElementById("order-4");
-    
 
     let orderCollection = [order_1,order_2,order_3,order_4];
 
@@ -889,11 +888,13 @@ function main() {
     play_btn.display="none";
     play_btn.addEventListener("click", playVideo)
 
+    /*
     let home_btn = document.getElementById("home-btn");
     home_btn.display="none";
     home_btn.addEventListener("click", function() {
         window.location.href = "/home";
     });
+    */
 
     let next_btn = document.getElementById("next-btn");
     next_btn.display="none";
