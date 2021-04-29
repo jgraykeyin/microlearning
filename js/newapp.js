@@ -98,8 +98,6 @@ function showQuestion() {
     number_area.innerHTML = html;
     tf_number_area.innerHTML = html;
 
-    console.log(index);
-
     // Set the question title
     let order_title = document.querySelector(".order-title");
     let question_title = document.querySelector(".question-title");
@@ -128,7 +126,7 @@ function showQuestion() {
         play_btn.style.display = "none";
         next_btn.style.display = "none";
 
-    } else if (index >= 19) {
+    } else if (index >= 20) {
         
         let result_area = document.querySelector(".result");
         let result_title = document.querySelector(".result-title");
