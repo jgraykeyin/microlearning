@@ -433,4 +433,22 @@ body {
 }
 
 
+.sidenav a {
+    color: #fff;
+}
 
+.sidenav a:link {
+    color: #fff;
+}
+
+.sidenav a:visited {
+    color: #fff;
+}
+
+.sidenav a:hover {
+    color: #fff;
+}
+
+.sidenav a:active {
+    color: #fff;
+}
