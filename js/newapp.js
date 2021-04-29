@@ -117,6 +117,24 @@ function showQuestion() {
         play_btn.style.display = "none";
         next_btn.style.display = "none";
 
+    } else if (index >= 20) {
+        
+        let result_area = document.querySelector(".result");
+        let result_title = document.querySelector(".result-title");
+        let result_body = document.querySelector(".result-body");
+
+        let play_btn = document.getElementById("play-btn");
+        let next_btn = document.getElementById("next-btn");
+
+        truefalse_area.style.display = "none";
+        question_area.style.display = "none";
+        result_area.style.display = "flex";
+        order_area.style.display = "none"
+        match_area.style.display = "none";
+        result_title.innerHTML = "Course Complete!";
+        result_body.innerHTML = "Congratulations, you've completed the course!";
+        play_btn.style.display = "none";
+        next_btn.style.display = "none";
 
     } else if (quiz[0]["quiz"][index]["true"]) {
         // This is a the true-false questions
@@ -130,7 +148,9 @@ function showQuestion() {
 
     } else if (quiz[0]["quiz"][index]["sequence"]){
         //This is a sequence order questions
-        order_area.style.display = "flex"
+        console.log("Order")
+        order_area.style.display = "flex";
+        console.log(order_area)
         truefalse_area.style.display = "none";
         question_area.style.display = "none";
         checkbox_area.style.display = "none"
