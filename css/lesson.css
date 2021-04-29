@@ -97,6 +97,10 @@ body {
       padding: 20px;
   }
 
+.linky {
+    text-decoration: underline;
+}
+
   .sidenav p {
       padding-top: 4px;
       padding-bottom: 4px;
