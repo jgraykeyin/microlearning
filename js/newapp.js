@@ -81,6 +81,7 @@ function showQuestion() {
     if (index > 20) {
         question = "All done"
     } else {
+        
         // Get the current question title
         question = quiz[0]["quiz"][index]["question"];
         match_area.style.display = "none";
