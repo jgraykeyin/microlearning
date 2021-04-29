@@ -205,6 +205,7 @@
                 "id": 18,
                 "clip_start": 2005,
                 "clip_end": 2095,
+                "statement": "For the following multiple response questions, select all the options that are correct.",
                 "video": "performance18.mp4",
                 "question": "What should a manager focus on in a performance interview?",
                 "a": "All the negative personal characteristics an employee demonstrates.",
