@@ -456,3 +456,29 @@ body {
 .sidenav a:active {
     color: #fff;
 }
+
+.homelink a {
+    color: #fff;
+}
+
+.homelink a:link {
+    color: #fff;
+}
+
+.homelink a:visited {
+    color: #fff;
+}
+
+.homelink a:hover {
+    color: #fff;
+}
+
+.homelink a:active {
+    color: #fff;
+}
+
+.smalltext {
+    font-size: 12px;
+    font-weight: 300;
+}
+
