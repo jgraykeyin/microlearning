@@ -35,12 +35,10 @@
                "video": "timestress3.mp4",
                "clip_start": 391,
                "clip_end": 606,
+               "type": "match",
                "question": "Match each description with the correct Time Management Theory.",
-               "match1": ["The ABC Method", "Prioritizes 20% of inputs and 80% of outputs"],
-               "match2": ["The Pareto Principle", "Concentration on large tasks. Fits similar tasks around large ones"],
-               "match3": ["The Pickle Jar Theory","Works on a task for 25 minutes and then take a break"],
-               "match4": ["The Pomodoro Technique","Prioritizes work and create to do lists"]
-
+               "answer_column_a":["The ABC Method", "The Pareto Principle", "The Pickle Jar Theory","The Pomodoro Technique"],
+               "answer_column_b": ["Prioritizes 20% of inputs and 80% of outputs","Concentration on large tasks. Fits similar tasks around large ones", "Works on a task for 25 minutes and then take a break", "Prioritizes work and create to do lists" ]
             },
             {
                 "id": 4,
