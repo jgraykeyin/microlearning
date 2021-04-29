@@ -174,6 +174,15 @@ app.get('/logout', function(request, response) {
     response.end();
 })
 
+app.get('/about', function(request, response) {
+    response.sendFile(path.join(__dirname, '/about.html'));
+});
+
+app.get('/contact', function(request, response) {
+    response.sendFile(path.join(__dirname, '/contact.html'));
+});
+
+
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
         console.log(`${request.session.email} has logged in`);
