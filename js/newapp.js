@@ -923,11 +923,13 @@ function main() {
     play_btn.display="none";
     play_btn.addEventListener("click", playVideo)
 
+    /*
     let home_btn = document.getElementById("home-btn");
     home_btn.display="none";
     home_btn.addEventListener("click", function() {
         window.location.href = "/home";
     });
+    */
 
     let next_btn = document.getElementById("next-btn");
     next_btn.display="none";
