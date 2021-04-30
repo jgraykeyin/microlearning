@@ -367,6 +367,16 @@ function processAnswer() {
     // Correct answer
     if (user_answer === answer) {
 
+        let radios = document.getElementsByName("quiz-option");
+        for (let i=0; i<radios.length;i++) {
+            radios[i].checked = false;
+        }
+
+        let checks = document.getElementsByName("cbquiz-option");
+        for (let i=0; i<checks.length;i++) {
+            checks[i].checked = false;
+        }
+
         question_index++;
         levelUp(question_index);
 
