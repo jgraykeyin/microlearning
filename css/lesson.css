@@ -212,15 +212,15 @@ body {
 }
 
 .truefalse-btn:hover {
-    background-color: #78AF62;
+    background-color: #ffffff6b;
     color: #000;
-    border: 3px solid #07613A;
+    border: 3px solid #4a4a4a;
 }
 
 .truefalse-btn:focus {
-    background-color: #78AF62;
+    background-color: #919191;
     color: #000;
-    border: 3px solid #07613A;
+    border: 3px solid #292a29;
 }
 
 .activity-area {
@@ -300,6 +300,9 @@ body {
     font-size: 14px;
     max-width: 98px;
 }
+/* .dd-extend{
+    max-width: 140px;;
+} */
 
 .dd-starting-items {
     display: flex;
