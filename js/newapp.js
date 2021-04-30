@@ -89,6 +89,7 @@ function showQuestion() {
 
     let number_area = document.querySelector(".number-counter");
     let tf_number_area = document.getElementById("num-tf");
+    let number_areas = document.querySelectorAll(".number-counter")
 
     if (numWeeks > 19) {
         numWeeks = 19;
@@ -97,6 +98,9 @@ function showQuestion() {
     let html = `Question ${index+1} of ${numWeeks+1}`
     number_area.innerHTML = html;
     tf_number_area.innerHTML = html;
+    number_areas.forEach((e)=>{
+        e.innerHtml = html;
+    })
 
     // Set the question title
     let order_title = document.querySelector(".order-title");
@@ -108,6 +112,7 @@ function showQuestion() {
     let match_title = document.querySelector(".match-title")
     
     if (index > numWeeks) {
+        console.log("Here.")
 
         let result_area = document.querySelector(".result");
         let result_title = document.querySelector(".result-title");
@@ -127,7 +132,7 @@ function showQuestion() {
         next_btn.style.display = "none";
 
     } else if (index >= 20) {
-        
+        console.log("Here")
         let result_area = document.querySelector(".result");
         let result_title = document.querySelector(".result-title");
         let result_body = document.querySelector(".result-body");
@@ -202,17 +207,33 @@ function showQuestion() {
         let matched_4 = document.getElementById("answered-match-d");
         let matched_5 = document.getElementById("answered-match-e");
 
-        match_1.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][0];
-        match_2.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][1];
-        match_3.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][2];
-        match_4.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][3];
-        match_5.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][4];
+        let match_box_e =  document.getElementById('answer-match-e');
+        if(match_box_e.classList.contains('match-hide-answer')){
+            match_box_e.classList.remove("match-hide-answer")
+        }
+        
+        if(matched_5.classList.contains('match-hide-answer')){
+            matched_5.classList.add('match-hide-answer');
+        }
+ 
 
         matched_1.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][0];
         matched_2.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][1];
         matched_3.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][2];
         matched_4.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][3];
         matched_5.innerHTML = quiz[0]["quiz"][index]["answer_column_b"][4];
+
+        match_1.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][0];
+        match_2.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][1];
+        match_3.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][2];
+        match_4.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][3];
+        if(match_5 !== null && match_5 !== undefined){
+            match_5.innerHTML = quiz[0]["quiz"][index]["answer_column_a"][4];
+        }else{
+            match_box_e.classList.add("match-hide-answer")
+            matched_5.classList.add('match-hide-answer');
+        }
+
         console.log(quiz[0]["quiz"][index]["answer_column_b"][0])
     
     }else if (quiz[0]["quiz"][index]["heading_a"]) {
@@ -288,6 +309,7 @@ function showQuestion() {
         option_b.innerHTML = quiz[0]["quiz"][index]["b"];
         option_c.innerHTML = quiz[0]["quiz"][index]["c"];
         option_d.innerHTML = quiz[0]["quiz"][index]["d"];
+        
         if ((option_e != null) && (quiz[0]["quiz"][index]["e"])){
             if(option_e.parentElement.classList.contains("hidden-mc-option")){
                 option_e.parentElement.classList.remove("hidden-mc-option")
@@ -302,8 +324,8 @@ function showQuestion() {
     }
 
     // Save the answer to local storage
-    let answer = quiz[0]["quiz"][index]["answer"];
-    localStorage.setItem("answer", answer);
+    //let answer = quiz[0]["quiz"][index]["answer"];
+    //localStorage.setItem("answer", answer);
 }
 
 
@@ -312,7 +334,11 @@ function processAnswer() {
     let user_answer = "";
 
     // Get the answer from the json data
-    let answer = localStorage.getItem("answer");
+    let quiz = JSON.parse(localStorage.getItem('data'));
+    let index = parseInt(localStorage.getItem("currentQuestion"))
+    //let answer = localStorage.getItem("answer");
+    let answer = quiz[0]["quiz"][index]["answer"];
+    
     let tf_answer = localStorage.getItem("tf_answer");
 
     let question_area = document.querySelector(".question-area");

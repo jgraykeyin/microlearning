@@ -340,7 +340,7 @@ interact('#answers-column-b').dropzone({
       })
     
   // enable draggables to be dropped into this
-  interact("#answer-match-a").dropzone({
+  interact(".answer-match").dropzone({
     // only accept elements matching this CSS selector
     accept: '.drag-drop',
     // Require a 75% element overlap for a drop to be possible
